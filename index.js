@@ -12,7 +12,7 @@ bot.on('message', message => {
   if (message.author.bot) return;
 
   if (message.content.indexOf("I love you Yuki") === 0) {
-    return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>);
+    return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
     }
 
   if (message.content.indexOf("Yuki is hot") === 0) {
