@@ -87,7 +87,7 @@ bot.on("message", async message => {
   }
   
   if(cmd === `${prefix}car`){
-    return message.channel.send("Papa, buy me a car.");
+    return message.channel.send("Papa, buy me a new car.");
   }
 
   if(cmd === `${prefix}crank`){
