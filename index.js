@@ -42,6 +42,10 @@ bot.on('message', message => {
   if (message.content.indexOf("Good night Yuki") === 0) {
     return message.channel.send("Good kids should head to sleep early.");
     }
+  
+    if (message.content.indexOf("Pika~") === 0) {
+    return message.channel.send("Chu~");
+    }
 });
 
 bot.on("message", async message => {
@@ -89,15 +93,19 @@ bot.on("message", async message => {
   if(cmd === `${prefix}crank`){
     return message.channel.send("We’ll have a secret intensive training session together.");
   }
+  
   if(cmd === `${prefix}srank`){
     return message.channel.send("I’m going to imitate Momo. Yay! You did it!");
   }
+  
   if(cmd === `${prefix}arank`){
     return message.channel.send("Next time, I expect you will try harder.");
   }
+  
     if(cmd === `${prefix}brank`){
     return message.channel.send("What’s wrong, that you can’t do something like this?");
   }
+  
     if(cmd === `${prefix}ssrank`){
     return message.channel.send("As expected. I’m also pleased.");
   }
