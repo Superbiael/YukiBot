@@ -26,6 +26,10 @@ bot.on('message', message => {
     if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
     return message.channel.send("Finally.");
     }
+  
+      if (message.content.indexOf("I'm gonna munch") === 0) {
+    return message.channel.send("I'm gonna crunch.");
+    }
 });
 
 bot.on("message", async message => {
