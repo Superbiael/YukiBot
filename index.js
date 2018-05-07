@@ -38,6 +38,10 @@ bot.on('message', message => {
   if (message.content.indexOf("Good morning Yuki") === 0) {
     return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
     }
+  
+  if (message.content.indexOf("Good night Yuki") === 0) {
+    return message.channel.send("Good kids should head to sleep early.");
+    }
 });
 
 bot.on("message", async message => {
