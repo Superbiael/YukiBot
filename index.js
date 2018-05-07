@@ -9,26 +9,30 @@ bot.on("ready", async () => {
 // Event to listen to messages sent to the server where the bot is located
 bot.on('message', message => {
     // So the bot doesn't reply to iteself
-    if (message.author.bot) return;
+  if (message.author.bot) return;
 
-    if (message.content.indexOf("I love you Yuki") === 0) {
+  if (message.content.indexOf("I love you Yuki") === 0) {
     return message.channel.send("I love you too, Satsujin");
     }
 
-    if (message.content.indexOf("Yuki is hot") === 0) {
+  if (message.content.indexOf("Yuki is hot") === 0) {
     return message.channel.send("I know.");
     }
 
-    if (message.content.indexOf("Yuppi") === 0) {
+  if (message.content.indexOf("Yuppi") === 0) {
     return message.channel.send("Gakkyun");
     }
 
-    if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
+  if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
     return message.channel.send("Finally.");
     }
   
-      if (message.content.indexOf("I'm gonna munch") === 0) {
+  if (message.content.indexOf("I'm gonna munch") === 0) {
     return message.channel.send("I'm gonna crunch.");
+    }
+  
+  if (message.content.indexOf("Yuki, if you're out there") === 0) {
+    return message.channel.send("Don't worry, I'm here.");
     }
   
 });
@@ -52,7 +56,7 @@ bot.on("message", async message => {
     .setThumbnail(bicon)
     .addField("Bot Name", bot.user.username)
 
-    return message. channel.send(botembed);
+  return message. channel.send(botembed);
   }
 
   if(cmd === `${prefix}mafia`){
