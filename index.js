@@ -26,7 +26,6 @@ bot.on('message', message => {
     if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
     return message.channel.send("Finally.");
     }
-});
 
 bot.on("message", async message => {
   if(message.author.box) return;
