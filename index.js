@@ -89,6 +89,9 @@ bot.on("message", async message => {
   if(cmd === `${prefix}crank`){
     return message.channel.send("We’ll have a secret intensive training session together.");
   }
+  if(cmd === `${prefix}srank`){
+    return message.channel.send("I’m going to imitate Momo. Yay! You did it!");
+  }
 });
 
 bot.login(process.env.token);
