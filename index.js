@@ -86,22 +86,22 @@ bot.on("message", async message => {
     return message.channel.send("Papa, buy me a car.");
   }
   
-  if(cmd === `${prefix}Crank`){
+  if(cmd === `${prefix}c`){
     return message.channel.send("We’ll have a secret intensive training session together.");
   }
   
-  if(cmd === `${prefix}Brank`){
+  if(cmd === `${prefix}c`){
     return message.channel.send("What’s wrong, that you can’t do something like this?.");
   }
   
-  if(cmd === `${prefix}Arank`){
+  if(cmd === `${prefix}a`){
     return message.channel.send("Next time, I expect you will try harder.");
     
-  if(cmd === `${prefix}Srank`){
+  if(cmd === `${prefix}s`){
     return message.channel.send("I’m going to imitate Momo. Yay! You did it!");
   }
 
-  if(cmd === `${prefix}SSrank`){
+  if(cmd === `${prefix}ss`){
     return message.channel.send("As expected. I’m also pleased.");
   }
 });
