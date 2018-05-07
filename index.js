@@ -34,6 +34,10 @@ bot.on('message', message => {
   if (message.content.indexOf("Yuki, if you're out there") === 0) {
     return message.channel.send("I'm right here.");
     }
+  
+  if (message.content.indexOf("Good morning Yuki") === 0) {
+    return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
+    }
 });
 
 bot.on("message", async message => {
