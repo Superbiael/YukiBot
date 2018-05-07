@@ -44,7 +44,7 @@ bot.on('message', message => {
     }
   
     if (message.content.indexOf("Pika~") === 0) {
-    return message.channel.send("Chu~");
+    return message.channel.send("Chu~ <:pika2:383925508683071498>");
     }
   
     if (message.content.indexOf(":3c") === 0) {
