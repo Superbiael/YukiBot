@@ -46,6 +46,10 @@ bot.on('message', message => {
     if (message.content.indexOf("Pika~") === 0) {
     return message.channel.send("Chu~");
     }
+  
+    if (message.content.indexOf(":3c") === 0) {
+    return message.channel.send(":3c");
+    }
 });
 
 bot.on("message", async message => {
