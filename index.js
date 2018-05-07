@@ -65,6 +65,10 @@ bot.on("message", async message => {
   if(cmd === `${prefix}ryo`){
     return message.channel.send("Oh fuck. Bastard spotted.");
   }
+  
+  if(cmd === `${prefix}order`){
+    return message.channel.send("We're fresh out of Yuki.");
+  }
 });
 
 bot.login(process.env.token);
