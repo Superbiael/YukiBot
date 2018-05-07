@@ -32,7 +32,7 @@ bot.on('message', message => {
     }
   
   if (message.content.indexOf("Yuki, if you're out there") === 0) {
-    return message.channel.send("Don't worry, I'm here.");
+    return message.channel.send("I'm right here.");
     }
 });
 
@@ -76,6 +76,13 @@ bot.on("message", async message => {
   
   if(cmd === `${prefix}car`){
     return message.channel.send("Papa, buy me a car.");
+  }
+  
+  if(cmd === `${prefix}ping`){
+    // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
+    // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
+    const m = await message.channel.send("Ping?");
+    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
 });
 
