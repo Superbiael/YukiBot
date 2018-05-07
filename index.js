@@ -3,37 +3,17 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setPresence({game:{name:'testing',type:0}});﻿
+  bot.user.setActivity(`Testing1`);
 });
 
-// Event to listen to messages sent to the server where the bot is located
-bot.on('message', message => {
-    // So the bot doesn't reply to iteself
-    if (message.author.bot) return;
-
-    if (message.content.indexOf("I love you Yuki") === 0) {
-    return message.channel.send("I love you too, Satsujin");
-    }
-
-    if (message.content.indexOf("Yuki is hot") === 0) {
-    return message.channel.send("I know.");
-    }
-
-    if (message.content.indexOf("Yuppi") === 0) {
-    return message.channel.send("Gakkyun");
-    }
-
-    if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
-    return message.channel.send("Finally.");
-    }
-
 bot.on("message", async message => {
-  if(message.author.box) return;
-  if(message.channel.type === "dm") return;
+
+  if (message.author.bot) return;
+  if (message.channel.type === "dm") return;
 
   let prefix = 'y!';
-  let messageArray = message.content.split( " ");
-  let cmd = messageArray[0]
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
   if(cmd ===`${prefix}botinfo`){
@@ -59,7 +39,6 @@ bot.on("message", async message => {
   if(cmd === `${prefix}ryo`){
     return message.channel.send("Oh fuck. Bastard spotted.");
   }
-
 });
 
 bot.login(process.env.token);
