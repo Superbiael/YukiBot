@@ -67,7 +67,7 @@ bot.on("message", async message => {
   }
 
   if(cmd === `${prefix}leaf`){
-    return message.channel.send("Babe, that me leaf.");
+    return message.channel.send("Babe, that me leaf 🍃");
   }
 
   if(cmd === `${prefix}ryo`){
