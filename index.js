@@ -31,7 +31,6 @@ bot.on('message', message => {
     return message.channel.send("I'm gonna crunch.");
     }
   
-    }
 });
 
 bot.on("message", async message => {
