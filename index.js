@@ -35,6 +35,9 @@ bot.on('message', message => {
     return message.channel.send("Don't worry, I'm here.");
     }
   
+  if (message.content.indexOf("^^") === 0) {
+    return message.channel.send("^^");
+    }
 });
 
 bot.on("message", async message => {
@@ -72,7 +75,7 @@ bot.on("message", async message => {
   }
   
   if(cmd === `${prefix}order`){
-    return message.channel.send("We're fresh out of Yuki.");
+    return message.channel.send("We're fresh out of Yuki (lol) ");
   }
   
   if(cmd === `${prefix}car`){
