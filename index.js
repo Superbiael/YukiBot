@@ -34,7 +34,6 @@ bot.on('message', message => {
   if (message.content.indexOf("Yuki, if you're out there") === 0) {
     return message.channel.send("Don't worry, I'm here.");
     }
-    }
 });
 
 bot.on("message", async message => {
