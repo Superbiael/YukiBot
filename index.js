@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setPresence({game:{name:'munching and crunching',type:0}});﻿
+  bot.user.setPresence({game:{name:'oh no',type:0}});﻿
 });
 
 // Event to listen to messages sent to the server where the bot is located
@@ -26,6 +26,41 @@ bot.on('message', message => {
     if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
     return message.channel.send("Finally.");
     }
+});
+
+bot.on("message", async message => {
+  if(message.author.box) return;
+  if(message.channel.type === "dm") return;
+
+  let prefix = botconfig.prefix;
+  let messageArray = message.content.split( " ");
+  let cmd = messageArray[0]
+  let args = messageArray.slice(1);
+
+  if(cmd ===`${prefix}botinfo`){
+
+    let bicon = bot.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setDescription("Bot Information")
+    .setColor("#00ff67")
+    .setThumbnail(bicon)
+    .addField("Bot Name", bot.user.username)
+
+    return message. channel.send(botembed);
+  }
+
+  if(cmd === `${prefix}mafia`){
+    return message.channel.send("maf maf");
+  }
+
+  if(cmd === `${prefix}leaf`){
+    return message.channel.send("babe, that me leaf.");
+  }
+
+  if(cmd === `${prefix}ryo`){
+    return message.channel.send("Oh fuck. Bastard spotted.");
+  }
+
 });
 
 bot.login(process.env.token);
