@@ -30,6 +30,8 @@ bot.on('message', message => {
       if (message.content.indexOf("I'm gonna munch") === 0) {
     return message.channel.send("I'm gonna crunch.");
     }
+  
+    }
 });
 
 bot.on("message", async message => {
@@ -68,6 +70,10 @@ bot.on("message", async message => {
   
   if(cmd === `${prefix}order`){
     return message.channel.send("We're fresh out of Yuki.");
+  }
+  
+  if(cmd === `${prefix}car`){
+    return message.channel.send("Papa, buy me a car.");
   }
 });
 
