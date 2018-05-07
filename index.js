@@ -85,7 +85,25 @@ bot.on("message", async message => {
   if(cmd === `${prefix}car`){
     return message.channel.send("Papa, buy me a car.");
   }
+  
+  if(cmd === `${prefix}c rank`){
+    return message.channel.send("We’ll have a secret intensive training session together.");
+  }
+  
+  if(cmd === `${prefix}b rank`){
+    return message.channel.send("What’s wrong, that you can’t do something like this?.");
+  }
+  
+  if(cmd === `${prefix}a rank`){
+    return message.channel.send("Next time, I expect you will try harder.");
+    
+  if(cmd === `${prefix}s rank`){
+    return message.channel.send("I’m going to imitate Momo. Yay! You did it!");
+  }
 
+  if(cmd === `${prefix}ss rank`){
+    return message.channel.send("As expected. I’m also pleased.");
+  }
 });
 
 bot.login(process.env.token);
