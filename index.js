@@ -32,7 +32,7 @@ bot.on('message', message => {
     if (message.author.bot) return;
 
     if (message.content.indexOf("You better watch out") === 0) {
-      message.channel.send ("Myuu!", {files:["./images/3.png"]});
+      message.channel.send ({files:["./images/3.png"]});
     }
   
     if (message.content.indexOf("I love you Yuki") === 0) {
