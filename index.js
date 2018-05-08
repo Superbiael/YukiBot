@@ -31,43 +31,45 @@ bot.on('message', message => {
     // So the bot doesn't reply to iteself
     if (message.author.bot) return;
 
-    if (message.content.indexOf("You better watch out") === 0) {
+     msg = message.content.toLowerCase();
+  
+    if (msg.startsWith ("you better watch out")) {
       message.channel.send ({files:["./images/3.png"]});
     }
   
-    if (message.content.indexOf("I love you Yuki") === 0) {
+    if (msg.startsWith ("i love you yuki")) {
       return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
       }
 
-    if (message.content.indexOf("Yuki is hot") === 0) {
+    if (msg.startsWith ("yuki is hot")) {
     return message.channel.send("I know.");
     }
 
-    if (message.content.indexOf("Yuppi") === 0) {
+    if (msg.startsWith ("yuppi")) {
     return message.channel.send("Gakkyun");
     }
 
-    if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
+    if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
     }
 
-    if (message.content.indexOf("I'm gonna munch") === 0) {
+    if (msg.startsWith ("i'm gonna munch")) {
     return message.channel.send("I'm gonna crunch.");
   }
 
-  if (message.content.indexOf("Yuki, if you're out there") === 0) {
+    if (msg.startsWith ("yuki, if you're out there")) {
     return message.channel.send("I'm right here.");
     }
 
-  if (message.content.indexOf("Good morning Yuki") === 0) {
+    if (msg.startsWith ("good morning yuki")) {
     return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
     }
 
-  if (message.content.indexOf("Good night Yuki") === 0) {
+    if (msg.startsWith ("good night yuki")) {
     return message.channel.send("Good kids should head to sleep early.");
     }
 
-    if (message.content.indexOf("Pika~") === 0) {
+    if (msg.startsWith ("pika~")) {
     return message.channel.send("Chu~ <:pika2:383925508683071498>");
     }
 
