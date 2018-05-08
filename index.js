@@ -33,9 +33,9 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
   
-    if (msg.startsWith ("you better watch out")) {
-      message.channel.send ({files:["./images/3.png"]});
-    }
+ //   if (msg.startsWith ("you better watch out")) {
+//      message.channel.send ({files:["./images/3.png"]});
+//    }
   
     if (msg.startsWith ("i love you yuki")) {
       return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
