@@ -23,8 +23,9 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity(`Munching and Crunching`);
+  bot.user.setPresence({game:{name:'Munching and crunching',type:0}});
 });
+
 
 // Event to listen to messages sent to the server where the bot is located
 bot.on('message', message => {
