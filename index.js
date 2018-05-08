@@ -122,7 +122,7 @@ bot.on("message", async message => {
   }
 
   if(cmd === `${prefix}crank`){
-    return message.channel.send("We’ll have a secret intensive training session together.");
+    return message.channel.send("We're going to have a secret intensive training session together.");
   }
   
   if(cmd === `${prefix}srank`){
