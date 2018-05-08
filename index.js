@@ -126,11 +126,11 @@ bot.on("message", async message => {
   }
   
   if(cmd === `${prefix}srank`){
-    return message.channel.send("I’m going to imitate Momo. Yay! You did it!");
+    return message.channel.send("I’m going to imitate Momo. Yay~! You did it!");
   }
   
   if(cmd === `${prefix}arank`){
-    return message.channel.send("Next time, I expect you will try harder.");
+    return message.channel.send("Next time, I expect you to try harder.");
   }
   
     if(cmd === `${prefix}brank`){
