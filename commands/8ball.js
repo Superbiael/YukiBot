@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-   if(!args[2]) return message.reply("Please Ask A Full Question!");
-   let replies = ["Yes.", "Likely", "Unclear", "Unlikely", "No"];
+   if(!args[2]) return message.reply("I never learned how to read.");
+   let replies = ["I'm sleepy...", "Do I look like someone who'd know that?", "God knows but he's not answering", "I don't know."];
 
    let result = Math.floor((Math.random() * replies.length));
    let question = args.slice(0).join(" ");
