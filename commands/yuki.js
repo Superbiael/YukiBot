@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
    let ballembed = new Discord.RichEmbed()
    .setColor("#00ff67")
-   .addField("Answer:", replies[result]);
+   .addField(replies[result]);
 
    message.channel.send(ballembed);
 }
