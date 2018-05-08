@@ -26,56 +26,56 @@ bot.on("ready", async () => {
   bot.user.setPresence({game:{name:'Munching and Crunching.',type:0}});﻿
 });
 
-// Event to listen to messages sent to the server where the bot is located
+
 bot.on('message', message => {
-    // So the bot doesn't reply to iteself
-    if (message.author.bot) return;
+  if (message.author.bot) return;
 
      msg = message.content.toLowerCase();
   
-//   if (msg.startsWith ("you better watch out")) {
+//  if (msg.startsWith ("you better watch out")) {
 //      message.channel.send ({files:["./images/3.png"]});
 //    }
   
-    if (msg.startsWith ("i love you yuki")) {
+  if (msg.startsWith ("i love you yuki")) {
       return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
   }
 
-    if (msg.startsWith ("yuki is hot")) {
+  if (msg.startsWith ("yuki is hot")) {
     return message.channel.send("I know.");
     }
 
-    if (msg.startsWith ("yuppi")) {
+  if (msg.startsWith ("yuppi")) {
     return message.channel.send("Gakkyun");
   }
 
-    if (msg.startsWith ("hey gays")) {
+  if (msg.startsWith ("hey gays")) {
     return message.channel.send("—And Gaku.");
   }
   
-    if (msg.startsWith ("i can't believe ryo is dead")) {
+  if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
   }
 
-    if (msg.startsWith ("i'm gonna munch")) {
+  if (msg.startsWith ("i'm gonna munch")) {
     return message.channel.send("I'm gonna crunch.");
   }
 
-    if (msg.startsWith ("yuki, if you're out there")) {
+  if (msg.startsWith ("yuki, if you're out there")) {
     return message.channel.send("I'm right here.");
   }
 
-    if (msg.startsWith ("good morning yuki")) {
+  if (msg.startsWith ("good morning yuki")) {
     return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
   }
 
-    if (msg.startsWith ("good night yuki")) {
+  if (msg.startsWith ("good night yuki")) {
     return message.channel.send("Good kids should head to sleep early.");
   }
 
-    if (msg.startsWith ("pika~")) {
+  if (message.content.indexOf('I love you Kinako') === 0) {
     return message.channel.send("Chu~ <:pika2:383925508683071498>");
 }
+  
 });
 
 bot.on("message", async message => {
