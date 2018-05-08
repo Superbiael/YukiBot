@@ -8,8 +8,10 @@ module.exports.run = async (bot, message, args) => {
    let question = args.slice(0).join(" ");
 
    let ballembed = new Discord.RichEmbed()
-   .setColor("#00ff67")
-   .addField(replies[result]);
+   .setAuthor(message.author.tag)
+   .setColor("#f45342")
+   .addField("Question:", question)
+   .addField("Answer:", replies[result]);
 
    message.channel.send(ballembed);
 }
