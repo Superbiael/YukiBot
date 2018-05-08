@@ -72,10 +72,6 @@ bot.on('message', message => {
     if (msg.startsWith ("pika~")) {
     return message.channel.send("Chu~ <:pika2:383925508683071498>");
     }
-
-    if (message.content.indexOf(":3c") === 0) {
-    return message.channel.send(":3c");
-    }
 });
 
 bot.on("message", async message => {
