@@ -23,65 +23,66 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setPresence({game:{name:'Munching and crunching',type:0}});
+  bot.user.setPresence({game:{name:'Testing.',type:0}});﻿
 });
-
 
 // Event to listen to messages sent to the server where the bot is located
 bot.on('message', message => {
     // So the bot doesn't reply to iteself
-  if (message.author.bot) return;
+    if (message.author.bot) return;
 
-  if (message.content.indexOf("I love you Yuki") === 0) {
-    return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
-    }
+    if (message.content.indexOf("I love you Yuki") === 0) {
+      return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
+      }
 
-  if (message.content.indexOf("Yuki is hot") === 0) {
+    if (message.content.indexOf("Yuki is hot") === 0) {
     return message.channel.send("I know.");
     }
 
-  if (message.content.indexOf("Yuppi") === 0) {
+    if (message.content.indexOf("Yuppi") === 0) {
     return message.channel.send("Gakkyun");
     }
 
-  if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
+    if (message.content.indexOf("I can't believe Ryo is dead") === 0) {
     return message.channel.send("Finally.");
     }
-  
-  if (message.content.indexOf("I'm gonna munch") === 0) {
+
+    if (message.content.indexOf("I'm gonna munch") === 0) {
     return message.channel.send("I'm gonna crunch.");
-    }
-  
+  }
+
   if (message.content.indexOf("Yuki, if you're out there") === 0) {
     return message.channel.send("I'm right here.");
     }
-  
+
   if (message.content.indexOf("Good morning Yuki") === 0) {
     return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
     }
-  
+
   if (message.content.indexOf("Good night Yuki") === 0) {
     return message.channel.send("Good kids should head to sleep early.");
     }
-  
+
     if (message.content.indexOf("Pika~") === 0) {
     return message.channel.send("Chu~ <:pika2:383925508683071498>");
     }
-  
+
     if (message.content.indexOf(":3c") === 0) {
     return message.channel.send(":3c");
     }
 });
 
 bot.on("message", async message => {
-
-  if (message.author.bot) return;
-  if (message.channel.type === "dm") return;
+  if(message.author.box) return;
+  if(message.channel.type === "dm") return;
 
   let prefix = 'y!';
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
+  let messageArray = message.content.split( " ");
+  let cmd = messageArray[0]
   let args = messageArray.slice(1);
+
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
 
   if(cmd ===`${prefix}botinfo`){
 
@@ -92,7 +93,7 @@ bot.on("message", async message => {
     .setThumbnail(bicon)
     .addField("Bot Name", bot.user.username)
 
-  return message. channel.send(botembed);
+    return message. channel.send(botembed);
   }
 
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
@@ -106,11 +107,11 @@ bot.on("message", async message => {
   if(cmd === `${prefix}ryo`){
     return message.channel.send("Oh fuck. Bastard spotted.");
   }
-  
+
   if(cmd === `${prefix}order`){
     return message.channel.send("We're fresh out of Yuki (lol) ");
   }
-  
+
   if(cmd === `${prefix}car`){
     return message.channel.send("Papa, buy me a new car.");
   }
@@ -130,6 +131,7 @@ bot.on("message", async message => {
     if(cmd === `${prefix}ssrank`){
     return message.channel.send("As expected. I’m also pleased.");
   }
+
 });
 
 bot.login(process.env.token);
