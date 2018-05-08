@@ -31,6 +31,10 @@ bot.on('message', message => {
     // So the bot doesn't reply to iteself
     if (message.author.bot) return;
 
+    if (message.content.indexOf("You better watch out") === 0) {
+      message.channel.send ("Myuu!", {files:["./images/3.png"]});
+    }
+  
     if (message.content.indexOf("I love you Yuki") === 0) {
       return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
       }
