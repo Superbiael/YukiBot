@@ -44,7 +44,7 @@ bot.on('message', message => {
     return message.channel.send("I know.");
     }
 
-  if (msg.startsWith ("yuppi")) {
+  if (msg.startsWith ("yuppi") === 0) {
     return message.channel.send("Gakkyun");
   }
 
