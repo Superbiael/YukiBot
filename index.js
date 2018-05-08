@@ -68,7 +68,7 @@ bot.on('message', message => {
   }
 
   if (msg.startsWith ("pika~")) {
-    return message.channel.send("Chu~ <:pika2:383925508683071498>);
+    return message.channel.send("Chu~ <:pika2:383925508683071498>");
   }
   
 });
