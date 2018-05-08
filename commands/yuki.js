@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-   if(!args[2]) return message.reply("I never learned how to read.");
-   let replies = ["I'm sleepy...", "Do I look like someone who'd know that?", "God knows but he's not answering", "I don't know."];
+   if(!args[1]) return message.reply("I never learned how to read.");
+   let replies = ["I'm sleepy...", "<:yuki:407039712893861909>"];
 
    let result = Math.floor((Math.random() * replies.length));
    let question = args.slice(0).join(" ");
@@ -17,5 +17,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name:"8ball"
+  name:"yuki"
 }
