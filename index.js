@@ -33,13 +33,13 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
   
- //   if (msg.startsWith ("you better watch out")) {
+//   if (msg.startsWith ("you better watch out")) {
 //      message.channel.send ({files:["./images/3.png"]});
 //    }
   
     if (msg.startsWith ("i love you yuki")) {
       return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
-      }
+  }
 
     if (msg.startsWith ("yuki is hot")) {
     return message.channel.send("I know.");
@@ -47,15 +47,15 @@ bot.on('message', message => {
 
     if (msg.startsWith ("yuppi")) {
     return message.channel.send("Gakkyun");
-    }
+  }
 
     if (msg.startsWith ("hey gays")) {
     return message.channel.send("—And Gaku.");
-    }
+  }
   
     if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
-    }
+  }
 
     if (msg.startsWith ("i'm gonna munch")) {
     return message.channel.send("I'm gonna crunch.");
@@ -63,19 +63,19 @@ bot.on('message', message => {
 
     if (msg.startsWith ("yuki, if you're out there")) {
     return message.channel.send("I'm right here.");
-    }
+  }
 
     if (msg.startsWith ("good morning yuki")) {
     return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
-    }
+  }
 
     if (msg.startsWith ("good night yuki")) {
     return message.channel.send("Good kids should head to sleep early.");
-    }
+  }
 
     if (msg.startsWith ("pika~")) {
     return message.channel.send("Chu~ <:pika2:383925508683071498>");
-    }
+}
 });
 
 bot.on("message", async message => {
@@ -92,14 +92,14 @@ bot.on("message", async message => {
 
   if(cmd ===`${prefix}botinfo`){
 
-    let bicon = bot.user.displayAvatarURL;
-    let botembed = new Discord.RichEmbed()
+  let bicon = bot.user.displayAvatarURL;
+  let botembed = new Discord.RichEmbed()
     .setDescription("Bot Information")
     .setColor("#00ff67")
     .setThumbnail(bicon)
     .addField("Bot Name", bot.user.username)
 
-    return message. channel.send(botembed);
+  return message. channel.send(botembed);
   }
 
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
@@ -134,10 +134,9 @@ bot.on("message", async message => {
     if(cmd === `${prefix}brank`){
     return message.channel.send("What’s wrong, that you can’t do something like this?");
   }
-    if(cmd === `${prefix}ssrank`){
+   if(cmd === `${prefix}ssrank`){
     return message.channel.send("As expected. I’m also pleased.");
   }
-
 });
 
 bot.login(process.env.token);
