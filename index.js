@@ -39,11 +39,6 @@ bot.on('message', message => {
   if (msg.startsWith ("i love you yuki")) {
       return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
   }
-
-  if (msg.startsWith ("yuki is hot")) {
-    return message.channel.send("I know.");
-    }
-
   if (msg.startsWith ("yuppi") === 0) {
     return message.channel.send("Gakkyun");
   }
@@ -60,7 +55,7 @@ bot.on('message', message => {
     return message.channel.send("I'm gonna crunch.");
   }
 
-  if (msg.startsWith ("yuki, if you're out there")) {
+  if (msg.startsWith ("yuki if you're out there")) {
     return message.channel.send("I'm right here.");
   }
 
