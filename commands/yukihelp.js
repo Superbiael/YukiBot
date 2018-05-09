@@ -8,7 +8,7 @@ module.exports.run = async (bot,message, args) => {
   .addField("y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || c - ss rank || watchout")
   .addField("Other commands:", "I can't believe Ryo is dead || I'm gonna munch || Yuppi || I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Pika~ || Hey gays")
   .addField("8ball command:","y!yuki <question>")
-  .addField("Send DM:", "s!send @user <message> | Requires administrator permissions to delete command message after sending DM");
+  .addField("Send DM:", "y!send @user <message> | Requires administrator permissions to delete command message after sending DM");
 
   message.channel.send(helpembed);
 }
