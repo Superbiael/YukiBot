@@ -33,13 +33,13 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
   
-//  if (msg.startsWith ("you better watch out")) {
-//      message.channel.send ({files:["./images/3.png"]});
-//    }
+  if (msg.startsWith ("you better watch out")) {
+      message.channel.send ({files:["./images/3.png"]});
+   }
   
      mention = message.mentions.users.first();
 
-     if (msg.startsWith (prefix + "send")) {
+  if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
         message.delete();
         mentionMessage = message.content.slice(6);
