@@ -32,11 +32,7 @@ bot.on('message', message => {
   if (message.author.bot) return;
 
      msg = message.content.toLowerCase();
-  
-  if (msg.startsWith ("you better watch out")) {
-      message.channel.send ({files:["./images/3.png"]});
-   }
-  
+ 
      mention = message.mentions.users.first();
 
   if (msg.startsWith (prefix + "send")) {
@@ -108,8 +104,8 @@ bot.on("message", async message => {
   return message. channel.send(botembed);
   }
 
-  if(cmd === `${prefix}comfortme`){
-    return message.channel.send("There, there");
+  if(cmd === `${prefix}you better watch out`){
+    return message.channel.send("["./images/3.png"]");
   }
   
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
