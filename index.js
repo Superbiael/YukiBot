@@ -40,7 +40,7 @@ bot.on('message', message => {
         message.delete();
         mentionMessage = message.content.slice(6);
         mention.sendMessage (mentionMessage);
-        message.channel.send ("Message sent.");
+        return message.channel.send ("Message sent.");
       }
   
   if (msg.startsWith ("i love you yuki")) {
