@@ -6,7 +6,8 @@ module.exports.run = async (bot,message, args) => {
   .setColor("#00ff67")
   .addField("y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || c - ss rank")
   .addField("Other commands:", "I can't believe Ryo is dead || I'm gonna munch || Yuppi || I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Pika~")
-  .addField("8ball command:","y!yuki <question>");
+  .addField("8ball command:","y!yuki <question>")
+  .addField("Send DM:", "k!send @ user <message>");
 
   message.channel.send(helpembed);
 }
