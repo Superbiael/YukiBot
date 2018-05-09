@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
    if(!args[0]) return message.reply("I'm gay, and can't read.");
-   let replies = ["Haa... No way.", "Yes... Is what you thought I would say (lol)","Of course.","I don't know.", "Don't be ridiculous.","Do I look like someone who'd know?", "Sure, why not?", "A whole lot."];
+   let replies = ["No... is what you thought I would say (lol)","No way.", "Yes... Is what you thought I would say (lol)","Of course.", "Don't be ridiculous.","Do I look like someone who'd know?", "Sure, why not?", "A whole lot."];
 
    let result = Math.floor((Math.random() * replies.length));
    let question = args.slice(0).join(" ");
