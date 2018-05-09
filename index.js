@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
 bot.commands = new Discord.Collection();
+const prefix = "y!";
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -35,6 +36,16 @@ bot.on('message', message => {
 //  if (msg.startsWith ("you better watch out")) {
 //      message.channel.send ({files:["./images/3.png"]});
 //    }
+  
+     mention = message.mentions.users.first();
+
+     if (msg.startsWith (prefix + "send")) {
+       if (mention == null) { return; }
+        message.delete();
+        mentionMessage = message.content.slice(6);
+        mention.sendMessage (mentionMessage);
+        message.channel.send ("done!");
+      }
   
   if (msg.startsWith ("i love you yuki")) {
       return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
