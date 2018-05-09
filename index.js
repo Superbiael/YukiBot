@@ -112,8 +112,8 @@ bot.on("message", async message => {
   return message. channel.send(botembed);
   }
 
-  if(cmd === `${prefix}youbetterwatchout`){
-  return message.channel.send ("", {files:["./images/3.png"]});
+  if(cmd === `${prefix}watch out`){
+  return message.channel.send ("You better watch out.", {files:["./images/youbetterwatchout.png"]});
   }  
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
     return message.channel.send("maf maf");
