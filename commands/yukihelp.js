@@ -6,7 +6,7 @@ module.exports.run = async (bot,message, args) => {
   .setDescription("Do not include < > when using commands.")
   .setColor("#00ff67")
   .addField("y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || c - ss rank")
-  .addField("Other commands:", "I can't believe Ryo is dead || I'm gonna munch || Yuppi || I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Pika~")
+  .addField("Other commands:", "I can't believe Ryo is dead || I'm gonna munch || Yuppi || I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Pika~ || Hey gays")
   .addField("8ball command:","y!yuki <question>")
   .addField("Send DM:", "y!send @user <message>");
 
