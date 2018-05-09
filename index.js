@@ -46,9 +46,11 @@ bot.on('message', message => {
   if (msg.startsWith ("i love you yuki")) {
       return message.channel.send("I love you too, Satsujin. <:kissyface:407041007020933131>");
   }
-  if (msg.startsWith ("yuppi") === 0) {
-    return message.channel.send("Gakkyun");
+  
+  if (msg.startsWith ("yuppi")) {
+    return message.channel.send("Gakkyun.");
   }
+  
 
   if (msg.startsWith ("hey gays")) {
     return message.channel.send("—And Gaku.");
