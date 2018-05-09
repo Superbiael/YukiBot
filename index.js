@@ -53,7 +53,7 @@ bot.on('message', message => {
   
 
   if (msg.startsWith ("hey gays")) {
-    return message.channel.send("—And Gaku.");
+    return message.channel.send("And Gaku.");
   }
   
   if (msg.startsWith ("i can't believe ryo is dead")) {
