@@ -47,9 +47,9 @@ bot.on('message', message => {
   if (msg.startsWith ("i love you yuki")) {
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
-        message.channel.sendMessage("I love you too,  Satsujin. <:kissyface:407041007020933131>");
+        message.channel.send("I love you too,  Satsujin. <:kissyface:407041007020933131>");
       } else {
-        message.channel.sendMessage("Ah, you're not Satsujin.");
+        message.channel.send("Ah, you're not Satsujin.");
       }
   }
   
@@ -114,9 +114,9 @@ bot.on("message", async message => {
   if(cmd === `${prefix}smooch`){
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
-        message.channel.sendMessage("Fufu... You're being affectionate today. Come here. <:kissyface:407041007020933131>");
+        message.channel.send("Fufu... You're being affectionate today. Come here. <:kissyface:407041007020933131>");
       } else {
-        message.channel.sendMessage("Who're you again?");
+        message.channel.send("Who're you again?");
       }
   }
   
