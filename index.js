@@ -55,7 +55,7 @@ bot.on('message', message => {
   
          // random image command files:["./images/youbetterwatchout.png"]}
   
-     yuki1 = "./images/yuki1.png" ; yuki2 = "./images/yuki2.png" ; yuki3 = "./images/yuki3.png";
+     yuki1 = "./images/yuki1.png"; yuki2 = "./images/yuki2.png"; yuki3 = "./images/yuki3.png";
      if (msg.startsWith (prefix + "picture")) {
        number = 3;
        var random = Math.floor (Math.random() * (number)) + 1;
