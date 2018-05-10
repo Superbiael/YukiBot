@@ -34,16 +34,16 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
  
-       // random image command
-
-//     yuki1 = "./randomimg/yuki1.png" ; yuki2 = "./randomimg/yuki2.png" ; yuki3 = "./randomimg/yuki3.png";
+       // random image command files:["./images/youbetterwatchout.png"]}
+  
+//     yuki1 = "./imgages/yuki1.png" ; yuki2 = "./images/yuki2.png" ; yuki3 = "./images/yuki3.png";
 //     if (msg.startsWith (prefix + "picture")) {
 //       number = 3;
 //       var random = Math.floor (Math.random() * (number)) + 1;
 //       switch (random) {
-//         case 1: message.channel.send ({ files: [yuki1] }); break;
-//         case 2: message.channel.send ({ files: [yuki2] }); break;
-//         case 3: message.channel.send ({ files: [yuki3] }); break;
+//         case 1: message.channel.send ({files: [yuki1]}); break;
+//         case 2: message.channel.send ({files: [yuki2]}); break;
+//         case 3: message.channel.send ({files: [yuki3]}); break;
 //       }
 //     }
   
