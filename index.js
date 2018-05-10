@@ -47,9 +47,9 @@ bot.on('message', message => {
   if (msg.startsWith ("i love you yuki")) {
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
-        message.channel.send("I love you too,  Satsujin. <:kissyface:407041007020933131>");
+        message.channel.send("I love you too,  Satsujin. <:kissyface:407041007020933131> I don't know how into words how happy I am with you here.");
       } else {
-        message.channel.send("Ah, you're not Satsujin.");
+        message.channel.send("I see. I appreciate the sentiment, however my affection lies elsewhere...");
       }
   }
   
