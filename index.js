@@ -34,6 +34,16 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
    
+    if(msg.startsWith (prefix + "pic")) {
+      number = 3; 
+      var random = Math.floor (Math.random() * (number)) + 1;
+      switch (random) {
+        case 1: message.channel.send ("", {files:["./images/yuki1.png"]}); break;
+        case 2: message.channel.send ("", {files:["./images/yuki2.png"]}); break;
+        case 3: message.channel.send ("", {files:["./images/yuki3.png"]}); break;
+      }
+    }
+  
      mention = message.mentions.users.first();
 
   if (msg.startsWith (prefix + "send")) {
