@@ -39,8 +39,8 @@ bot.on('message', message => {
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
         case 1: message.channel.send ("", {files:["./images/yuki1.png"]}); break;
-        case 2: message.channel.send ("", {files:["./images/yuki2.png"]}); break;
-        case 3: message.channel.send ("", {files:["./images/yuki3.png"]}); break;
+        case 2: message.channel.send ("", {files:["./images/Yuki2.png"]}); break;
+        case 3: message.channel.send ("", {files:["./images/Yuki3.png"]}); break;
       }
     }
   
