@@ -116,7 +116,7 @@ bot.on("message", async message => {
       if(message.member.roles.has(modRole.id)) {
         message.channel.send("Fufu... You're being affectionate today. Come here. <:kissyface:407041007020933131>");
       } else {
-        message.channel.send("Who're you again?");
+        message.channel.send("I'm sorry but these lips are reserved for Satsujin until the end of time (lol)");
       }
   }
   
