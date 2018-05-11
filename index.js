@@ -53,7 +53,7 @@ bot.on('message', message => {
         case 13: message.channel.send ({files:["./images/yuki_taisho.png"]}); break;
         case 14: message.channel.send ({files:["./images/yuki_work.png"]}); break;
         case 15: message.channel.send ({files:["./images/yuki_worksr.png"]}); break;
-        case 16: message.channel.send ({files:["/images/yuki_xmas.png"]}); break;
+        case 16: message.channel.send ({files:["./images/yuki_xmas.png"]}); break;
         case 17: message.channel.send ({files:["./images/yuki_zodiac.png"]}); break;
       }
     }
