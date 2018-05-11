@@ -44,7 +44,7 @@ bot.on('message', message => {
         case 4: message.channel.send ({files:["./images/yuki_monster.png"]}); break;
         case 5: message.channel.send ({files:["./images/yuki_nodoubt.png"]}); break;
         case 6: message.channel.send ({files:["./images/yuki_ordinarydays.png"]}); break;
-        case 7: message.channel.send ({files:["./images/yuki_ordinarydaysr.png.png"]}); break;
+        case 7: message.channel.send ({files:["./images/yuki_ordinarydaysr.png"]}); break;
         case 8: message.channel.send ({files:["./images/yuki_ordinarydayssr.png"]}); break;
         case 9: message.channel.send ({files:["./images/yuki_rabbit.png"]}); break;
         case 10: message.channel.send ({files:["./images/yuki_rabbitsr.png"]}); break;
@@ -59,7 +59,8 @@ bot.on('message', message => {
         case 19: message.channel.send ({files:["./images/yuki_order.png"]}); break;
         case 20: message.channel.send ({files:["./images/yuki_winter.png"]}); break;
         case 21: message.channel.send ({files:["./images/yuki_winterssr.png"]}); break;
-        case 22: message.channel.send ({files:["./images/yuki_shuffle.png.png"]}); break;
+        case 22: message.channel.send ({files:["./images/yuki_shuffle.png"]}); break;
+        case 23: message.channel.send ({files:["./images/yuki_kiseki.png"]}); break;
       }
     }
   
