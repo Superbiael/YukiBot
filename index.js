@@ -34,13 +34,16 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
    
-    if(msg.startsWith (prefix + "pic")) {
-      number = 3; 
+    if(msg.startsWith (prefix + "scout")) {
+      number = 6; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
-        case 1: message.channel.send ("", {files:["./images/Yuki1.png"]}); break;
-        case 2: message.channel.send ("", {files:["./images/Yuki2.png"]}); break;
-        case 3: message.channel.send ("", {files:["./images/Yuki3.png"]}); break;
+        case 1: message.channel.send ({files:["./images/yuki_disone.png"]}); break;
+        case 2: message.channel.send ({files:["./images/yuki_kingpudding.png"]}); break;
+        case 3: message.channel.send ({files:["./images/yuki_marchen.png"]}); break;
+        case 4: message.channel.send ({files:["./images/yuki_monster.png"]}); break;
+        case 5: message.channel.send ({files:["./images/yuki_nodoubt.png"]}); break;
+        case 6: message.channel.send ({files:["./images/yuki_ordinarydaysr.png"]})); break;
       }
     }
   
