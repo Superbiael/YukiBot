@@ -35,7 +35,7 @@ bot.on('message', message => {
      msg = message.content.toLowerCase();
    
     if(msg.startsWith (prefix + "scout")) {
-      number = 6; 
+      number = 17; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
         case 1: message.channel.send ({files:["./images/yuki_disone.png"]}); break;
@@ -44,6 +44,17 @@ bot.on('message', message => {
         case 4: message.channel.send ({files:["./images/yuki_monster.png"]}); break;
         case 5: message.channel.send ({files:["./images/yuki_nodoubt.png"]}); break;
         case 6: message.channel.send ({files:["./images/yuki_ordinarydays.png"]}); break;
+        case 7: message.channel.send ({files:["./images/yuki_ordinarydaysr.png.png"]}); break;
+        case 8: message.channel.send ({files:["./images/yuki_ordinarydayssr.png"]}); break;
+        case 9: message.channel.send ({files:["./images/yuki_rabbit.png"]}); break;
+        case 10: message.channel.send ({files:["./images/yuki_rabbitsr.png"]}); break;
+        case 11: message.channel.send ({files:["./images/yuki_rehearsal.png"]}); break;          
+        case 12: message.channel.send ({files:["./images/yuki_rehearsalsr.png"]}); break;
+        case 13: message.channel.send ({files:["./images/yuki_taisho.png"]}); break;
+        case 14: message.channel.send ({files:["./images/yuki_work.png"]}); break;
+        case 15: message.channel.send ({files:["./images/yuki_worksr.png"]}); break;
+        case 16: message.channel.send ({files:["/images/yuki_xmas.png"]}); break;
+        case 17: message.channel.send ({files:["./images/yuki_zodiac.png"]}); break;
       }
     }
   
