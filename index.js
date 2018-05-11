@@ -73,6 +73,14 @@ bot.on('message', message => {
         mention.send (mentionMessage);
 //        return message.channel.send ("Message sent.");
       }
+  if (msg.startsWith ("take an 8 hour nap with me yuki")) {
+      let modRole = message.guild.roles.find("name","YUKILOVER69.");
+      if(message.member.roles.has(modRole.id)) {
+        message.channel.send("A nap does sound nice right now... Alright, let's go.");
+      } else {
+        message.channel.send("I'll pass, actually...");
+      }
+  }
   
   if (msg.startsWith ("i love you yuki")) {
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
