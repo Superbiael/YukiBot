@@ -35,7 +35,7 @@ bot.on('message', message => {
      msg = message.content.toLowerCase();
    
     if(msg.startsWith (prefix + "scout")) {
-      number = 26; 
+      number = 32; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
         case 1: message.channel.send ({files:["./images/yuki_disone.png"]}); break;
@@ -64,6 +64,12 @@ bot.on('message', message => {
         case 24: message.channel.send ({files:["./images/yuki_rehearsal_ur.png"]}); break;
         case 25: message.channel.send ({files:["./images/yuki_gothichalloween_ssr.png"]}); break;
         case 26: message.channel.send ({files:["./images/yuki_whiteday_sr.png"]}); break;
+        case 27: message.channel.send ({files:["./images/yuki_whiteday_ssr.png"]}); break;
+        case 28: message.channel.send ({files:["./images/yuki_xmasmagic_ssr.png"]}); break;
+        case 29: message.channel.send ({files:["./images/yuki_valentine_ssr.png"]}); break;
+        case 30: message.channel.send ({files:["./images/yuki_sweets_ssr.png"]}); break;
+        case 31: message.channel.send ({files:["./images/yuki_sparkle_ssr.png"]}); break;
+        case 32: message.channel.send ({files:["yuki_esperanza_ssr.png"]}); break;
       }
     }
   
