@@ -35,7 +35,7 @@ bot.on('message', message => {
      msg = message.content.toLowerCase();
    
     if(msg.startsWith (prefix + "scout")) {
-      number = 22; 
+      number = 23; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
         case 1: message.channel.send ({files:["./images/yuki_disone.png"]}); break;
