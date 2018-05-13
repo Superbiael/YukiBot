@@ -166,6 +166,12 @@ bot.on("message", async message => {
   return message. channel.send(botembed);
   }
 
+  if(cmd === `${prefix}say`){
+  let botmessage = args.join(" ");
+  message.delete().catch();
+  message.channel.send(botmessage);
+}
+  
   if(cmd === `${prefix}smooch`){
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
