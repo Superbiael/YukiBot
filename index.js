@@ -175,7 +175,7 @@ bot.on("message", async message => {
   if(cmd === `${prefix}smooch`){
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
-        message.channel.send("Fufu... You're being affectionate today. Come here. <:kissyface:407041007020933131>");
+        message.channel.send("Fufu... You're being affectionate today. Come here.");
       } else {
         message.channel.send("I'm sorry but these lips are reserved for Satsujin until the end of time (lol)");
       }
