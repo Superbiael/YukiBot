@@ -34,6 +34,15 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
    
+    if(msg.startsWith (prefix + "smooch")) {
+      number = 2;
+      var random = Math.floor (Math.random() * (number)) + 1;
+      switch (random) {
+        case 1: message.channel.send ( "Fufu... You're being affectionate today. Come here."); break;
+        case 2: message.channel.send ( "My heart races in more ways than one when you do that, you know?"); break;
+     }
+   }
+  
     if(msg.startsWith (prefix + "scout")) {
       number = 38; 
       var random = Math.floor (Math.random() * (number)) + 1;
@@ -88,6 +97,11 @@ bot.on('message', message => {
         mention.send (mentionMessage);
 //        return message.channel.send ("Message sent.");
       }
+  
+  if (msg.startsWith ("hey gays")) {
+    return message.channel.send("And Gaku.");
+  }
+  
   if (msg.startsWith ("take an 8 hour nap with me yuki")) {
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
@@ -109,11 +123,7 @@ bot.on('message', message => {
   if (msg.startsWith ("yuppi")) {
     return message.channel.send("Gakkyun.");
   }
-  
-  if (msg.startsWith ("hey gays")) {
-    return message.channel.send("And Gaku.");
-  }
-  
+    
   if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
   }
@@ -170,14 +180,14 @@ bot.on("message", async message => {
   message.channel.send(botmessage);
 }
   
-  if(cmd === `${prefix}smooch`){
-      let modRole = message.guild.roles.find("name","YUKILOVER69.");
-      if(message.member.roles.has(modRole.id)) {
-        message.channel.send("Fufu... You're being affectionate today. Come here.");
-      } else {
-        message.channel.send("I'm sorry but these lips are reserved for Satsujin until the end of time (lol)");
-      }
-  }
+//   if(cmd === `${prefix}smooch`){
+//       let modRole = message.guild.roles.find("name","YUKILOVER69.");
+//       if(message.member.roles.has(modRole.id)) {
+//         message.channel.send("Fufu... You're being affectionate today. Come here.");
+//       } else {
+//         message.channel.send("I'm sorry but these lips are reserved for Satsujin until the end of time (lol)");
+//       }
+//   }
   
   if(cmd === `${prefix}watchout`){
   return message.channel.send ("You better watch out.", {files:["./images/youbetterwatchout.png"]});
