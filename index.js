@@ -34,7 +34,7 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
    
-    if(msg.startsWith (prefix + "smooch")) {
+  if(msg.startsWith (prefix + "smooch")) {
       number = 2;
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
@@ -43,7 +43,7 @@ bot.on('message', message => {
      }
    }
   
-    if(msg.startsWith (prefix + "scout")) {
+  if(msg.startsWith (prefix + "scout")) {
       number = 38; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
@@ -170,7 +170,7 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
-    if(cmd ===`${prefix}help`){
+  if(cmd ===`${prefix}help`){
     let helpembed = new Discord.RichEmbed()
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#00ff67")
