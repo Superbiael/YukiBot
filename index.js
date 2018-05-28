@@ -170,8 +170,18 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
-  if(cmd ===`${prefix}botinfo`){
+    if(cmd ===`${prefix}help`){
+    let helpembed = new Discord.RichEmbed()
+    .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
+    .setColor("#00ff67")
+    .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message")
+    .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || c - ss rank *(ex: ss!rank)* || watchout")
+    .addField("Command phrases:", "I can't believe Ryo is dead || I'm gonna munch|| I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Hey gays")
 
+    message.channel.send(helpembed);
+  }
+  
+  if(cmd ===`${prefix}botinfo`){
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
     .setDescription("Bot Information")
