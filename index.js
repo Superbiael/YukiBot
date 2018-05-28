@@ -116,22 +116,13 @@ bot.on('message', message => {
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabit?"); break;
-       case 2: message.channel.send ("I'm a vegetarian. Not for spirtual reasons, just because I prefer thta sort of food."); break;
+       case 2: message.channel.send ("I'm a vegetarian. Not for spirtual reasons, just because I prefer that sort of food."); break;
        case 3: message.channel.send ("If I have the time to eat breakfast, Id rather spend it sleeping..."); break;
-       case 4: message.channel.send ("I've used the \"relative's funeral\" excuse so many times over my school years that I don't remember how much of my family is supposed to be dead by now. I need to come up with something else. \nMaybe I'll go with some kind of illness.")
-       case 5: message.channel.send ("What were we talking about again? How great I am at cooking?")
+       case 4: message.channel.send ("I've used the \"relative's funeral\" excuse so many times over my school years that I don't remember how much of my family is supposed to be dead by now. I need to come up with something else. \nMaybe I'll go with some kind of illness."); break;
+       case 5: message.channel.send ("What were we talking about again? How great I am at cooking?"); break;
     }
   }
-  
-  if (msg.startsWith ("take an 8 hour nap with me yuki")) {
-      let modRole = message.guild.roles.find("name","YUKILOVER69.");
-      if(message.member.roles.has(modRole.id)) {
-        message.channel.send("A nap does sound nice right now... Alright, let's go.");
-      } else {
-        message.channel.send("I'll pass, actually...");
-      }
-  }
-  
+   
   if (msg.startsWith ("i love you yuki")) {
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
@@ -163,10 +154,6 @@ bot.on('message', message => {
 
   if (msg.startsWith ("good night yuki")) {
     return message.channel.send("Good kids should head to sleep early.");
-  }
-
-  if (msg.startsWith ("pika~")) {
-    return message.channel.send("Chu~ <:pika2:383925508683071498>");
   }
   
 });
