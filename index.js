@@ -132,10 +132,6 @@ bot.on('message', message => {
       }
   }
     
-  if (msg.startsWith ("yuppi")) {
-    return message.channel.send("Gakkyun.");
-  }
-    
   if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
   }
