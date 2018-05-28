@@ -102,6 +102,27 @@ bot.on('message', message => {
     return message.channel.send("And Gaku.");
   }
   
+   if(msg.startsWith (prefix + "order")) {
+     number = 2;
+     var random = Math.floor (Math.random() * (number)) + 1;
+     switch (random) {
+       case 1: message.channel.send ("We're fresh out of Yuki (lol)"); break;
+       case 2: message.channel.send ("I was bought out by a certain Mr. Satsujin, you see."); break;
+    }
+   }
+  
+   if(msg.startsWith (prefix + "quote")) {
+     number = 5;
+     var random = Math.floor (Math.random() * (number)) + 1;
+     switch (random) {
+       case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabit?"); break;
+       case 2: message.channel.send ("I'm a vegetarian. Not for spirtual reasons, just because I prefer thta sort of food."); break;
+       case 3: message.channel.send ("If I have the time to eat breakfast, Id rather spend it sleeping..."); break;
+       case 4: message.channel.send ("I've used the \"relative's funeral\" excuse so many times over my school years that I don't remember how much of my family is supposed to be dead by now. I need to come up with something else. \nMaybe I'll go with some kind of illness.")
+       case 5: message.channel.send ("What were we talking about again? How great I am at cooking?")
+    }
+  }
+  
   if (msg.startsWith ("take an 8 hour nap with me yuki")) {
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
@@ -180,15 +201,6 @@ bot.on("message", async message => {
   message.channel.send(botmessage);
 }
   
-//   if(cmd === `${prefix}smooch`){
-//       let modRole = message.guild.roles.find("name","YUKILOVER69.");
-//       if(message.member.roles.has(modRole.id)) {
-//         message.channel.send("Fufu... You're being affectionate today. Come here.");
-//       } else {
-//         message.channel.send("I'm sorry but these lips are reserved for Satsujin until the end of time (lol)");
-//       }
-//   }
-  
   if(cmd === `${prefix}watchout`){
   return message.channel.send ("You better watch out.", {files:["./images/youbetterwatchout.png"]});
   }  
@@ -203,14 +215,6 @@ bot.on("message", async message => {
 
   if(cmd === `${prefix}ryo`){
     return message.channel.send("Oh fuck. Bastard spotted.");
-  }
-
-  if(cmd === `${prefix}order`){
-    return message.channel.send("We're fresh out of Yuki (lol) ");
-  }
-
-  if(cmd === `${prefix}car`){
-    return message.channel.send("Papa, buy me a new car.");
   }
 
   if(cmd === `${prefix}crank`){
