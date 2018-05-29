@@ -19,7 +19,6 @@ fs.readdir("./commands/", (err, files) => {
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
   });
-
 });
 
 bot.on("ready", async () => {
@@ -27,7 +26,6 @@ bot.on("ready", async () => {
   bot.user.setActivity("Satsujin love bot", {type:0});
 
 });
-
 
 bot.on('message', message => {
   if (message.author.bot) return;
@@ -95,7 +93,7 @@ bot.on('message', message => {
         message.delete();
         mentionMessage = message.content.slice(6);
         mention.send (mentionMessage);
-//        return message.channel.send ("Message sent.");
+//         return message.channel.send ("Message sent.");
       }
   
   if (msg.startsWith ("hey gays")) {
@@ -112,14 +110,17 @@ bot.on('message', message => {
    }
   
    if(msg.startsWith (prefix + "quote")) {
-     number = 5;
+     number = 8;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
-       case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabit?"); break;
+       case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
        case 2: message.channel.send ("I'm a vegetarian. Not for spirtual reasons, just because I prefer that sort of food."); break;
        case 3: message.channel.send ("If I have the time to eat breakfast, I'd rather spend it sleeping..."); break;
        case 4: message.channel.send ("I've used the \"relative's funeral\" excuse so many times over my school years that I don't remember how much of my family is supposed to be dead by now. I need to come up with something else. \nMaybe I'll go with some kind of illness."); break;
        case 5: message.channel.send ("What were we talking about again? How great I am at cooking?"); break;
+       case 6: message.channel.send ("Aren't you tired of looking at this bespectacled man by now? How about someone grown-up, and a classic *ikemen*?"); break;
+       case 7: message.channel.send ("I'll tell you as much personal information as you want. First, should I tell you my three sizes?"); break;
+       case 8: message.channel.send ("If it is true that we are what we eat, then I am made of very strong vegetables."); break;
     }
   }
    
@@ -145,8 +146,13 @@ bot.on('message', message => {
   }
 
   if (msg.startsWith ("good morning yuki")) {
-    return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
-  }
+      let modRole = message.guild.roles.find("name","YUKILOVER69.");
+      if(message.member.roles.has(modRole.id)) {
+        message.channel.send("Ah, Satsujin, I thought you were an angel for a moment...");
+      } else {
+        message.channel.send("Good morning. I wish I could sleep for 8 hours.");
+        }
+    }
 
   if (msg.startsWith ("good night yuki")) {
     return message.channel.send("Good kids should head to sleep early.");
