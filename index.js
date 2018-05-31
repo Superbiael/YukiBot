@@ -74,7 +74,7 @@ bot.on('message', message => {
         case 15: message.channel.send ({files:["./images/yuki_nodoubt_ssr.png"]}); break;
         case 16: message.channel.send ({files:["./images/yuki_order_ssr.png"]}); break;
         case 17: message.channel.send ({files:["./images/yuki_ordinarydays_r.png"]}); break;
-        case 18: message.channel.send ({files:["./images/yuki_ordinaryday_sr.png"]}); break;
+        case 18: message.channel.send ({files:["./images/yuki_ordinarydays_sr.png"]}); break;
         case 19: message.channel.send ({files:["./images/yuki_ordinarydays_ssr.png"]}); break;
         case 20: message.channel.send ({files:["./images/yuki_rabbit_sr.png"]}); break;
         case 21: message.channel.send ({files:["./images/yuki_rabbit_ssr.png"]}); break;
