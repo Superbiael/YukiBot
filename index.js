@@ -117,12 +117,12 @@ bot.on('message', message => {
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("We're fresh out of Yuki (lol)"); break;
-       case 2: message.channel.send ("Unfortunate for you, but fortunate for me, I was bought out by a certain Mr. Satsujin, you see."); break;
+       case 2: message.channel.send ("Unfortunate for you, but fortunate for me, I was bought out by a certain Mr. Satsujin, you see (lol)"); break;
     }
    }
   
    if(msg.startsWith (prefix + "quote")) {
-     number = 8;
+     number = 9;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -133,6 +133,7 @@ bot.on('message', message => {
        case 6: message.channel.send ("Aren't you tired of looking at this bespectacled man by now? How about someone grown-up, and a classic *ikemen*?"); break;
        case 7: message.channel.send ("I'll tell you as much personal information as you want. First, should I tell you my three sizes?"); break;
        case 8: message.channel.send ("If it is true that we are what we eat, then I am made of very strong vegetables."); break;
+       case 9: message.channel.send ("Since I have someone who keeps praising me with \"ikemen, ikemen\", that's probably how I can stay beautiful. I'm a \"Praise me and I'll grow\" type after all."); break;
     }
   }
 
