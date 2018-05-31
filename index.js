@@ -45,7 +45,7 @@ bot.on('message', message => {
        number = 5;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
-         case 1: message.channel.send ("As expected, I'm also pleased."); break;
+         case 1: message.channel.send ("As expected, I'm also pleased. "); break;
          case 2: message.channel.send ("I'm going to imitate Momo. Yay~! You did it!"); break;
          case 3: message.channel.send ("Next time I expect you to try harder."); break;
          case 4: message.channel.send ("What’s wrong, that you can’t do something like this?"); break;
