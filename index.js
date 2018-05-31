@@ -54,7 +54,7 @@ bot.on('message', message => {
     }
   
   if(msg.startsWith (prefix + "scout")) {
-      number = 38; 
+      number = 2; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
 //         case 1: message.channel.send ({files:["./images/yuki_birthday.png"]}); break;
@@ -67,7 +67,7 @@ bot.on('message', message => {
 //         case 8: message.channel.send ({files:["./images/yuki_order.png"]}); break;
 //         case 9: message.channel.send ({files:["./images/yuki_rabbit.png"]}); break;
 //         case 10: message.channel.send ({files:["./images/yuki_rabbitsr.png"]}); break;
-//         case 11: message.channel.send ({files:["./images/yuki_xmas.png"]}); break;     
+        case 1: message.channel.send ({files:["./images/yuki_xmasmagic_ssr.png"]}); break;     
 //         case 12: message.channel.send ({files:["./images/yuki_linked.png"]}); break;
 //         case 13: message.channel.send ({files:["./images/yuki_monster.png"]}); break;
 //         case 14: message.channel.send ({files:["./images/yuki_monstersr.png"]}); break;
@@ -81,7 +81,7 @@ bot.on('message', message => {
 //         case 22: message.channel.send ({files:["./images/yuki_valentine_ssr.png"]}); break;
 //         case 23: message.channel.send ({files:["./images/yuki_work.png"]}); break;
 //         case 24: message.channel.send ({files:["./images/yuki_worksr.png"]}); break;
-//         case 25: message.channel.send ({files:["./images/yuki_xmasrock_ssr.png"]}); break;
+        case 2: message.channel.send ({files:["./images/yuki_xmasrock_ssr.png"]}); break;
 //         case 26: message.channel.send ({files:["./images/yuki_zodiac.png"]}); break;  
 //         case 27: message.channel.send ({files:["./images/yuki_disone.png"]}); break;
 //         case 28: message.channel.send ({files:["./images/yuki_kingpudding.png"]}); break;
