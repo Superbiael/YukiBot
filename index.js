@@ -41,6 +41,18 @@ bot.on('message', message => {
      }
    }
   
+   if(msg.startsWith (prefix + "rank")) {
+       number = 5;
+       var random = Math.floor (Math.random() * (number)) + 1;
+       switch (random) {
+         case 1: message.channel.send ("As expected, I'm also pleased."); break;
+         case 2: message.channel.send ("I'm going to imitate Momo. Yay~! You did it!"); break;
+         case 3: message.channel.send ("Next time I expect you to try harder."); break;
+         case 4: message.channel.send ("What’s wrong, that you can’t do something like this?"); break;
+         case 5: message.channel.send ("We're going to have a secret intensive training session together."); break;
+      }
+    }
+  
   if(msg.startsWith (prefix + "scout")) {
       number = 38; 
       var random = Math.floor (Math.random() * (number)) + 1;
@@ -177,7 +189,7 @@ bot.on("message", async message => {
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#00ff67")
     .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message")
-    .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || c - ss rank *(ex: y!ssrank)* || watchout")
+    .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || rank || watchout")
     .addField("Command phrases:", "I can't believe Ryo is dead || I'm gonna munch|| I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Hey gays")
 
     message.channel.send(helpembed);
@@ -216,25 +228,6 @@ bot.on("message", async message => {
     return message.channel.send("Oh fuck. Bastard spotted.");
   }
 
-  if(cmd === `${prefix}crank`){
-    return message.channel.send("We're going to have a secret intensive training session together.");
-  }
-  
-  if(cmd === `${prefix}srank`){
-    return message.channel.send("I’m going to imitate Momo. Yay~! You did it!");
-  }
-  
-  if(cmd === `${prefix}arank`){
-    return message.channel.send("Next time, I expect you to try harder.");
-  }
-  
-    if(cmd === `${prefix}brank`){
-    return message.channel.send("What’s wrong, that you can’t do something like this?");
-  }
-  
-   if(cmd === `${prefix}ssrank`){
-    return message.channel.send("As expected. I’m also pleased.");
-  }
 });
 
 bot.login(process.env.token);
