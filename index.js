@@ -136,14 +136,14 @@ bot.on('message', message => {
     }
   }
    
-  if (msg.startsWith ("i love you yuki")) {
-      let modRole = message.guild.roles.find("name","YUKILOVER69.");
-      if(message.member.roles.has(modRole.id)) {
-        message.channel.send("I love you too,  Satsujin. I don't know how to put into words how happy I am with you here.");
-      } else {
-        message.channel.send("I see. I appreciate the sentiment, however my affection lies elsewhere...");
-      }
-  }
+  if(msg.startsWith (prefix + "smooch")) {
+      number = 2;
+      var random = Math.floor (Math.random() * (number)) + 1;
+      switch (random) {
+        case 1: message.channel.send ( "Fufu... You're being affectionate today. Come here."); break;
+        case 2: message.channel.send ( "My heart races in more ways than one when you do that, you know?"); break;
+     }
+   }
     
   if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
@@ -157,6 +157,15 @@ bot.on('message', message => {
     return message.channel.send("I'm right here.");
   }
 
+  // if (msg.startsWith ("i love you yuki")) {
+  //     let modRole = message.guild.roles.find("name","YUKILOVER69.");
+  //     if(message.member.roles.has(modRole.id)) {
+  //       message.channel.send("I love you too,  Satsujin. I don't know how to put into words how happy I am with you here.");
+  //     } else {
+  //       message.channel.send("I see. I appreciate the sentiment, however my affection lies elsewhere...");
+  //     }
+  // }
+  
   if (msg.startsWith ("good morning yuki")) {
       let modRole = message.guild.roles.find("name","YUKILOVER69.");
       if(message.member.roles.has(modRole.id)) {
