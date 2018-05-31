@@ -98,8 +98,8 @@ bot.on('message', message => {
       }
     }
   
-     mention = message.mentions.users.first();
-
+  mention = message.mentions.users.first();
+  
   if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
         message.delete();
