@@ -135,16 +135,7 @@ bot.on('message', message => {
        case 8: message.channel.send ("If it is true that we are what we eat, then I am made of very strong vegetables."); break;
     }
   }
-   
-  if(msg.startsWith (prefix + "smooch")) {
-      number = 2;
-     var random = Math.floor (Math.random() * (number)) + 1;
-     switch (random) {
-        case 1: message.channel.send ( "Fufu... You're being affectionate today. Come here."); break;
-        case 2: message.channel.send ( "My heart races in more ways than one when you do that, you know?"); break;
-     }
-   }
-    
+
   if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
   }
