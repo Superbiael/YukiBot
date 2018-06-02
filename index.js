@@ -122,7 +122,7 @@ bot.on('message', message => {
    }
   
    if(msg.startsWith (prefix + "quote")) {
-     number = 9;
+     number = 10;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -134,6 +134,7 @@ bot.on('message', message => {
        case 7: message.channel.send ("I'll tell you as much personal information as you want. First, should I tell you my three sizes?"); break;
        case 8: message.channel.send ("If it is true that we are what we eat, then I am made of very strong vegetables."); break;
        case 9: message.channel.send ("Since I have someone who keeps praising me with \"ikemen, ikemen\", that's probably how I can stay beautiful. I'm a \"Praise me and I'll grow\" type after all."); break;
+       case 10: message.channel.send ("I'm more or less \nalive."); break;
     }
   }
 
