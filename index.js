@@ -153,7 +153,7 @@ bot.on('message', message => {
     number = 2;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
-      case 1: message.channel.send ("I love you too, Satsujin. I don't know how to put into works how happy I am with you."); break;
+      case 1: message.channel.send ("I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
       case 2: message.channel.send ("I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
    }
  }
