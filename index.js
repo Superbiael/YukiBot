@@ -217,6 +217,15 @@ bot.on("message", async message => {
   message.delete().catch();
   message.channel.send(botmessage);
 }
+
+  if(cmd === `${prefix}clear`){
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("oof.");
+  if(!args[0]) return message.channel.send("oof.");
+  message.channel.bulkDelete(args[0]).then(() => {
+    message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
+  });
+}
+  
   
   if(cmd === `${prefix}watchout`){
   return message.channel.send ("You better watch out.", {files:["./images/youbetterwatchout.png"]});
