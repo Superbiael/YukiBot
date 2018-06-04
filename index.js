@@ -122,7 +122,7 @@ bot.on('message', message => {
    }
   
    if(msg.startsWith (prefix + "quote")) {
-     number = 10;
+     number = 14;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -135,6 +135,10 @@ bot.on('message', message => {
        case 8: message.channel.send ("If it is true that we are what we eat, then I am made of very strong vegetables."); break;
        case 9: message.channel.send ("Since I have someone who keeps praising me with \"ikemen, ikemen\", that's probably how I can stay beautiful. I'm a \"Praise me and I'll grow\" type after all."); break;
        case 10: message.channel.send ("I'm more or less \nalive."); break;
+       case 11: message.channel.send ("I'm getting sleepy so I'll go to bed."); break;
+       case 12: message.channel.send ("Momo says that Re:vale's success is thanks to me, but it's probably thanks to Momo."); break;
+       case 13: message.channel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? LOL"); break;
+       case 14: message.channel.send ("Let Satsujin know that I'll be doing fanservice for him."); break;
     }
   }
 
