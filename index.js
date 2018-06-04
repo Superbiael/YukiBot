@@ -180,7 +180,7 @@ bot.on('message', message => {
 
 bot.on("message", async message => {
   if(message.author.box) return;
-  if(message.channel.type === "dm") return;
+//   if(message.channel.type === "dm") return;
 
   let prefix = 'y!';
   let messageArray = message.content.split( " ");
