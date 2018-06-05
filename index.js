@@ -137,7 +137,7 @@ bot.on('message', message => {
        case 10: message.channel.send ("I'm more or less \nalive."); break;
        case 11: message.channel.send ("I'm getting sleepy so I'll go to bed."); break;
        case 12: message.channel.send ("Momo says that Re:vale's success is thanks to me, but it's probably thanks to Momo."); break;
-       case 13: message.channel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? LOL"); break;
+       case 13: message.channel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? lol"); break;
        case 14: message.channel.send ("Let Satsujin know that I'll be doing fanservice for him."); break;
     }
   }
