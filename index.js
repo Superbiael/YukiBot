@@ -224,8 +224,7 @@ bot.on("message", async message => {
   message.channel.bulkDelete(args[0]).then(() => {
     message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
   });
-}
-  
+}  
   
   if(cmd === `${prefix}watchout`){
   return message.channel.send ("You better watch out.", {files:["./images/youbetterwatchout.png"]});
