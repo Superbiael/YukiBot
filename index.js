@@ -142,6 +142,10 @@ bot.on('message', message => {
     }
   }
 
+  if (msg.startsWith ("<:blockchu:451782181543477258>")) {
+    return message.channel.send("<:blockchu:451782181543477258>");
+  }
+  
   if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
   }
