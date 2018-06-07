@@ -230,6 +230,10 @@ bot.on("message", async message => {
   });
 }  
   
+  if(cmd === `${prefix}cat`){
+    return message.channel.send ({files:["./images/cat.png"]});
+  }
+  
   if(cmd === `${prefix}watchout`){
   return message.channel.send ("You better watch out.", {files:["./images/youbetterwatchout.png"]});
   }  
