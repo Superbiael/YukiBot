@@ -53,10 +53,12 @@ bot.on('message', message => {
       }
     }
   
-  if(msg.startsWith (prefix + "scout")) {
-      number = 38; 
-      var random = Math.floor (Math.random() * (number)) + 1;
-      switch (random) {
+    if(msg.startsWith (prefix + "scout")) {
+      let emoji = message.guild.emojis.find('name', "yuppi");
+      message.react(emoji);
+        number = 38;
+        var random = Math.floor (Math.random() * (number)) + 1;
+        switch (random) {
         case 1: message.channel.send ({files:["./images/yuki_birthday_sr.png"]}); break;
         case 2: message.channel.send ({files:["./images/yuki_birthday_ssr.png"]}); break;
         case 3: message.channel.send ({files:["./images/yuki_disone_ssr.png"]}); break;
