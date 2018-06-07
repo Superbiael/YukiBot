@@ -239,6 +239,7 @@ bot.on("message", async message => {
   }
 
   if(cmd === `${prefix}leaf`){
+    message.react('🍃');
     return message.channel.send("Babe, that me leaf 🍃");
   }
 
