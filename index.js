@@ -33,6 +33,7 @@ bot.on('message', message => {
      msg = message.content.toLowerCase();
    
   if(msg.startsWith (prefix + "smooch")) {
+    if(message.author.id != "182723698711592960") return;
       number = 2;
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
@@ -161,11 +162,14 @@ bot.on('message', message => {
   }
 
   if (msg.startsWith ("i love you yuki")) {
+    if(message.author.id != "182723698711592960") return;
+    let emoji = message.guild.emojis.find('name', "yuppismooch");
+    message.react(emoji);
     number = 2;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
-      case 1: message.channel.send ("I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
-      case 2: message.channel.send ("I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
+      case 1: message.channel.send ("<:yuppismooch:454423176026390534> I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
+      case 2: message.channel.send ("<:yuppismooch:454423176026390534> I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
    }
  }
   
@@ -212,8 +216,8 @@ bot.on("message", async message => {
     .setDescription("Bot Information")
     .setColor("#00ff67")
     .setThumbnail(bicon)
-    .addField("Bot Name", bot.user.username)
-
+    .addField("Name:", bot.user.username)
+    .addField("Twitter:", "https://twitter.com/Superbiael")
   return message. channel.send(botembed);
   }
 
@@ -224,6 +228,7 @@ bot.on("message", async message => {
 }
 
   if(cmd === `${prefix}clear`){
+  if(message.author.id != "182723698711592960") return;  
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("oof.");
   if(!args[0]) return message.channel.send("oof.");
   message.channel.bulkDelete(args[0]).then(() => {
