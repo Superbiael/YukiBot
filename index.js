@@ -122,6 +122,12 @@ bot.on('message', message => {
     return message.channel.send("And Gaku.");
   }
   
+   if(msg.startsWith (prefix + "nuzzle")) {
+     if(message.author.id != "182723698711592960") return;
+         return message.channel.send ("Fufu, that tickles. You're so cute when you do that. I can't help myself...");
+      }
+    }
+  
    if(msg.startsWith (prefix + "order")) {
      number = 2;
      var random = Math.floor (Math.random() * (number)) + 1;
