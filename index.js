@@ -125,7 +125,6 @@ bot.on('message', message => {
    if(msg.startsWith (prefix + "nuzzle")) {
      if(message.author.id != "182723698711592960") return;
          return message.channel.send ("Fufu, that tickles. You're so cute when you do that. I can't help myself...");
-      }
     }
   
    if(msg.startsWith (prefix + "order")) {
