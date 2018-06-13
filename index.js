@@ -137,7 +137,7 @@ bot.on('message', message => {
    }
   
    if(msg.startsWith (prefix + "quote")) {
-     number = 14;
+     number = 20;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -154,6 +154,12 @@ bot.on('message', message => {
        case 12: message.channel.send ("Momo says that Re:vale's success is thanks to me, but it's probably thanks to Momo."); break;
        case 13: message.channel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? lol"); break;
        case 14: message.channel.send ("Let Satsujin know that I'll be doing fanservice for him."); break;
+       case 15: message.channel.send ("Sorry if I keep you up all night."); break;
+       case 16: message.channel.send ("Ah, my nail fell off."); break;
+       case 17: message.channel.send ("Well, Re:vale always uses any means necessary to win. We have that motto."); break;
+       case 18: message.channel.send ("I don’t care if they don’t love me. I want everything, from the lowliest of bugs to God himself, to love my songs. \nJust my songs. I only want the people who’ll treasure my songs to listen to them."); break;
+       case 19: message.channel.send ("If I'm going outside, I'd rather do it after sunset."); break;
+       case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemisty-wise, we make a terrible combination."); break;
     }
   }
 
