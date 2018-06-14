@@ -63,52 +63,33 @@ bot.on('message', message => {
       }
     }
   
-    if(msg.startsWith (prefix + "scout")) {
-      let emoji = message.guild.emojis.find('name', "yuppi");
-      message.react(emoji);
-        number = 38;
-        var random = Math.floor (Math.random() * (number)) + 1;
-        switch (random) {
-        case 1: message.channel.send ({files:["./images/yuki_birthday_sr.png"]}); break;
-        case 2: message.channel.send ({files:["./images/yuki_birthday_ssr.png"]}); break;
-        case 3: message.channel.send ({files:["./images/yuki_disone_ssr.png"]}); break;
-        case 4: message.channel.send ({files:["./images/yuki_esperanza_ssr.png"]}); break;
-        case 5: message.channel.send ({files:["./images/yuki_gardentea_ssr.png"]}); break;
-        case 6: message.channel.send ({files:["./images/yuki_gothichalloween_ssr.png"]}); break;
-        case 7: message.channel.send ({files:["./images/yuki_kingpudding_ssr.png"]}); break;
-        case 8: message.channel.send ({files:["./images/yuki_kiseki_ur.png"]}); break;
-        case 9: message.channel.send ({files:["./images/yuki_linked_ssr.png"]}); break;
-        case 10: message.channel.send ({files:["./images/yuki_lullaby_ssr.png"]}); break;
-        case 11: message.channel.send ({files:["./images/yuki_marchen_ssr.png"]}); break;
-        case 12: message.channel.send ({files:["./images/yuki_monster_sr.png"]}); break;
-        case 13: message.channel.send ({files:["./images/yuki_monster_ssr.png"]}); break;
-        case 14: message.channel.send ({files:["./images/yuki_nodoubt_sr.png"]}); break;
-        case 15: message.channel.send ({files:["./images/yuki_nodoubt_ssr.png"]}); break;
-        case 16: message.channel.send ({files:["./images/yuki_order_ssr.png"]}); break;
-        case 17: message.channel.send ({files:["./images/yuki_ordinarydays_r.png"]}); break;
-        case 18: message.channel.send ({files:["./images/yuki_ordinarydays_sr.png"]}); break;
-        case 19: message.channel.send ({files:["./images/yuki_ordinarydays_ssr.png"]}); break;
-        case 20: message.channel.send ({files:["./images/yuki_rabbit_sr.png"]}); break;
-        case 21: message.channel.send ({files:["./images/yuki_rabbit_ssr.png"]}); break;
-        case 22: message.channel.send ({files:["./images/yuki_rehearsal_sr.png"]}); break;
-        case 23: message.channel.send ({files:["./images/yuki_rehearsal_ssr.png"]}); break
-        case 24: message.channel.send ({files:["./images/yuki_rehearsal_ur.png"]}); break;
-        case 25: message.channel.send ({files:["./images/yuki_shuffle_ssr.png"]}); break;
-        case 26: message.channel.send ({files:["./images/yuki_sparkle_ssr.png"]}); break; 
-        case 27: message.channel.send ({files:["./images/yuki_xmasmagic_ssr.png"]}); break;  
-        case 28: message.channel.send ({files:["./images/yuki_sweets_ssr.png"]}); break;
-        case 29: message.channel.send ({files:["./images/yuki_taisho_ssr.png"]}); break;
-        case 30: message.channel.send ({files:["./images/yuki_valentine_ssr.png"]}); break;
-        case 31: message.channel.send ({files:["./images/yuki_whiteday_sr.png"]}); break;
-        case 32: message.channel.send ({files:["./images/yuki_whiteday_ssr.png"]}); break;
-        case 33: message.channel.send ({files:["./images/yuki_winter_sr.png"]}); break;
-        case 34: message.channel.send ({files:["./images/yuki_winter_ssr.png"]}); break;
-        case 35: message.channel.send ({files:["./images/yuki_work_sr.png"]}); break;
-        case 36: message.channel.send ({files:["./images/yuki_work_ssr.png"]}); break;
-        case 37: message.channel.send ({files:["./images/yuki_xmasrock_ssr.png"]}); break;
-        case 38: message.channel.send ({files:["./images/yuki_zodiac_ssr.png"]}); break;        
-      }
+   if(msg.startsWith (prefix + "quote")) {
+     number = 21;
+     var random = Math.floor (Math.random() * (number)) + 1;
+     switch (random) {
+       case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
+       case 2: message.channel.send ("I'm a vegetarian. Not for spirtual reasons, just because I prefer that sort of food."); break;
+       case 3: message.channel.send ("If I have the time to eat breakfast, I'd rather spend it sleeping..."); break;
+       case 4: message.channel.send ("I've used the \"relative's funeral\" excuse so many times over my school years that I don't remember how much of my family is supposed to be dead by now. I need to come up with something else. \nMaybe I'll go with some kind of illness."); break;
+       case 5: message.channel.send ("What were we talking about again? How great I am at cooking?"); break;
+       case 6: message.channel.send ("Aren't you tired of looking at this bespectacled man by now? How about someone grown-up, and a classic *ikemen*?"); break;
+       case 7: message.channel.send ("I'll tell you as much personal information as you want. First, should I tell you my three sizes?"); break;
+       case 8: message.channel.send ("If it is true that we are what we eat, then I am made of very strong vegetables."); break;
+       case 9: message.channel.send ("Since I have someone who keeps praising me with \"ikemen, ikemen\", that's probably how I can stay beautiful. I'm a \"Praise me and I'll grow\" type after all."); break;
+       case 10: message.channel.send ("I'm more or less \nalive."); break;
+       case 11: message.channel.send ("I'm getting sleepy so I'll go to bed."); break;
+       case 12: message.channel.send ("Momo says that Re:vale's success is thanks to me, but it's probably thanks to Momo."); break;
+       case 13: message.channel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? lol"); break;
+       case 14: message.channel.send ("Let Satsujin know that I'll be doing fanservice for him."); break;
+       case 15: message.channel.send ("Sorry if I keep you up all night."); break;
+       case 16: message.channel.send ("Ah, my nail fell off."); break;
+       case 17: message.channel.send ("Well, Re:vale always uses any means necessary to win. We have that motto."); break;
+       case 18: message.channel.send ("I don’t care if they don’t love me. I want everything, from the lowliest of bugs to God himself, to love my songs. \nJust my songs. I only want the people who’ll treasure my songs to listen to them."); break;
+       case 19: message.channel.send ("If I'm going outside, I'd rather do it after sunset."); break;
+       case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemisty-wise, we make a terrible combination."); break;
+       case 21: message.channel.send ("So all I need to do is follow him home without being noticed..."); break;
     }
+  }
     
   if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
