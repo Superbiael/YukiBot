@@ -86,7 +86,7 @@ bot.on('message', message => {
        case 17: message.channel.send ("Well, Re:vale always uses any means necessary to win. We have that motto."); break;
        case 18: message.channel.send ("I don’t care if they don’t love me. I want everything, from the lowliest of bugs to God himself, to love my songs. \nJust my songs. I only want the people who’ll treasure my songs to listen to them."); break;
        case 19: message.channel.send ("If I'm going outside, I'd rather do it after sunset."); break;
-       case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemisty-wise, we make a terrible combination."); break;
+       case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemistry-wise, we make a terrible combination."); break;
        case 21: message.channel.send ("So all I need to do is follow him home without being noticed..."); break;
     }
   }
