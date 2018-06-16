@@ -142,10 +142,6 @@ bot.on('message', message => {
        case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemisty-wise, we make a terrible combination."); break;
     }
   }
-
-  if (msg.startsWith ("<:blockchu:451782181543477258>")) {
-    return message.channel.send("<:blockchu:451782181543477258>");
-  }
   
   if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
