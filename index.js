@@ -64,7 +64,7 @@ bot.on('message', message => {
     }
   
    if(msg.startsWith (prefix + "quote")) {
-     number = 21;
+     number = 22;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -88,6 +88,7 @@ bot.on('message', message => {
        case 19: message.channel.send ("If I'm going outside, I'd rather do it after sunset."); break;
        case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemistry-wise, we make a terrible combination."); break;
        case 21: message.channel.send ("So all I need to do is follow him home without being noticed..."); break;
+       case 22: message.channel.send ("What I like about myself.\nThe first thing that comes to mind is that I've been singing for over 10 years now.\nI never stopped, even when I was going through hard times. It's all thanks to Momo, Ban, and Okarin, though."); break;
     }
   }
     
@@ -115,34 +116,7 @@ bot.on('message', message => {
        case 2: message.channel.send ("Unfortunate for you, but fortunate for me, I was bought out by a certain Mr. Satsujin, you see (lol)"); break;
     }
    }
-  
-   if(msg.startsWith (prefix + "quote")) {
-     number = 20;
-     var random = Math.floor (Math.random() * (number)) + 1;
-     switch (random) {
-       case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
-       case 2: message.channel.send ("I'm a vegetarian. Not for spirtual reasons, just because I prefer that sort of food."); break;
-       case 3: message.channel.send ("If I have the time to eat breakfast, I'd rather spend it sleeping..."); break;
-       case 4: message.channel.send ("I've used the \"relative's funeral\" excuse so many times over my school years that I don't remember how much of my family is supposed to be dead by now. I need to come up with something else. \nMaybe I'll go with some kind of illness."); break;
-       case 5: message.channel.send ("What were we talking about again? How great I am at cooking?"); break;
-       case 6: message.channel.send ("Aren't you tired of looking at this bespectacled man by now? How about someone grown-up, and a classic *ikemen*?"); break;
-       case 7: message.channel.send ("I'll tell you as much personal information as you want. First, should I tell you my three sizes?"); break;
-       case 8: message.channel.send ("If it is true that we are what we eat, then I am made of very strong vegetables."); break;
-       case 9: message.channel.send ("Since I have someone who keeps praising me with \"ikemen, ikemen\", that's probably how I can stay beautiful. I'm a \"Praise me and I'll grow\" type after all."); break;
-       case 10: message.channel.send ("I'm more or less \nalive."); break;
-       case 11: message.channel.send ("I'm getting sleepy so I'll go to bed."); break;
-       case 12: message.channel.send ("Momo says that Re:vale's success is thanks to me, but it's probably thanks to Momo."); break;
-       case 13: message.channel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? lol"); break;
-       case 14: message.channel.send ("Let Satsujin know that I'll be doing fanservice for him."); break;
-       case 15: message.channel.send ("Sorry if I keep you up all night."); break;
-       case 16: message.channel.send ("Ah, my nail fell off."); break;
-       case 17: message.channel.send ("Well, Re:vale always uses any means necessary to win. We have that motto."); break;
-       case 18: message.channel.send ("I don’t care if they don’t love me. I want everything, from the lowliest of bugs to God himself, to love my songs. \nJust my songs. I only want the people who’ll treasure my songs to listen to them."); break;
-       case 19: message.channel.send ("If I'm going outside, I'd rather do it after sunset."); break;
-       case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemisty-wise, we make a terrible combination."); break;
-    }
-  }
-  
+    
   if (msg.startsWith ("i can't believe ryo is dead")) {
     return message.channel.send("Finally.");
   }
@@ -162,8 +136,8 @@ bot.on('message', message => {
     number = 2;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
-      case 1: message.channel.send ("<:yuppismooch:454423176026390534> I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
-      case 2: message.channel.send ("<:yuppismooch:454423176026390534> I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
+      case 1: message.channel.send ("I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
+      case 2: message.channel.send ("I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
    }
  }
   
