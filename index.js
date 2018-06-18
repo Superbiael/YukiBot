@@ -64,7 +64,7 @@ bot.on('message', message => {
     }
   
    if(msg.startsWith (prefix + "quote")) {
-     number = 22;
+     number = 23;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -89,6 +89,7 @@ bot.on('message', message => {
        case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemistry-wise, we make a terrible combination."); break;
        case 21: message.channel.send ("So all I need to do is follow him home without being noticed..."); break;
        case 22: message.channel.send ("What I like about myself.\nThe first thing that comes to mind is that I've been singing for over 10 years now.\nI never stopped, even when I was going through hard times. It's all thanks to Momo, Ban, and Okarin, though."); break;
+       case 23: message.channel.send ("Emotions are something that can't be seen, yet easily changeable, unstable things. I'm sure youre environment growing up is what make you this way. \nYou have nothing to be afraid of. You can come right at us."); break;         
     }
   }
     
