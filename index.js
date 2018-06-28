@@ -40,7 +40,7 @@ bot.on('message', message => {
      msg = message.content.toLowerCase();
      mention = message.mentions.users.first();
 
-     let botschannel = message.guild.channels.find(`name`, "idolboti7");
+     let botschannel = message.guild.channels.find(`name`, "idolbot7");
      if(!botschannel) return message.channel.send("Couldn't find bot channel.");
 
      if (msg.startsWith ("hey gays")) {
