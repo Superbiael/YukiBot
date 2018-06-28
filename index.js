@@ -29,7 +29,7 @@ bot.on("ready", async () => {
 
 bot.on('message', message => {
   if (message.author.bot) return;
-//   if(message.channel.type === "dm") return;
+  if(message.channel.type === "dm") return;
 
   let prefix = 'y!';
   let messageArray = message.content.split( " ");
@@ -38,8 +38,8 @@ bot.on('message', message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
  
-    mention = message.mentions.users.first();
-    msg = message.content.toLowerCase();
+  mention = message.mentions.users.first();
+  msg = message.content.toLowerCase();
    
   if(msg.startsWith (prefix + "smooch")) {
     if(message.author.id != "182723698711592960") return;
@@ -64,7 +64,7 @@ bot.on('message', message => {
     }
   
    if(msg.startsWith (prefix + "quote")) {
-     number = 23;
+     number = 24;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -89,7 +89,8 @@ bot.on('message', message => {
        case 20: message.channel.send ("All of Re:vale, including Okarin, are sadists. Chemistry-wise, we make a terrible combination."); break;
        case 21: message.channel.send ("So all I need to do is follow him home without being noticed..."); break;
        case 22: message.channel.send ("What I like about myself.\nThe first thing that comes to mind is that I've been singing for over 10 years now.\nI never stopped, even when I was going through hard times. It's all thanks to Momo, Ban, and Okarin, though."); break;
-       case 23: message.channel.send ("Emotions are something that can't be seen, yet easily changeable, unstable things. I'm sure your environment growing up is what make you this way. \nYou have nothing to be afraid of. You can come right at us."); break;         
+       case 23: message.channel.send ("Emotions are something that can't be seen, yet easily changeable, unstable things. I'm sure your environment growing up is what make you this way. \nYou have nothing to be afraid of. You can come right at us."); break;
+       case 24: message.channel.send ("I’m ordinary, you know. To the point where there’s no one else as ordinary as me."); break;
     }
   }
     
