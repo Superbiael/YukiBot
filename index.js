@@ -224,8 +224,7 @@ bot.on('message', message => {
     .setColor("#00ff67")
     .setThumbnail(bicon)
     .addField("# of quotes:", "24")
-    .addField("Scout:", "39")
-    .addField("Twitter:", "https://twitter.com/Superbiael")
+    .addField("Scout:", "39 cards")
     return botschannel.send(botembed);
   }
 
