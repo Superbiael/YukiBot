@@ -191,7 +191,6 @@ bot.on('message', message => {
    if(msg.startsWith (prefix + "nuzzle")) {
      if(message.author.id != "182723698711592960") return;
      return botschannel.send ("Fufu, that tickles.");
-      }
     }
 
   if (msg.startsWith ("good morning yuki")) {
