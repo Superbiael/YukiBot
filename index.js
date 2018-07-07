@@ -27,21 +27,20 @@ bot.on("ready", async () => {
 });
 
 bot.on('message', message => {
-    if (message.author.bot) return;
-    if(message.channel.type === "dm") return;
+  if (message.author.bot) return;
+  if(message.channel.type === "dm") return;
 
-    let prefix = 'y!';
-    let messageArray = message.content.split(" ");
-    let cmd = messageArray[0]
-    let args = messageArray.slice(1);
-    let commandfile = bot.commands.get(cmd.slice(prefix.length));
-    if(commandfile) commandfile.run(bot,message,args);
+  let prefix = 'y!';
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0]
+  let args = messageArray.slice(1);
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
 
-     msg = message.content.toLowerCase();
-     mention = message.mentions.users.first();
-
-     let botschannel = message.guild.channels.find(`name`, "idolbot7");
-     if(!botschannel) return message.channel.send("Couldn't find bot channel.");
+  msg = message.content.toLowerCase();
+  mention = message.mentions.users.first();
+  let botschannel = message.guild.channels.find(`name`, "idolbot7");
+  if(!botschannel) return message.channel.send("Couldn't find bot channel.");
 
      if (msg.startsWith ("hey gays")) {
        return message.channel.send("And Gaku.");
@@ -68,7 +67,7 @@ bot.on('message', message => {
          case 5: botschannel.send ("We're going to have a secret intensive training session together."); break;
       }
     }
-  
+
     if(msg.startsWith (prefix + "scout")) {
         number = 39;
         var random = Math.floor (Math.random() * (number)) + 1;
@@ -190,7 +189,12 @@ bot.on('message', message => {
 
    if(msg.startsWith (prefix + "nuzzle")) {
      if(message.author.id != "182723698711592960") return;
-     return botschannel.send ("Fufu, that tickles.");
+       number = 1;
+       var random = Math.floor (Math.random() * (number)) + 1;
+       switch (random) {
+         case 1: botschannel.send ("Fufu, that tickles."); break;
+         // case 2: message.channel.send (""); break;
+      }
     }
 
   if (msg.startsWith ("good morning yuki")) {
@@ -222,8 +226,10 @@ bot.on('message', message => {
     .setDescription("Bot Information")
     .setColor("#00ff67")
     .setThumbnail(bicon)
-    .addField("# of quotes:", "24")
-    .addField("Scout:", "39 cards")
+    .addField("Name:", bot.user.username)
+    .addField("# of quotes", "24")
+    .addField("Scout:", "40 cards")
+    .addField("Twitter:", "https://twitter.com/Superbiael")
     return botschannel.send(botembed);
   }
 
