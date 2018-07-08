@@ -69,7 +69,7 @@ bot.on('message', message => {
     }
 
     if(msg.startsWith (prefix + "scout")) {
-        number = 39;
+        number = 40;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ({files:["./images/yuki_birthday_sr.png"]}); break;
@@ -111,6 +111,7 @@ bot.on('message', message => {
           case 37: botschannel.send ({files:["./images/yuki_xmasrock_ssr.png"]}); break;
           case 38: botschannel.send ({files:["./images/yuki_zodiac_ssr.png"]}); break;
           case 39: botschannel.send ({files:["./images/yuki_bno_ssr.png"]}); break;
+          case 41: botschannel.send ({files:["./images/yuki_rti_ssr.png"]}); break;
         }
       }
 
@@ -149,15 +150,15 @@ bot.on('message', message => {
        case 13: botschannel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? lol"); break;
        case 14: botschannel.send ("Let Satsujin know that I'll be doing fanservice for him."); break;
        case 15: botschannel.send ("Sorry if I keep you up all night."); break;
-       case 16: botschannel.send ("Ah, my nail fell off."); break;
-       case 17: botschannel.send ("Well, Re:vale always uses any means necessary to win. We have that motto."); break;
-       case 18: botschannel.send ("I don’t care if they don’t love me. I want everything, from the lowliest of bugs to God himself, to love my songs. \nJust my songs. I only want the people who’ll treasure my songs to listen to them."); break;
-       case 19: botschannel.send ("If I'm going outside, I'd rather do it after sunset."); break;
-       case 20: botschannel.send ("All of Re:vale, including Okarin, are sadists. Chemistry-wise, we make a terrible combination."); break;
-       case 21: botschannel.send ("So all I need to do is follow him home without being noticed..."); break;
-       case 22: botschannel.send ("What I like about myself.\nThe first thing that comes to mind is that I've been singing for over 10 years now.\nI never stopped, even when I was going through hard times. It's all thanks to Momo, Ban, and Okarin, though."); break;
-       case 23: botschannel.send ("Emotions are something that can't be seen, yet easily changeable, unstable things. I'm sure your environment growing up is what make you this way. \nYou have nothing to be afraid of. You can come right at us."); break;
-       case 24: botschannel.send ("I’m ordinary, you know. To the point where there’s no one else as ordinary as me."); break;
+       case 16: botschannel.send ("Well, Re:vale always uses any means necessary to win. We have that motto."); break;
+       case 17: botschannel.send ("I don’t care if they don’t love me. I want everything, from the lowliest of bugs to God himself, to love my songs. \nJust my songs. I only want the people who’ll treasure my songs to listen to them."); break;
+       case 18: botschannel.send ("If I'm going outside, I'd rather do it after sunset."); break;
+       case 19: botschannel.send ("All of Re:vale, including Okarin, are sadists. Chemistry-wise, we make a terrible combination."); break;
+       case 20: botschannel.send ("So all I need to do is follow him home without being noticed..."); break;
+       case 21: botschannel.send ("What I like about myself.\nThe first thing that comes to mind is that I've been singing for over 10 years now.\nI never stopped, even when I was going through hard times. It's all thanks to Momo, Ban, and Okarin, though."); break;
+       case 22: botschannel.send ("Emotions are something that can't be seen, yet easily changeable, unstable things. I'm sure your environment growing up is what make you this way. \nYou have nothing to be afraid of. You can come right at us."); break;
+       case 23: botschannel.send ("I’m ordinary, you know. To the point where there's no one else as ordinary as me."); break;
+       case 24: botschannel.send ("\"We, the Incomplete\"...\nI forgot that was Momo's favorite song. \n...Even though he was so happy about it...\nIf something falls down next to me while I'm singing that song... I can't. Not again- I wouldn't be able to bear it.\n...I wonder... Does he want to sing it, or does he want to listen to it? \nI'm sure he can't decide."); break;
     }
   }
 
@@ -228,7 +229,7 @@ bot.on('message', message => {
     .setThumbnail(bicon)
     .addField("Name:", bot.user.username)
     .addField("# of quotes", "24")
-    .addField("Scout:", "40 cards")
+    .addField("Scout:", "41 cards")
     .addField("Twitter:", "https://twitter.com/Superbiael")
     return botschannel.send(botembed);
   }
