@@ -132,7 +132,7 @@ bot.on('message', message => {
    }
 
    if(msg.startsWith (prefix + "quote")) {
-     number = 24;
+     number = 25;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: botschannel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -159,6 +159,7 @@ bot.on('message', message => {
        case 22: botschannel.send ("Emotions are something that can't be seen, yet easily changeable, unstable things. I'm sure your environment growing up is what make you this way. \nYou have nothing to be afraid of. You can come right at us."); break;
        case 23: botschannel.send ("I’m ordinary, you know. To the point where there's no one else as ordinary as me."); break;
        case 24: botschannel.send ("\"We, the Incomplete\"...\nI forgot that was Momo's favorite song. \n...Even though he was so happy about it...\nIf something falls down next to me while I'm singing that song... I can't. Not again- I wouldn't be able to bear it.\n...I wonder... Does he want to sing it, or does he want to listen to it? \nI'm sure he can't decide."); break;
+       case 25: botschannel.send ("In a world that became pitch black, I decided to be the leading light for everyone and ran ahead. Behind me, countless lights were born and became the path. Let's shine brightly on the past and future, and see the next world."); break;
     }
   }
 
@@ -228,7 +229,7 @@ bot.on('message', message => {
     .setColor("#00ff67")
     .setThumbnail(bicon)
     .addField("Name:", bot.user.username)
-    .addField("# of quotes", "24")
+    .addField("# of quotes", "25")
     .addField("Scout:", "41 cards")
     .addField("Twitter:", "https://twitter.com/Superbiael")
     return botschannel.send(botembed);
