@@ -68,52 +68,11 @@ bot.on('message', message => {
       }
     }
 
-    if(msg.startsWith (prefix + "scout")) {
-        number = 40;
-        var random = Math.floor (Math.random() * (number)) + 1;
-        switch (random) {
-          case 1: botschannel.send ({files:["./images/yuki_birthday_sr.png"]}); break;
-          case 2: botschannel.send ({files:["./images/yuki_birthday_ssr.png"]}); break;
-          case 3: botschannel.send ({files:["./images/yuki_disone_ssr.png"]}); break;
-          case 4: botschannel.send ({files:["./images/yuki_esperanza_ssr.png"]}); break;
-          case 5: botschannel.send ({files:["./images/yuki_gardentea_ssr.png"]}); break;
-          case 6: botschannel.send ({files:["./images/yuki_gothichalloween_ssr.png"]}); break;
-          case 7: botschannel.send ({files:["./images/yuki_kingpudding_ssr.png"]}); break;
-          case 8: botschannel.send ({files:["./images/yuki_kiseki_ur.png"]}); break;
-          case 9: botschannel.send ({files:["./images/yuki_linked_ssr.png"]}); break;
-          case 10: botschannel.send ({files:["./images/yuki_lullaby_ssr.png"]}); break;
-          case 11: botschannel.send ({files:["./images/yuki_marchen_ssr.png"]}); break;
-          case 12: botschannel.send ({files:["./images/yuki_monster_sr.png"]}); break;
-          case 13: botschannel.send ({files:["./images/yuki_monster_ssr.png"]}); break;
-          case 14: botschannel.send ({files:["./images/yuki_nodoubt_sr.png"]}); break;
-          case 15: botschannel.send ({files:["./images/yuki_nodoubt_ssr.png"]}); break;
-          case 16: botschannel.send ({files:["./images/yuki_order_ssr.png"]}); break;
-          case 17: botschannel.send ({files:["./images/yuki_ordinarydays_r.png"]}); break;
-          case 18: botschannel.send ({files:["./images/yuki_ordinarydays_sr.png"]}); break;
-          case 19: botschannel.send ({files:["./images/yuki_ordinarydays_ssr.png"]}); break;
-          case 20: botschannel.send ({files:["./images/yuki_rabbit_sr.png"]}); break;
-          case 21: botschannel.send ({files:["./images/yuki_rabbit_ssr.png"]}); break;
-          case 22: botschannel.send ({files:["./images/yuki_rehearsal_sr.png"]}); break;
-          case 23: botschannel.send ({files:["./images/yuki_rehearsal_ssr.png"]}); break
-          case 24: botschannel.send ({files:["./images/yuki_rehearsal_ur.png"]}); break;
-          case 25: botschannel.send ({files:["./images/yuki_shuffle_ssr.png"]}); break;
-          case 26: botschannel.send ({files:["./images/yuki_sparkle_ssr.png"]}); break;
-          case 27: botschannel.send ({files:["./images/yuki_xmasmagic_ssr.png"]}); break;
-          case 28: botschannel.send ({files:["./images/yuki_sweets_ssr.png"]}); break;
-          case 29: botschannel.send ({files:["./images/yuki_taisho_ssr.png"]}); break;
-          case 30: botschannel.send ({files:["./images/yuki_valentine_ssr.png"]}); break;
-          case 31: botschannel.send ({files:["./images/yuki_whiteday_sr.png"]}); break;
-          case 32: botschannel.send ({files:["./images/yuki_whiteday_ssr.png"]}); break;
-          case 33: botschannel.send ({files:["./images/yuki_winter_sr.png"]}); break;
-          case 34: botschannel.send ({files:["./images/yuki_winter_ssr.png"]}); break;
-          case 35: botschannel.send ({files:["./images/yuki_work_sr.png"]}); break;
-          case 36: botschannel.send ({files:["./images/yuki_work_ssr.png"]}); break;
-          case 37: botschannel.send ({files:["./images/yuki_xmasrock_ssr.png"]}); break;
-          case 38: botschannel.send ({files:["./images/yuki_zodiac_ssr.png"]}); break;
-          case 39: botschannel.send ({files:["./images/yuki_bno_ssr.png"]}); break;
-          case 41: botschannel.send ({files:["./images/yuki_rti_ssr.png"]}); break;
-        }
-      }
+   if (msg.startsWith (prefix + "scout")) {
+      number = 40;
+      imageNumber = Math.floor (Math.random() * (number)) + 1;
+      message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
+    }
 
   if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
@@ -127,7 +86,7 @@ bot.on('message', message => {
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: botschannel.send ("We're fresh out of Yuki (lol)"); break;
-       case 2: botschannel.send ("Unfortunate for you, but fortunate for me, I was bought out by a certain Mr. Satsujin, you see."); break;
+       case 2: botschannel.send ("Unfortunate for you, I was bought out by a certain Mr. Satsujin, you see."); break;
     }
    }
 
@@ -195,7 +154,6 @@ bot.on('message', message => {
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ("Fufu, that tickles."); break;
-         // case 2: message.channel.send (""); break;
       }
     }
 
@@ -217,7 +175,7 @@ bot.on('message', message => {
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#00ff67")
     .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message")
-    .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || rank || watchout || smooch || cat")
+    .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || rank || watchout || smooch || cat || nuzzle")
     .addField("Command phrases:", "I can't believe Ryo is dead || I'm gonna munch|| I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Hey gays")
     return botschannel.send(helpembed);
   }
