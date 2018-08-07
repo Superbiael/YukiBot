@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
-bot.commands = new Discord.Collection();
 const prefix = "y!";
+bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -68,7 +68,7 @@ bot.on('message', message => {
       }
     }
 
-   if (msg.startsWith (prefix + "scout")) {
+    if (msg.startsWith (prefix + "scout")) {
       number = 40;
       imageNumber = Math.floor (Math.random() * (number)) + 1;
       message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
@@ -119,6 +119,9 @@ bot.on('message', message => {
        case 23: botschannel.send ("I’m ordinary, you know. To the point where there's no one else as ordinary as me."); break;
        case 24: botschannel.send ("\"We, the Incomplete\"...\nI forgot that was Momo's favorite song. \n...Even though he was so happy about it...\nIf something falls down next to me while I'm singing that song... I can't. Not again- I wouldn't be able to bear it.\n...I wonder... Does he want to sing it, or does he want to listen to it? \nI'm sure he can't decide."); break;
        case 25: botschannel.send ("In a world that became pitch black, I decided to be the leading light for everyone and ran ahead. Behind me, countless lights were born and became the path. Let's shine brightly on the past and future, and see the next world."); break;
+       case 26: botschannel.send ("I thought I'd become a light that would run ahead of anyone. Let's dazzingly illuminate the page and present and go to the next world."); break;
+       // case 27: botschannel.send (""); break;
+       // case 28: botschannel.send (""); break;
     }
   }
 
@@ -129,6 +132,10 @@ bot.on('message', message => {
     switch (random) {
       case 1: botschannel.send (" I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
       case 2: botschannel.send (" I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
+      // case 3: message.channel.send (""); break;
+      // case 4: message.channel.send (""); break;
+      // case 5: message.channel.send (""); break;
+      // case 6: message.channel.send (""); break;
    }
  }
 
@@ -149,11 +156,12 @@ bot.on('message', message => {
   }
 
    if(msg.startsWith (prefix + "nuzzle")) {
-     if(message.author.id != "182723698711592960") return;
+     // if(message.author.id != "182723698711592960") return;
        number = 1;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
-         case 1: botschannel.send ("Fufu, that tickles."); break;
+         case 1: botschannel.send ("Fufu, that tickles..."); break;
+         // case 2: message.channel.send (""); break;
       }
     }
 
@@ -174,8 +182,8 @@ bot.on('message', message => {
     let helpembed = new Discord.RichEmbed()
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#00ff67")
-    .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message")
-    .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || rank || watchout || smooch || cat || nuzzle")
+    .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message\n**y!botinfo**")
+    .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || rank || watchout || smooch || cat")
     .addField("Command phrases:", "I can't believe Ryo is dead || I'm gonna munch|| I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Hey gays")
     return botschannel.send(helpembed);
   }
@@ -186,10 +194,8 @@ bot.on('message', message => {
     .setDescription("Bot Information")
     .setColor("#00ff67")
     .setThumbnail(bicon)
-    .addField("Name:", bot.user.username)
-    .addField("# of quotes", "25")
-    .addField("Scout:", "41 cards")
-    .addField("Twitter:", "https://twitter.com/Superbiael")
+    .addField("# of quotes", "26")
+    .addField("Scout:", "40 cards")
     return botschannel.send(botembed);
   }
 
