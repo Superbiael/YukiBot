@@ -69,7 +69,7 @@ bot.on('message', message => {
     }
 
     if (msg.startsWith (prefix + "scout")) {
-      number = 40;
+      number = 41;
       imageNumber = Math.floor (Math.random() * (number)) + 1;
       message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
     }
