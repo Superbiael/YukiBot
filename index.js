@@ -21,12 +21,12 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-  bot.on("ready", async () => {
+bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setActivity("I love you Satsujin", {type:0});
 });
 
-bot.on('message', message => {
+  bot.on('message', message => {
   if (message.author.bot) return;
   if(message.channel.type === "dm") return;
 
@@ -39,6 +39,7 @@ bot.on('message', message => {
 
   msg = message.content.toLowerCase();
   mention = message.mentions.users.first();
+
   let botschannel = message.guild.channels.find(`name`, "idolbot7");
   if(!botschannel) return
 
@@ -212,27 +213,26 @@ bot.on('message', message => {
     });
   }
 
-  if(cmd === `${prefix}cat`){
-    botschannel.send ({files:["./images/cat.png"]});
+  if (msg.startsWith (prefix + "cat")) {
+    return botschannel.send ({files:["./images/cat.png"]});
   }
 
-  if(cmd === `${prefix}watchout`){
-    botschannel.send ("You better watch out.", {files:["./images/youbetterwatchout.png"]});
+  if (msg.startsWith (prefix + "watchout")) {
+    return botschannel.send ("You better watch out.", {files:["./images/youbetterwatchout.png"]});
   }
 
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
-    botschannel.send("maf maf");
+    return botschannel.send("maf maf");
   }
 
-  if(cmd === `${prefix}leaf`){
+  if (msg.startsWith (prefix + "leaf")) {
     message.react('🍃');
-    botschannel.send("Babe, that me leaf 🍃");
+    return botschannel.send("Babe, that me leaf 🍃");
   }
 
-  if(cmd === `${prefix}ryo`){
-    botschannel.send("Oh fuck. Bastard spotted.");
+  if (msg.startsWith (prefix + "ryo")) {
+    return botschannel.send("Oh fuck. Bastard spotted.");
   }
 
 });
-
 bot.login(process.env.token);
