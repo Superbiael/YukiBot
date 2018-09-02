@@ -21,7 +21,7 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-bot.on("ready", async () => {
+  bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setActivity("I love you Satsujin", {type:0});
 });
@@ -40,10 +40,10 @@ bot.on('message', message => {
   msg = message.content.toLowerCase();
   mention = message.mentions.users.first();
   let botschannel = message.guild.channels.find(`name`, "idolbot7");
-  if(!botschannel) return message.channel.send("Couldn't find bot channel.");
+  if(!botschannel) return
 
      if (msg.startsWith ("hey gays")) {
-       return message.channel.send("And Gaku.");
+       return botschannel.send("And Gaku.");
      }
 
   if(msg.startsWith (prefix + "smooch")) {
@@ -72,7 +72,7 @@ bot.on('message', message => {
     if (msg.startsWith (prefix + "scout")) {
       number = 41;
       imageNumber = Math.floor (Math.random() * (number)) + 1;
-      message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
+      botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
     }
 
   if (msg.startsWith (prefix + "send")) {
@@ -92,7 +92,7 @@ bot.on('message', message => {
    }
 
    if(msg.startsWith (prefix + "quote")) {
-     number = 27;
+     number = 29;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: botschannel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -124,7 +124,6 @@ bot.on('message', message => {
        case 27: botschannel.send ("It's always fun when you're with me. It's all right to come to my place more often without holding back."); break;
        case 28: botschannel.send ("Ask me anything, if it's from you I'll consider anything. Like my body measurements, if your want. The color of my underwear is also fine."); break;
        case 29: botschannel.send ("By the way, my three sizes are... "); break;
-       case 30: botschannel.send (""); break;
     }
   }
 
@@ -155,7 +154,7 @@ bot.on('message', message => {
   }
 
    if(msg.startsWith (prefix + "nuzzle")) {
-     // if(message.author.id != "182723698711592960") return;
+     if(message.author.id != "182723698711592960") return;
        number = 1;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
@@ -193,7 +192,7 @@ bot.on('message', message => {
     .setDescription("Bot Information")
     .setColor("#00ff67")
     .setThumbnail(bicon)
-    .addField("# of quotes", "27")
+    .addField("# of quotes", "29")
     .addField("Scout:", "41 cards")
     return botschannel.send(botembed);
   }
@@ -235,4 +234,5 @@ bot.on('message', message => {
   }
 
 });
+
 bot.login(process.env.token);
