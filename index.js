@@ -48,11 +48,12 @@ bot.on('message', message => {
 
   if(msg.startsWith (prefix + "smooch")) {
     if(message.author.id != "182723698711592960") return;
-      number = 2;
+      number = 3;
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
-        case 1: botschannel.send ( "Fufu... You're being affectionate today. Come here."); break;
-        case 2: botschannel.send ( "My heart races in more ways than one when you do that, you know?"); break;
+        case 1: botschannel.send ("Fufu... You're being affectionate today. Come here."); break;
+        case 2: botschannel.send ("My heart races in more ways than one when you do that, you know?"); break;
+        case 3: botschannel.send ("I feel like I've received a special reward. I'm glad to be alive."); break;
      }
    }
 
@@ -121,6 +122,9 @@ bot.on('message', message => {
        case 25: botschannel.send ("In a world that became pitch black, I decided to be the leading light for everyone and ran ahead. Behind me, countless lights were born and became the path. Let's shine brightly on the past and future, and see the next world."); break;
        case 26: botschannel.send ("I thought I'd become a light that would run ahead of anyone. Let's dazzingly illuminate the page and present and go to the next world."); break;
        case 27: botschannel.send ("It's always fun when you're with me. It's all right to come to my place more often without holding back."); break;
+       case 28: botschannel.send ("Ask me anything, if it's from you I'll consider anything. Like my body measurements, if your want. The color of my underwear is also fine."); break;
+       case 29: botschannel.send ("By the way, my three sizes are... "); break;
+       case 30: botschannel.send (""); break;
     }
   }
 
@@ -129,8 +133,8 @@ bot.on('message', message => {
     number = 2;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
-      case 1: botschannel.send (" I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
-      case 2: botschannel.send (" I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
+      case 1: botschannel.send ("I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
+      case 2: botschannel.send ("I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
    }
  }
 
@@ -231,5 +235,4 @@ bot.on('message', message => {
   }
 
 });
-
 bot.login(process.env.token);
