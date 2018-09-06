@@ -41,7 +41,7 @@ bot.commands = new Discord.Collection();
    mention = message.mentions.users.first();
 
    let botschannel = message.guild.channels.find(`name`, "idolbot7");
-   if(!botschannel) return
+   if(!botschannel) return;
 
    if(msg.startsWith (prefix + "quote")) {
      number = 29;
@@ -76,15 +76,14 @@ bot.commands = new Discord.Collection();
         case 27: botschannel.send ("It's always fun when you're with me. It's all right to come to my place more often without holding back."); break;
         case 28: botschannel.send ("Ask me anything, if it's from you I'll consider anything. Like my body measurements, if your want. The color of my underwear is also fine."); break;
         case 29: botschannel.send ("By the way, my three sizes are... "); break;
-        case 30: botschannel.send (""); break;
-    }
-   }
+      }
+     }
 
    if (msg.startsWith ("good morning yuki")) {
     let modRole = message.guild.roles.find("name","YUKILOVER69.");
     if(message.member.roles.has(modRole.id)) {
         return botschannel.send("Ah, Satsujin, I thought you were an angel for a moment...");
-      } else {
+    } else {
         return botschannel.send("Good morning. I wish I could sleep for 8 hours.");
       }
      }
@@ -98,7 +97,7 @@ bot.commands = new Discord.Collection();
         case 2: botschannel.send ("My heart races in more ways than one when you do that, you know?"); break;
         case 3: botschannel.send ("I feel like I've received a special reward. I'm glad to be alive."); break;
       }
-    }
+     }
 
    if(msg.startsWith (prefix + "rank")) {
       number = 5;
@@ -109,8 +108,8 @@ bot.commands = new Discord.Collection();
       case 3: botschannel.send ("Next time I expect you to try harder."); break;
       case 4: botschannel.send ("What’s wrong, that you can’t do something like this?"); break;
       case 5: botschannel.send ("We're going to have a secret intensive training session together."); break;
-      }
     }
+   }
 
    if(msg.startsWith (prefix + "order")) {
       number = 2;
@@ -128,7 +127,7 @@ bot.commands = new Discord.Collection();
      switch (random) {
        case 1: botschannel.send ("I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
        case 2: botschannel.send ("I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
-       case 3: botschannel.send ("I know. I love you too."); break;
+       case 3: botschannel.send ("I know. I love you too, darling~"); break;
      }
     }
 
@@ -147,7 +146,6 @@ bot.commands = new Discord.Collection();
 
    if (msg.startsWith (prefix + "clear")) {
       if(message.author.id != "182723698711592960") return;
-      if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("oof.");
       if(!args[0]) return message.channel.send("oof.");
       message.channel.bulkDelete(args[0]).then(() => {
       message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(3000));
