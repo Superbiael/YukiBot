@@ -131,12 +131,16 @@ bot.commands = new Discord.Collection();
      }
     }
 
-   if (msg.startsWith (prefix + "scout")) {
-     number = 44;
-     imageNumber = Math.floor (Math.random() * (number)) + 1;
-     botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
-    }
+//    if (msg.startsWith (prefix + "scout")) {
+//      number = 44;
+//      imageNumber = Math.floor (Math.random() * (number)) + 1;
+//      botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+//     }
 
+   if (msg.startsWith (prefix + "scout")) {
+     return botschannel.send ({files:["./scout/45.png"]});
+   }
+      
    if (msg.startsWith (prefix + "send")) {
      if (mention == null) { return; }
       message.delete();
@@ -184,7 +188,7 @@ bot.commands = new Discord.Collection();
       .setColor("#00ff67")
       .setThumbnail(bicon)
       .addField("# of quotes", "29")
-      .addField("Scout:", "44 cards")
+      .addField("Scout:", "45 cards")
     return botschannel.send(botembed);
     }
 
