@@ -1,3 +1,4 @@
+
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
@@ -40,11 +41,11 @@ bot.commands = new Discord.Collection();
    msg = message.content.toLowerCase();
    mention = message.mentions.users.first();
 
-    let botschannel = message.guild.channels.find(`name`, "bot-channel");
-    if(!botschannel) return;
+   let botschannel = message.guild.channels.find(`name`, "bot-channel");
+   if(!botschannel) return;
 
    if(msg.startsWith (prefix + "quote")) {
-     number = 29;
+     number = 33;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
         case 1: botschannel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -76,6 +77,10 @@ bot.commands = new Discord.Collection();
         case 27: botschannel.send ("It's always fun when you're with me. It's all right to come to my place more often without holding back."); break;
         case 28: botschannel.send ("Ask me anything, if it's from you I'll consider anything. Like my body measurements, if your want. The color of my underwear is also fine."); break;
         case 29: botschannel.send ("By the way, my three sizes are... "); break;
+        case 30: botschannel.send ("As expected, I'm also pleased."); break;
+        case 31: botschannel.send ("I'm going to imitate Momo. Yay~! You did it!"); break;
+        case 32: botschannel.send ("What's wrong that you can't even do something like this?"); break;
+        case 33: botschannel.send ("We're going to have a secret intensive training session together."); break;
       }
      }
 
@@ -99,18 +104,6 @@ bot.commands = new Discord.Collection();
       }
      }
 
-   if(msg.startsWith (prefix + "rank")) {
-      number = 5;
-      var random = Math.floor (Math.random() * (number)) + 1;
-      switch (random) {
-      case 1: botschannel.send ("As expected, I'm also pleased. "); break;
-      case 2: botschannel.send ("I'm going to imitate Momo. Yay~! You did it!"); break;
-      case 3: botschannel.send ("Next time I expect you to try harder."); break;
-      case 4: botschannel.send ("What’s wrong, that you can’t do something like this?"); break;
-      case 5: botschannel.send ("We're going to have a secret intensive training session together."); break;
-    }
-   }
-
    if(msg.startsWith (prefix + "order")) {
       number = 2;
       var random = Math.floor (Math.random() * (number)) + 1;
@@ -131,16 +124,12 @@ bot.commands = new Discord.Collection();
      }
     }
 
-//    if (msg.startsWith (prefix + "scout")) {
-//      number = 44;
-//      imageNumber = Math.floor (Math.random() * (number)) + 1;
-//      botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
-//     }
-
    if (msg.startsWith (prefix + "scout")) {
-     return botschannel.send ({files:["./scout/45.png"]});
-   }
-      
+     number = 45;
+     imageNumber = Math.floor (Math.random() * (number)) + 1;
+     botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+    }
+
    if (msg.startsWith (prefix + "send")) {
      if (mention == null) { return; }
       message.delete();
@@ -168,15 +157,15 @@ bot.commands = new Discord.Collection();
    if (msg.startsWith (prefix + "say")) {
       let botmessage = args.join(" ");
       message.delete().catch();
-      return message.channel.send(botmessage);
+      return botschannel.send(botmessage);
     }
 
    if(cmd ===`${prefix}help`){
       let helpembed = new Discord.RichEmbed()
       .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
       .setColor("#00ff67")
-      .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message\n**y!botinfo**")
-      .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || rank || watchout || smooch || cat")
+      .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message")
+      .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || watchout || smooch || cat")
       .addField("Command phrases:", "I can't believe Ryo is dead || I'm gonna munch|| I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Hey gays")
     return botschannel.send(helpembed);
     }
@@ -187,7 +176,7 @@ bot.commands = new Discord.Collection();
       .setDescription("Bot Information")
       .setColor("#00ff67")
       .setThumbnail(bicon)
-      .addField("# of quotes", "29")
+      .addField("# of quotes", "33")
       .addField("Scout:", "45 cards")
     return botschannel.send(botembed);
     }
@@ -217,7 +206,12 @@ bot.commands = new Discord.Collection();
    }
 
    if (msg.startsWith (prefix + "cat")) {
-     return botschannel.send ({files:["./images/cat.png"]});
+       number = 2;
+       var random = Math.floor (Math.random() * (number)) + 1;
+       switch (random) {
+         case 1: botschannel.send ({files:["./images/cat.png"]}); break;
+         case 2: botschannel.send ({files:["./images/eat_veggie"]}); break;
+       }
    }
 
    if (msg.startsWith (prefix + "watchout")) {
