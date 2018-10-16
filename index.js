@@ -157,7 +157,7 @@ bot.commands = new Discord.Collection();
    if (msg.startsWith (prefix + "say")) {
       let botmessage = args.join(" ");
       message.delete().catch();
-      return botschannel.send(botmessage);
+      return message.channel.send(botmessage);
     }
 
    if(cmd ===`${prefix}help`){
