@@ -1,4 +1,3 @@
-
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
@@ -45,7 +44,7 @@ bot.commands = new Discord.Collection();
    if(!botschannel) return;
 
    if(msg.startsWith (prefix + "quote")) {
-     number = 33;
+     number = 35;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
         case 1: botschannel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -81,6 +80,9 @@ bot.commands = new Discord.Collection();
         case 31: botschannel.send ("I'm going to imitate Momo. Yay~! You did it!"); break;
         case 32: botschannel.send ("What's wrong that you can't even do something like this?"); break;
         case 33: botschannel.send ("We're going to have a secret intensive training session together."); break;
+        case 34: botschannel.send ("I hate how cold the winter is, but as long as Satsujin is celebrating with me, I'll do my best."); break;
+        case 35: botschannel.send ("Oh? I didn't think Gaku-kun was such a cherry boy."); break;
+
       }
      }
 
@@ -100,7 +102,7 @@ bot.commands = new Discord.Collection();
       switch (random) {
         case 1: botschannel.send ("Fufu... You're being affectionate today. Come here."); break;
         case 2: botschannel.send ("My heart races in more ways than one when you do that, you know?"); break;
-        case 3: botschannel.send ("I feel like I've received a special reward. I'm glad to be alive."); break;
+        case  3: botschannel.send ("I feel like I've received a special reward. I'm glad to be alive."); break;
       }
      }
 
@@ -176,7 +178,7 @@ bot.commands = new Discord.Collection();
       .setDescription("Bot Information")
       .setColor("#00ff67")
       .setThumbnail(bicon)
-      .addField("# of quotes", "33")
+      .addField("# of quotes", "35")
       .addField("Scout:", "45 cards")
     return botschannel.send(botembed);
     }
@@ -210,7 +212,7 @@ bot.commands = new Discord.Collection();
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ({files:["./images/cat.png"]}); break;
-         case 2: botschannel.send ({files:["./images/eat_veggie.png"]}); break;
+         case 2: botschannel.send ({files:["./images/eat_veggie"]}); break;
        }
    }
 
