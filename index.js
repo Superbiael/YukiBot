@@ -72,7 +72,7 @@ bot.commands = new Discord.Collection();
         case 23: botschannel.send ("I’m ordinary, you know. To the point where there's no one else as ordinary as me."); break;
         case 24: botschannel.send ("\"We, the Incomplete\"...\nI forgot that was Momo's favorite song. \n...Even though he was so happy about it...\nIf something falls down next to me while I'm singing that song... I can't. Not again- I wouldn't be able to bear it.\n...I wonder... Does he want to sing it, or does he want to listen to it? \nI'm sure he can't decide."); break;
         case 25: botschannel.send ("In a world that became pitch black, I decided to be the leading light for everyone and ran ahead. Behind me, countless lights were born and became the path. Let's shine brightly on the past and future, and see the next world."); break;
-        case 26: botschannel.send ("I thought I'd become a light that would run ahead of anyone. Let's dazzingly illuminate the page and present and go to the next world."); break;
+        case 26: botschannel.send ("I thought I'd become a light that would run ahead of anyone. Let's dazzingly illuminate the past and present and go to the next world."); break;
         case 27: botschannel.send ("It's always fun when you're with me. It's all right to come to my place more often without holding back."); break;
         case 28: botschannel.send ("Ask me anything, if it's from you I'll consider anything. Like my body measurements, if your want. The color of my underwear is also fine."); break;
         case 29: botschannel.send ("By the way, my three sizes are... "); break;
@@ -82,7 +82,6 @@ bot.commands = new Discord.Collection();
         case 33: botschannel.send ("We're going to have a secret intensive training session together."); break;
         case 34: botschannel.send ("I hate how cold the winter is, but as long as Satsujin is celebrating with me, I'll do my best."); break;
         case 35: botschannel.send ("Oh? I didn't think Gaku-kun was such a cherry boy."); break;
-
       }
      }
 
