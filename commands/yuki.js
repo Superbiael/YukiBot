@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
    let botschannel = message.guild.channels.find(`name`, "bot-channel");
    if(!botschannel) return;
-   return message.channel.send(ballembed);
+   return botschannel.send(ballembed);
  }
 
 module.exports.help = {
