@@ -101,7 +101,7 @@ bot.commands = new Discord.Collection();
       switch (random) {
         case 1: botschannel.send ("Fufu... You're being affectionate today. Come here."); break;
         case 2: botschannel.send ("My heart races in more ways than one when you do that, you know?"); break;
-        case  3: botschannel.send ("I feel like I've received a special reward. I'm glad to be alive."); break;
+        case 3: botschannel.send ("I feel like I've received a special reward. I'm glad to be alive."); break;
       }
      }
 
