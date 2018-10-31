@@ -134,7 +134,7 @@ bot.commands = new Discord.Collection();
    if (msg.startsWith (prefix + "scout")) {
      number = 47;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
-     return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+     return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
     }
 
    if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
