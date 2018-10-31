@@ -140,7 +140,7 @@ bot.commands = new Discord.Collection();
    if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
       number = 7;
       imageNumber = Math.floor (Math.random() * (number)) + 1;
-      return botschannel.send ({files: ["./mofumofu/" + imageNumber + ".png"]})
+      return botschannel.send ({files: ["./images/mofumofu/" + imageNumber + ".png"]})
      }
 
    if (msg.startsWith (prefix + "send")) {
