@@ -214,7 +214,7 @@ bot.commands = new Discord.Collection();
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ({files:["./images/cat.png"]}); break;
-         case 2: botschannel.send ({files:["./images/eat_veggie"]}); break;
+         case 2: botschannel.send ({files:["./images/eat_veggie.png"]}); break;
        }
    }
 
