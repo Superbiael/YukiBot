@@ -10,7 +10,8 @@ module.exports.run = async (bot, message, args) => {
      "Do I look like someone who'd know?",
      "Sure, why not?",
      "A whole lot.",
-     "More or less."
+     "More or less.",
+     "No ^^"
    ];
 
    let result = Math.floor((Math.random() * replies.length));
