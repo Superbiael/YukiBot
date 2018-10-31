@@ -180,7 +180,7 @@ bot.commands = new Discord.Collection();
       .setDescription("Bot Information")
       .setColor("#00ff67")
       .setThumbnail(bicon)
-      .addField("# of quotes", "36")
+      .addField("# of quotes", "39")
       .addField("Scout:", "47 cards")
     return botschannel.send(botembed);
     }
