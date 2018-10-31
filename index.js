@@ -44,7 +44,7 @@ bot.commands = new Discord.Collection();
    if(!botschannel) return;
 
    if(msg.startsWith (prefix + "quote")) {
-     number = 35;
+     number = 40;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
         case 1: botschannel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -56,32 +56,37 @@ bot.commands = new Discord.Collection();
         case 7: botschannel.send ("I'll tell you as much personal information as you want. First, should I tell you my three sizes?"); break;
         case 8: botschannel.send ("If it is true that we are what we eat, then I am made of very strong vegetables."); break;
         case 9: botschannel.send ("Since I have someone who keeps praising me with \"ikemen, ikemen\", that's probably how I can stay beautiful. I'm a \"Praise me and I'll grow\" type after all."); break;
-        case 10: botschannel.send ("I'm more or less \nalive."); break;
-        case 11: botschannel.send ("I'm getting sleepy so I'll go to bed."); break;
-        case 12: botschannel.send ("Momo says that Re:vale's success is thanks to me, but it's probably thanks to Momo."); break;
-        case 13: botschannel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? lol"); break;
-        case 14: botschannel.send ("Let Satsujin know that I'll be doing fanservice for him."); break;
-        case 15: botschannel.send ("Sorry if I keep you up all night."); break;
-        case 16: botschannel.send ("Well, Re:vale always uses any means necessary to win. We have that motto."); break;
-        case 17: botschannel.send ("I don’t care if they don’t love me. I want everything, from the lowliest of bugs to God himself, to love my songs. \nJust my songs. I only want the people who’ll treasure my songs to listen to them."); break;
-        case 18: botschannel.send ("If I'm going outside, I'd rather do it after sunset."); break;
-        case 19: botschannel.send ("All of Re:vale, including Okarin, are sadists. Chemistry-wise, we make a terrible combination."); break;
-        case 20: botschannel.send ("So all I need to do is follow him home without being noticed..."); break;
-        case 21: botschannel.send ("What I like about myself.\nThe first thing that comes to mind is that I've been singing for over 10 years now.\nI never stopped, even when I was going through hard times. It's all thanks to Momo, Ban, and Okarin, though."); break;
-        case 22: botschannel.send ("Emotions are something that can't be seen, yet easily changeable, unstable things. I'm sure your environment growing up is what make you this way. \nYou have nothing to be afraid of. You can come right at us."); break;
-        case 23: botschannel.send ("I’m ordinary, you know. To the point where there's no one else as ordinary as me."); break;
-        case 24: botschannel.send ("\"We, the Incomplete\"...\nI forgot that was Momo's favorite song. \n...Even though he was so happy about it...\nIf something falls down next to me while I'm singing that song... I can't. Not again- I wouldn't be able to bear it.\n...I wonder... Does he want to sing it, or does he want to listen to it? \nI'm sure he can't decide."); break;
-        case 25: botschannel.send ("In a world that became pitch black, I decided to be the leading light for everyone and ran ahead. Behind me, countless lights were born and became the path. Let's shine brightly on the past and future, and see the next world."); break;
-        case 26: botschannel.send ("I thought I'd become a light that would run ahead of anyone. Let's dazzingly illuminate the past and present and go to the next world."); break;
-        case 27: botschannel.send ("It's always fun when you're with me. It's all right to come to my place more often without holding back."); break;
-        case 28: botschannel.send ("Ask me anything, if it's from you I'll consider anything. Like my body measurements, if your want. The color of my underwear is also fine."); break;
-        case 29: botschannel.send ("By the way, my three sizes are... "); break;
-        case 30: botschannel.send ("As expected, I'm also pleased."); break;
-        case 31: botschannel.send ("I'm going to imitate Momo. Yay~! You did it!"); break;
-        case 32: botschannel.send ("What's wrong that you can't even do something like this?"); break;
-        case 33: botschannel.send ("We're going to have a secret intensive training session together."); break;
-        case 34: botschannel.send ("I hate how cold the winter is, but as long as Satsujin is celebrating with me, I'll do my best."); break;
-        case 35: botschannel.send ("Oh? I didn't think Gaku-kun was such a cherry boy."); break;
+        case 10: botschannel.send ("I'm getting sleepy so I'll go to bed."); break;
+        case 11: botschannel.send ("Momo says that Re:vale's success is thanks to me, but it's probably thanks to Momo."); break;
+        case 12: botschannel.send ("I wanted to sing songs. The reason I went the direction of an idol was... because of my face? lol"); break;
+        case 13: botschannel.send ("Let Satsujin know that I'll be doing fanservice for him."); break;
+        case 14: botschannel.send ("Sorry if I keep you up all night."); break;
+        case 15: botschannel.send ("Well, Re:vale always uses any means necessary to win. We have that motto."); break;
+        case 16: botschannel.send ("I don’t care if they don’t love me. I want everything, from the lowliest of bugs to God himself, to love my songs. \nJust my songs. I only want the people who’ll treasure my songs to listen to them."); break;
+        case 17: botschannel.send ("If I'm going outside, I'd rather do it after sunset."); break;
+        case 18: botschannel.send ("All of Re:vale, including Okarin, are sadists. Chemistry-wise, we make a terrible combination."); break;
+        case 19: botschannel.send ("So all I need to do is follow him home without being noticed..."); break;
+        case 20: botschannel.send ("What I like about myself.\nThe first thing that comes to mind is that I've been singing for over 10 years now.\nI never stopped, even when I was going through hard times. It's all thanks to Momo, Ban, and Okarin, though."); break;
+        case 21: botschannel.send ("Emotions are something that can't be seen, yet easily changeable, unstable things. I'm sure your environment growing up is what make you this way. \nYou have nothing to be afraid of. You can come right at us."); break;
+        case 22: botschannel.send ("I’m ordinary, you know. To the point where there's no one else as ordinary as me."); break;
+        case 23: botschannel.send ("\"We, the Incomplete\"...\nI forgot that was Momo's favorite song. \n...Even though he was so happy about it...\nIf something falls down next to me while I'm singing that song... I can't. Not again- I wouldn't be able to bear it.\n...I wonder... Does he want to sing it, or does he want to listen to it? \nI'm sure he can't decide."); break;
+        case 24: botschannel.send ("In a world that became pitch black, I decided to be the leading light for everyone and ran ahead. Behind me, countless lights were born and became the path. Let's shine brightly on the past and future, and see the next world."); break;
+        case 25: botschannel.send ("I thought I'd become a light that would run ahead of anyone. Let's dazzingly illuminate the page and present and go to the next world."); break;
+        case 26: botschannel.send ("It's always fun when you're with me. It's all right to come to my place more often without holding back."); break;
+        case 27: botschannel.send ("Ask me anything, if it's from you I'll consider anything. Like my body measurements, if your want. The color of my underwear is also fine."); break;
+        case 28: botschannel.send ("By the way, my three sizes are... "); break;
+        case 29: botschannel.send ("As expected, I'm also pleased."); break;
+        case 30: botschannel.send ("I'm going to imitate Momo. Yay~! You did it!"); break;
+        case 31: botschannel.send ("What's wrong that you can't even do something like this?"); break;
+        case 32: botschannel.send ("We're going to have a secret intensive training session together."); break;
+        case 33: botschannel.send ("I hate how cold the winter is, but as long as Satsujin is celebrating with me, I'll do my best."); break;
+        case 34: botschannel.send ("Oh? I didn't think Gaku-kun was such a cherry boy."); break;
+        case 35: botschannel.send ("Wake me up, lovely heart!"); break;
+        case 36: botschannel.send ("You've shared your warmth with me, and in return I want to make you happy."); break;
+        case 37: botschannel.send ("I feel like crying, ad there's an overwhelming warmth coming from inside me. I never thought I'd be capable of this sort of compassion."); break;
+        case 38: botschannel.send ("I thought that smilign even when I wasn't enjoying myself was like being enslaved. But that's not true. Smiling is kindness. Being with you makes me happy."); break;
+        case 39: botschannel.send ("Having to be thoughtful and considerate had always annoyed me. But that night these things became the warmth that sustained us both."); break;
+        case 40: botschannel.send ("I really am lucky. Now I know joy, and the meaning of a smile.\nI also know the miracle of having someone waiting for me when I return home."); break;
       }
      }
 
@@ -116,21 +121,29 @@ bot.commands = new Discord.Collection();
 
    if (msg.startsWith ("i love you yuki")) {
      if(message.author.id != "182723698711592960") return;
-     number = 3;
+     number = 5;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: botschannel.send ("I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
        case 2: botschannel.send ("I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
        case 3: botschannel.send ("I know. I love you too, darling~"); break;
+       case 4: botschannel.send ("Being with you is so much fun. Thank for you everything, now and forever."); break;
+       case 5: botschannel.send ("You've shared your warmth with me, and in return I want to make you happy."); break;
      }
     }
 
    if (msg.startsWith (prefix + "scout")) {
      number = 47;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
-     botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+     return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
     }
-      
+
+   if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
+      number = 7;
+      imageNumber = Math.floor (Math.random() * (number)) + 1;
+      return message.channel.send ({files: ["./mofumofu/" + imageNumber + ".png"]})
+     }
+
    if (msg.startsWith (prefix + "send")) {
      if (mention == null) { return; }
       message.delete();
@@ -146,15 +159,6 @@ bot.commands = new Discord.Collection();
      });
     }
 
-    if(msg.startsWith (prefix + "nuzzle")) {
-      if(message.author.id != "182723698711592960") return;
-      number = 1;
-      var random = Math.floor (Math.random() * (number)) + 1;
-      switch (random) {
-        case 1: botschannel.send ("Fufu, that tickles..."); break;
-     }
-    }
-
    if (msg.startsWith (prefix + "say")) {
       let botmessage = args.join(" ");
       message.delete().catch();
@@ -166,7 +170,7 @@ bot.commands = new Discord.Collection();
       .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
       .setColor("#00ff67")
       .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message")
-      .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || watchout || smooch || cat")
+      .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || watchout || smooch || cat || mofu")
       .addField("Command phrases:", "I can't believe Ryo is dead || I'm gonna munch|| I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Hey gays")
     return botschannel.send(helpembed);
     }
@@ -177,7 +181,7 @@ bot.commands = new Discord.Collection();
       .setDescription("Bot Information")
       .setColor("#00ff67")
       .setThumbnail(bicon)
-      .addField("# of quotes", "35")
+      .addField("# of quotes", "36")
       .addField("Scout:", "47 cards")
     return botschannel.send(botembed);
     }
