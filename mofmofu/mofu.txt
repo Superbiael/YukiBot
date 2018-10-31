@@ -1,5 +1,0 @@
-   if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
-      number = 8;
-      imageNumber = Math.floor (Math.random() * (number)) + 1;
-      return message.channel.send ({files: ["./mofumofu/" + imageNumber + ".png"]})
-     }
