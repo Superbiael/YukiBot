@@ -133,7 +133,7 @@ bot.commands = new Discord.Collection();
     }
 
    if (msg.startsWith (prefix + "scout")) {
-     number = 47;
+     number = 48;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
     }
