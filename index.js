@@ -132,12 +132,20 @@ bot.commands = new Discord.Collection();
      }
     }
 
-   if (msg.startsWith (prefix + "scout")) {
-     number = 48;
-     imageNumber = Math.floor (Math.random() * (number)) + 1;
-     return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
-    }
+//    if (msg.startsWith (prefix + "scout")) {
+//      number = 48;
+//      imageNumber = Math.floor (Math.random() * (number)) + 1;
+//      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
+//     }
 
+   if (msg.startsWith (prefix + "scout")) {
+       number = 1;
+       var random = Math.floor (Math.random() * (number)) + 1;
+       switch (random) {
+         case 1: botschannel.send ({files:["./images/scout/48.png"]}); break;
+       }
+   }
+      
    if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
       number = 7;
       imageNumber = Math.floor (Math.random() * (number)) + 1;
@@ -173,15 +181,6 @@ bot.commands = new Discord.Collection();
       .addField("Basic y!commands:", "mafia (alias:maf) || leaf || ryo || order || car || watchout || smooch || cat || mofu")
       .addField("Command phrases:", "I can't believe Ryo is dead || I'm gonna munch|| I love you Yuki || Good morning Yuki || Good night Yuki || Yuki if you're out there || Hey gays")
     return botschannel.send(helpembed);
-    }
-
-   if(cmd ===`${prefix}botinfo`){
-      let bicon = bot.user.displayAvatarURL;
-      let botembed = new Discord.RichEmbed()
-      .setDescription("Bot Information")
-      .setColor("#00ff67")
-      .setThumbnail(bicon)
-    return botschannel.send(botembed);
     }
 
    if (msg.startsWith ("hey gays")) {
