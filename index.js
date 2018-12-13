@@ -132,12 +132,16 @@ bot.commands = new Discord.Collection();
      }
     }
 
-   if (msg.startsWith (prefix + "scout")) {
-     number = 48;
-     imageNumber = Math.floor (Math.random() * (number)) + 1;
-     return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
-    }
+//    if (msg.startsWith (prefix + "scout")) {
+//      number = 48;
+//      imageNumber = Math.floor (Math.random() * (number)) + 1;
+//      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
+//     }
 
+   if (msg.startsWith (prefix + "scout")) {
+    return botschannel.send ({files:["./images/scout/49.png"]});
+  }
+      
       
    if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
       number = 7;
