@@ -1,1 +1,1 @@
-worker: node yuki.js
+worker: node index.js
