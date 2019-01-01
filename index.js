@@ -188,11 +188,7 @@ bot.commands = new Discord.Collection();
    if (msg.startsWith ("hey gays")) {
     return botschannel.send("And Gaku.");
     }
-
-   if (msg.startsWith ("yuppi")) {
-    return botschannel.send("Gakkyun.");
-    }
-
+      
    if (msg.startsWith ("i can't believe ryo is dead")) {
     return botschannel.send("Finally.");
     }
