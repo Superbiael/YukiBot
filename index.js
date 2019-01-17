@@ -132,11 +132,11 @@ bot.commands = new Discord.Collection();
      }
     }
 
-//    if (msg.startsWith (prefix + "scout")) {
-//      number = 51;
-//      imageNumber = Math.floor (Math.random() * (number)) + 1;
-//      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
-//     }
+   if (msg.startsWith (prefix + "scout")) {
+     number = 54;
+     imageNumber = Math.floor (Math.random() * (number)) + 1;
+     return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
+    }
 
    if (msg.startsWith (prefix + "scout")) {
        number = 3;
