@@ -138,15 +138,15 @@ bot.commands = new Discord.Collection();
      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
     }
 
-   if (msg.startsWith (prefix + "scout")) {
-       number = 3;
-       var random = Math.floor (Math.random() * (number)) + 1;
-       switch (random) {
-         case 1: botschannel.send ({files:["./images/scout/53.png"]}); break;
-         case 2: botschannel.send ({files:["./images/scout/52.png"]}); break;
-         case 3: botschannel.send ({files:["./images/scout/9.png"]}); break;
-       }
-   }
+//    if (msg.startsWith (prefix + "scout")) {
+//        number = 3;
+//        var random = Math.floor (Math.random() * (number)) + 1;
+//        switch (random) {
+//          case 1: botschannel.send ({files:["./images/scout/53.png"]}); break;
+//          case 2: botschannel.send ({files:["./images/scout/52.png"]}); break;
+//          case 3: botschannel.send ({files:["./images/scout/9.png"]}); break;
+//        }
+//    }
       
       
    if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
