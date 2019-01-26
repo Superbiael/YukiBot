@@ -27,7 +27,7 @@ bot.commands = new Discord.Collection();
   });
 
    bot.on('message', message => {
-//    if (message.author.bot) return;
+   // if (message.author.bot) return;
    if(message.channel.type === "dm") return;
 
    let prefix = 'y!';
@@ -110,15 +110,6 @@ bot.commands = new Discord.Collection();
       }
      }
 
-   if(msg.startsWith (prefix + "order")) {
-      number = 2;
-      var random = Math.floor (Math.random() * (number)) + 1;
-      switch (random) {
-       case 1: botschannel.send ("We're fresh out of Yuki (lol)"); break;
-       case 2: botschannel.send ("Unfortunate for you, I was bought out by a certain Mr. Satsujin, you see."); break;
-     }
-    }
-
    if (msg.startsWith ("i love you yuki")) {
      if(message.author.id != "182723698711592960") return;
      number = 5;
@@ -133,22 +124,11 @@ bot.commands = new Discord.Collection();
     }
 
    if (msg.startsWith (prefix + "scout")) {
-     number = 54;
+     number = 55;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
     }
 
-//    if (msg.startsWith (prefix + "scout")) {
-//        number = 3;
-//        var random = Math.floor (Math.random() * (number)) + 1;
-//        switch (random) {
-//          case 1: botschannel.send ({files:["./images/scout/53.png"]}); break;
-//          case 2: botschannel.send ({files:["./images/scout/52.png"]}); break;
-//          case 3: botschannel.send ({files:["./images/scout/9.png"]}); break;
-//        }
-//    }
-      
-      
    if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
       number = 7;
       imageNumber = Math.floor (Math.random() * (number)) + 1;
@@ -176,20 +156,10 @@ bot.commands = new Discord.Collection();
       return message.channel.send(botmessage);
     }
 
-   if(cmd ===`${prefix}help`){
-      let helpembed = new Discord.RichEmbed()
-      .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
-      .setColor("#00ff67")
-      .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message")
-      .addField("Basic y!commands:", "mafia (alias:maf) | leaf | ryo | order | car | watchout | smooch | cat | mofu")
-      .addField("Command phrases:", "I can't believe Ryo is dead | I'm gonna munch | I love you Yuki | Good morning Yuki | Good night Yuki | Yuki if you're out there | Hey gays")
-    return botschannel.send(helpembed);
-    }
-
    if (msg.startsWith ("hey gays")) {
     return botschannel.send("And Gaku.");
     }
-      
+
    if (msg.startsWith ("i can't believe ryo is dead")) {
     return botschannel.send("Finally.");
     }
@@ -232,6 +202,225 @@ bot.commands = new Discord.Collection();
     return botschannel.send("Oh fuck. Bastard spotted.");
    }
 
+   if(cmd ===`${prefix}help`){
+      let helpembed = new Discord.RichEmbed()
+      .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
+      .setColor("#00ff67")
+      .addField("Commands:","**y!yuki** *<question>* | Ask him anything. \n**y!send** *<@user> <message>* | Send a DM to the mentioned user\n**y!scout** | Solo Yolo \n**y!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**y!help** | Displays this help message\n**y!cards** | List of cards")
+      .addField("Basic y!commands:", "mafia (alias:maf) | leaf | ryo | car | watchout | smooch | cat | mofu")
+      .addField("Command phrases:", "I can't believe Ryo is dead | I'm gonna munch | I love you Yuki | Good morning Yuki | Good night Yuki | Yuki if you're out there | Hey gays")
+    return botschannel.send(helpembed);
+    }
+
+   if (msg.startsWith (prefix + "cards")) {
+     let cardsembed = new Discord.RichEmbed()
+       .setDescription("Command usage: y!cardname")
+       .setColor("#00ff67")
+       .addField("SSRs:", "bMAGA! | *alt: bNO* \nValentine Great Escape \nAinana Roman \nOrdinary Days \nMonster \nWork\nGothic Halloween \nNo Doubt \nRabbit Ears Parka \nDis One \nSweets \nRoad to Infinity | *alt: rti* \nHoliday Collection",true)
+       .addField("SSRs:", "Absolute Champions \nTea Party\nXmas Magic \nGrand Extermination Operation \n Light Future \n Linked Feelings \nXmas Rock \nRe:vale Police | *alt: Police*\nWinter Wonderland Trip \nTaiyou no Esperanza | *alt: Esperanza* \nWhite Special Day | *alt: white day* \nCyber Techno | *alt: vae* \n",true)
+       .addField("Ichiban Kuji:", "Marchen Dream\n Happy Sparkle Star | *alt: sparkle* \n King Pudding\nCelestial Pilgrimage | *alt: hoshi* \nOrder please \n",true)
+       .addField("URs:", "Kiseki \nMiddle of Rehearsal | *alt: Rehearsal*\nHappy New Year | *alt: New Year* \n Walker",true)
+       .addField("Others", "Shuffle Talk \n Shuffle Talk 2018 \nSilver Sky");
+     return botschannel.send(cardsembed);
+   }
+
 });
+
+bot.on("message", function(message) {
+    msg = message.content.toLowerCase();
+    if(!msg.startsWith(prefix)) return;
+    let botschannel = message.guild.channels.find(`name`, "bot-channel");
+    if(!botschannel) return;
+    var args = message.content.substring(prefix.length).split();
+
+    switch (args[0].toLowerCase()) {
+
+      case "kiseki":
+        return botschannel.send ({files:["./images/borderless/kiseki.png"]});
+        break;
+
+      case "order please":
+      case "order":
+        return botschannel.send ({files:["./images/borderless/order_please.png"]});
+        break;
+
+        case "photobook":
+        case "birthday photobook":
+          return botschannel.send ({files:["./images/borderless/birthday_photobook.png"]});
+          break;
+
+      case "marchen dream":
+      case "marchen":
+          return botschannel.send ({files:["./images/borderless/marchen_dream.png"]});
+            break;
+
+      case "rabbit ears parka":
+      case "rabbit ears":
+            case "rabbit":
+              return botschannel.send ({files:["./images/borderless/rabbit.png"]});
+              break;
+
+      case "tea party":
+      case "tea":
+        return botschannel.send ({files:["./images/borderless/tea_party.png"]});
+            break;
+
+      case "xmas magic":
+        return botschannel.send ({files:["./images/borderless/xmas_magic.png"]});
+      break;
+
+      case "grand extermination operation":
+      case "grand":
+      case "extermination":
+      case "splatoonish":
+        return botschannel.send ({files:["./images/borderless/extermination.png"]});
+      break;
+
+      case "celestial pilgrimagen":
+      case "hoshi":
+      case "celestial":
+        return botschannel.send ({files:["./images/borderless/celestial.png"]});
+      break;
+
+      case "light future":
+        return botschannel.send ({files:["./images/borderless/light_future.png"]});
+      break;
+
+      case "ordinary days":
+      case "ordinary":
+        return botschannel.send ({files:["./images/borderless/ordinary_days.png"]});
+      break;
+
+      case "work":
+        return botschannel.send ({files:["./images/borderless/work.png"]});
+      break;
+
+      case "gothic halloween":
+      case "gothic":
+        return botschannel.send ({files:["./images/borderless/gothic_halloween.png"]});
+      break;
+
+      case "no doubt":
+        return botschannel.send ({files:["./images/borderless/no_doubt.png"]});
+      break;
+
+      case "monster":
+        return botschannel.send ({files:["./images/borderless/monster.png"]});
+      break;
+
+      case "ainana roman":
+      case "taisho":
+        return botschannel.send ({files:["./images/borderless/ainana_roman.png"]});
+      break;
+
+      case "zodiac":
+        return botschannel.send ({files:["./images/borderless/zodiac.png"]});
+      break;
+
+      case "linked feelings":
+      case "linked":
+        return botschannel.send ({files:["./images/borderless/linked_feelings.png"]});
+      break;
+
+      case "happy sparkle star":
+      case "sparkle":
+        return botschannel.send ({files:["./images/borderless/sparkle.png"]});
+      break;
+
+      case "xmas rock":
+        return botschannel.send ({files:["./images/borderless/xmas_rock.png"]});
+      break;
+
+      case "bmaga":
+      case "bno":
+        return botschannel.send ({files:["./images/borderless/bno.png"]});
+      break;
+
+      case "re:vale police":
+      case "police":
+        return botschannel.send ({files:["./images/borderless/police.png"]});
+      break;
+
+      case "12 songs gift":
+      case "12 songs":
+        return botschannel.send ({files:["./images/borderless/12_songs_gift.png"]});
+      break;
+
+      case "absolute champions":
+        return botschannel.send ({files:["./images/borderless/absolute_champions.png"]});
+      break;
+
+        case "dis one":
+          return botschannel.send ({files:["./images/borderless/dis_one.png"]});
+        break;
+
+        case "king pudding":
+        case "pudding":
+          return botschannel.send ({files:["./images/borderless/king_pudding.png"]});
+        break;
+
+        case "sweets":
+          return botschannel.send ({files:["./images/borderless/sweets.png"]});
+        break;
+
+        case "winter wonderland trip":
+        case "winter wonderland":
+          return botschannel.send ({files:["./images/borderless/winter_wonderland.png"]});
+        break;
+
+        case "mechanical lullaby":
+          return botschannel.send ({files:["./images/borderless/lullaby.png"]});
+        break;
+
+        case "taiyou no esperanza":
+        case "esperanza":
+          return botschannel.send ({files:["./images/borderless/esperanza.png"]});
+        break;
+
+        case "white special day":
+        case "white day":
+          return botschannel.send ({files:["./images/borderless/white_special_day.png"]});
+        break;
+
+        case "shuffle talk":
+          return botschannel.send ({files:["./images/borderless/shuffle_talk.png"]});
+        break;
+
+        case "shuffle talk 2018":
+          return botschannel.send ({files:["./images/borderless/shuffle_talk_18.png"]});
+        break;
+
+        case "road to infinity":
+        case "rti":
+          return botschannel.send ({files:["./images/borderless/rti.png"]});
+        break;
+
+        case "cyber techno":
+        case "vae":
+          return botschannel.send ({files:["./images/borderless/vae.png"]});
+        break;
+
+        case "holiday collection":
+          return botschannel.send ({files:["./images/borderless/holiday_collection.png"]});
+        break;
+
+        case "silver sky":
+          return botschannel.send ({files:["./images/borderless/silver_sky.png"]});
+        break;
+
+        case "dis one2":
+          return botschannel.send ({files:["./images/borderless/disone.png"]});
+          break;
+
+        case "happy new year":
+          case "new year":
+          return botschannel.send ({files:["./images/borderless/new_year.png"]});
+        break;
+
+          case "walker":
+          return botschannel.send ({files:["./images/borderless/walker.png"]});
+        break;
+    }
+})
 
 bot.login(process.env.token);
