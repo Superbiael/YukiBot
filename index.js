@@ -218,7 +218,7 @@ bot.commands = new Discord.Collection();
        .setColor("#00ff67")
        .addField("SSRs:", "bMAGA! | *alt: bNO* \nValentine Great Escape \nAinana Roman \nOrdinary Days \nMonster \nWork\nGothic Halloween \nNo Doubt \nRabbit Ears Parka \nDis One \nSweets \nRoad to Infinity | *alt: rti* \nHoliday Collection",true)
        .addField("SSRs:", "Absolute Champions \nTea Party\nXmas Magic \nGrand Extermination Operation \n Light Future \n Connected Feelings \nXmas Rock \nRe:vale Police | *alt: Police*\nWinter Wonderland Trip \nTaiyou no Esperanza | *alt: Esperanza* \nWhite Special Day | *alt: white day* \nCyber Techno | *alt: vae* \n",true)
-       .addField("Ichiban Kuji:", "Marchen Dream\n Happy Sparkle Star | *alt: sparkle* \n King Pudding\nCelestial Pilgrimage | *alt: hoshi* \nOrder please \n",true)
+       .addField("Ichiban Kuji:", "Marchen Dream\n Happy Sparkle Star | *alt: sparkle* \n King Pudding\nCelestial Pilgrimage | *alt: hoshi* \nOrder please \nMechanical Lullaby | *alt: m lullaby*",true)
        .addField("URs:", "Kiseki \nMiddle of Rehearsal | *alt: Rehearsal*\nHappy New Year | *alt: New Year* \n Walker",true)
        .addField("Others", "Shuffle Talk \n Shuffle Talk 2018 \nSilver Sky");
      return botschannel.send(cardsembed);
@@ -342,6 +342,7 @@ bot.on("message", function(message) {
           return botschannel.send ({files:["./borderless/winter_wonderland.png"]});
         break;
         case "mechanical lullaby":
+       case "m lullaby":
           return botschannel.send ({files:["./borderless/lullaby.png"]});
         break;
         case "taiyou no esperanza":
