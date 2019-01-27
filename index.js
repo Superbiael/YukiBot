@@ -244,7 +244,7 @@ bot.on("message", function(message) {
       case "rehearsal":
         return botschannel.send ({files:["./images/borderless/rehearsal.png"]});
       break;
-      case "music in your thoughts"
+      case "music in your thoughts":
       case "walker":
         return botschannel.send ({files:["./images/borderless/walker.png"]});
       break;
