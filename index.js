@@ -217,7 +217,7 @@ bot.commands = new Discord.Collection();
        .setDescription("Command usage: y!cardname")
        .setColor("#00ff67")
        .addField("SSRs:", "bMAGA! | *alt: bNO* \nValentine Great Escape \nAinana Roman \nOrdinary Days \nMonster \nWork\nGothic Halloween \nNo Doubt \nRabbit Ears Parka \nDis One \nSweets \nRoad to Infinity | *alt: rti* \nHoliday Collection",true)
-       .addField("SSRs:", "Absolute Champions \nTea Party\nXmas Magic \nGrand Extermination Operation \n Light Future \n Linked Feelings \nXmas Rock \nRe:vale Police | *alt: Police*\nWinter Wonderland Trip \nTaiyou no Esperanza | *alt: Esperanza* \nWhite Special Day | *alt: white day* \nCyber Techno | *alt: vae* \n",true)
+       .addField("SSRs:", "Absolute Champions \nTea Party\nXmas Magic \nGrand Extermination Operation \n Light Future \n Connected Feelings \nXmas Rock \nRe:vale Police | *alt: Police*\nWinter Wonderland Trip \nTaiyou no Esperanza | *alt: Esperanza* \nWhite Special Day | *alt: white day* \nCyber Techno | *alt: vae* \n",true)
        .addField("Ichiban Kuji:", "Marchen Dream\n Happy Sparkle Star | *alt: sparkle* \n King Pudding\nCelestial Pilgrimage | *alt: hoshi* \nOrder please \n",true)
        .addField("URs:", "Kiseki \nMiddle of Rehearsal | *alt: Rehearsal*\nHappy New Year | *alt: New Year* \n Walker",true)
        .addField("Others", "Shuffle Talk \n Shuffle Talk 2018 \nSilver Sky");
@@ -238,87 +238,71 @@ bot.on("message", function(message) {
       case "kiseki":
         return botschannel.send ({files:["./borderless/kiseki.png"]});
         break;
-
       case "order please":
       case "order":
         return botschannel.send ({files:["./borderless/order_please.png"]});
         break;
-
         case "photobook":
         case "birthday photobook":
           return botschannel.send ({files:["./borderless/birthday_photobook.png"]});
           break;
-
       case "marchen dream":
       case "marchen":
           return botschannel.send ({files:["./borderless/marchen_dream.png"]});
             break;
-
       case "rabbit ears parka":
       case "rabbit ears":
             case "rabbit":
               return botschannel.send ({files:["./borderless/rabbit.png"]});
               break;
-
       case "tea party":
       case "tea":
         return botschannel.send ({files:["./borderless/tea_party.png"]});
             break;
-
       case "xmas magic":
         return botschannel.send ({files:["./borderless/xmas_magic.png"]});
       break;
-
       case "grand extermination operation":
       case "grand":
       case "extermination":
       case "splatoonish":
         return botschannel.send ({files:["./borderless/extermination.png"]});
       break;
-
       case "celestial pilgrimagen":
       case "hoshi":
       case "celestial":
         return botschannel.send ({files:["./borderless/celestial.png"]});
       break;
-
       case "light future":
         return botschannel.send ({files:["./borderless/light_future.png"]});
       break;
-
       case "ordinary days":
       case "ordinary":
         return botschannel.send ({files:["./borderless/ordinary_days.png"]});
       break;
-
       case "work":
         return botschannel.send ({files:["./borderless/work.png"]});
       break;
-
       case "gothic halloween":
       case "gothic":
         return botschannel.send ({files:["./borderless/gothic_halloween.png"]});
       break;
-
       case "no doubt":
         return botschannel.send ({files:["./borderless/no_doubt.png"]});
       break;
-
       case "monster":
         return botschannel.send ({files:["./borderless/monster.png"]});
       break;
-
       case "ainana roman":
       case "taisho":
         return botschannel.send ({files:["./borderless/ainana_roman.png"]});
       break;
-
       case "zodiac":
         return botschannel.send ({files:["./borderless/zodiac.png"]});
       break;
-
-      case "linked feelings":
-      case "linked":
+      case "connected feelings":
+      case "connected":
+      case "linked":          
         return botschannel.send ({files:["./borderless/linked_feelings.png"]});
       break;
 
