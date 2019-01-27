@@ -421,6 +421,6 @@ bot.on("message", function(message) {
           return botschannel.send ({files:["./borderless/walker.png"]});
         break;
     }
-})
+});
 
 bot.login(process.env.token);
