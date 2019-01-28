@@ -43,7 +43,7 @@ bot.commands = new Discord.Collection();
 
    // Redirect to specific channel
    // let botschannel = message.guild.channels.find(`name`, "bot-channel");
-   let botschannel = message.guild.channels.find(`name`, "test");
+   let botschannel = message.guild.channels.find(x => channel.name === "test").
    if(!botschannel) return;
 
    if(msg.startsWith (prefix + "quote")) {
@@ -94,7 +94,8 @@ bot.commands = new Discord.Collection();
      }
 
    if (msg.startsWith ("good morning yuki")) {
-    let modRole = message.guild.roles.find("name","YUKILOVER69.");
+//     let modRole = message.guild.roles.find("name","YUKILOVER69.");
+     let modRole = message.guild.roles.find(role => role.name === "YUKILOVER69.")
     if(message.member.roles.has(modRole.id)) {
         return botschannel.send("Ah, Satsujin, I thought you were an angel for a moment...");
     } else {
