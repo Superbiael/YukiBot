@@ -1,4 +1,3 @@
-// const botconfig = require("./botconfig.json"); // Delete this when transfering to Github
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
@@ -233,9 +232,9 @@ bot.commands = new Discord.Collection();
 bot.on("message", function(message) {
     msg = message.content.toLowerCase();
     if(!msg.startsWith(prefix)) return;
-    let botschannel = message.guild.channels.find(`name`, "bot-channel");
+//     let botschannel = message.guild.channels.find(`name`, "bot-channel");
     // let botschannel = message.guild.channels.find(`name`, "test");
-    if(!botschannel) return;
+//     if(!botschannel) return;
     var args = message.content.substring(prefix.length).split();
 
     switch (args[0].toLowerCase()) {
@@ -401,6 +400,4 @@ bot.on("message", function(message) {
     }
 });
 
-
-// bot.login(botconfig.token); // Delete this for Github + Use the line below instead
 bot.login(process.env.token);
