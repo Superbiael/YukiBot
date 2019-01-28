@@ -94,7 +94,8 @@ bot.commands = new Discord.Collection();
      }
 
    if (msg.startsWith ("good morning yuki")) {
-    let modRole = message.guild.roles.find("name","YUKILOVER69.");
+//     let modRole = message.guild.roles.find("name","YUKILOVER69.");
+    let modRole = message.guild.roles.find(role => role.name === 'YUKILOVER69.');
     if(message.member.roles.has(modRole.id)) {
         return message.channel.send("Ah, Satsujin, I thought you were an angel for a moment...");
     } else {
