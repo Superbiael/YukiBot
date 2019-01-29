@@ -93,13 +93,9 @@ bot.commands = new Discord.Collection();
      }
 
    if (msg.startsWith ("good morning yuki")) {
-    let modRole = message.guild.roles.find(role => role.name === 'YUKILOVER69.');
-    if(message.member.roles.has(modRole.id)) {
-        return message.channel.send("Ah, Satsujin, I thought you were an angel for a moment...");
-    } else {
-        return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
-      }
-     }
+      if(message.author.id != "182723698711592960") return message.channel.send("Good morning. I wish I could sleep for 8 hours.");
+return message.channel.send("Ah, Satsujin, I thought you were an angel for a moment...");
+   }
 
    if(msg.startsWith (prefix + "smooch")) {
       if(message.author.id != "182723698711592960") return;
