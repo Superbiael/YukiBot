@@ -277,7 +277,7 @@ bot.commands = new Discord.Collection();
         return message.channel.send ({files:["./images/borderless/ichiban/king_pudding.png"]});
       break;
       case "mechanical lullaby":
-      case "mlullaby""
+      case "mlullaby":
         return message.channel.send ({files:["./images/borderless/ichiban/lullaby.png"]});
       break;
 // Other cards
