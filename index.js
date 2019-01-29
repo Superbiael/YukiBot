@@ -1,3 +1,4 @@
+// const botconfig = require("./botconfig.json"); // Delete this when transfering to Github
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
@@ -45,7 +46,7 @@ bot.commands = new Discord.Collection();
    // if(!botschannel) return;
 
    if(msg.startsWith (prefix + "quote")) {
-     number = 39;
+     number = 41;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
         case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -88,6 +89,7 @@ bot.commands = new Discord.Collection();
         case 38: message.channel.send ("Having to be thoughtful and considerate had always annoyed me. But that night these things became the warmth that sustained us both."); break;
         case 39: message.channel.send ("I really am lucky. Now I know joy, and the meaning of a smile.\nI also know the miracle of having someone waiting for me when I return home."); break;
         case 40: message.channel.send ("I live in a constant state of may blues."); break;
+        case 41: message.channel.send ("☆-(´>ω・`)b"); break;
       }
      }
 
@@ -215,7 +217,7 @@ bot.commands = new Discord.Collection();
        .setColor("#00ff67")
        .addField("SSRs:", "bMAGA! in Manami Nature Park | alt: bno \nValentine Great Escape \nAinana Roman \nOrdinary Days \nMonster \nWork\nGothic Halloween \nNo Doubt \nRabbit Ears Parka \nDis One \nSweets \nRoad to Infinity | alt: rti \nHoliday Collection",true)
        .addField("SSRs:", "Absolute Champions \nTea Party\nXmas Magic\n Light Future \n Connected Feelings \nXmas Rock \nRe:vale Police | alt: Police\nWinter Wonderland Trip \nTaiyou no Esperanza | alt: Esperanza \nWhite Special Day | alt: white day \nCyber Techno | alt: vae\nGrand Extermination Operation + secret",true)
-       .addField("Ichiban Kuji:", "Marchen Dream\n Happy Sparkle Star | alt: sparkle \n King Pudding\nCelestial Pilgrimage | alt: hoshi \nOrder please \n",true)
+       .addField("Ichiban Kuji:", "Marchen Dream\n Happy Sparkle Star | alt: sparkle \n King Pudding\nCelestial Pilgrimage | alt: hoshi \nOrder please \nMechanical Lullaby | alt: mlullaby",true)
        .addField("URs:", "Kiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: New Year \n Music in your Thoughts | alt: Walker",true)
        .addField("Others", "Shuffle Talk \n Shuffle Talk 2018 \nSilver Sky\nDis One (group)")
        .setFooter("add sr/r to the end for other rarities. (ex: y!ordinary sr)");
@@ -244,6 +246,10 @@ bot.commands = new Discord.Collection();
       case "walker":
         return message.channel.send ({files:["./images/borderless/ur/walker.png"]});
       break;
+      case "music in your thoughts2":
+      case "walker2":
+        return message.channel.send ({files:["./images/borderless/ur/walker2.png"]});
+      break;
       case "happy new year":
         case "new year":
         return message.channel.send ({files:["./images/borderless/ur/new_year.png"]});
@@ -269,6 +275,10 @@ bot.commands = new Discord.Collection();
       break;
       case "king pudding":
         return message.channel.send ({files:["./images/borderless/ichiban/king_pudding.png"]});
+      break;
+      case "mechanical lullaby":
+      case "mlullaby"
+        return message.channel.send ({files:["./images/borderless/ichiban/lullaby.png"]});
       break;
 // Other cards
       case "shuffle talk":
@@ -425,9 +435,6 @@ bot.commands = new Discord.Collection();
       case "winter wonderland":
         return message.channel.send ({files:["./images/borderless/winter_wonderland.png"]});
       break;
-      case "mechanical lullaby":
-        return message.channel.send ({files:["./images/borderless/lullaby.png"]});
-      break;
       case "taiyou no esperanza":
       case "esperanza":
         return message.channel.send ({files:["./images/borderless/esperanza.png"]});
@@ -450,4 +457,5 @@ bot.commands = new Discord.Collection();
     }
 });
 
+// bot.login(botconfig.token); // Delete this for Github + Use the line below instead
 bot.login(process.env.token);
