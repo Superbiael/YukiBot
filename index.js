@@ -1,4 +1,3 @@
-// const botconfig = require("./botconfig.json"); // Delete this when transfering to Github
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
@@ -213,14 +212,13 @@ bot.commands = new Discord.Collection();
 
    if (msg.startsWith (prefix + "cards")) {
      let cardsembed = new Discord.RichEmbed()
-       .setDescription("Command usage: y!cardname")
+       .setDescription("Command usage: y!cardname\nadd r/sr to the end for other rarities (ex: y!12 songs sr)")
        .setColor("#00ff67")
-       .addField("SSRs:", "bMAGA! in Manami Nature Park | alt: bno \nValentine Great Escape \nAinana Roman \nOrdinary Days \nMonster \nWork\nGothic Halloween \nNo Doubt \nRabbit Ears Parka \nDis One \nSweets \nRoad to Infinity | alt: rti \nHoliday Collection",true)
-       .addField("SSRs:", "Absolute Champions \nTea Party\nXmas Magic\n Light Future \n Connected Feelings \nXmas Rock \nRe:vale Police | alt: Police\nWinter Wonderland Trip \nTaiyou no Esperanza | alt: Esperanza \nWhite Special Day | alt: white day \nCyber Techno | alt: vae\nGrand Extermination Operation + secret",true)
-       .addField("Ichiban Kuji:", "Marchen Dream\n Happy Sparkle Star | alt: sparkle \n King Pudding\nCelestial Pilgrimage | alt: hoshi \nOrder please \nMechanical Lullaby | alt: mlullaby",true)
-       .addField("URs:", "Kiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: New Year \n Music in your Thoughts | alt: Walker",true)
-       .addField("Others", "Shuffle Talk \n Shuffle Talk 2018 \nSilver Sky\nDis One (group)")
-       .setFooter("add sr/r to the end for other rarities. (ex: y!ordinary sr)");
+       .addField("SSRs:", "12 Songs Gift\nAinana Roman\nbMAGA! in Manami Nature Park | alt: bno\nConnected Feelings\nDis One\nGothic Halloween\nLight Future\nNo Doubt\nRabbit Ears Parka\nRoad to Infinity | alt: rti\nTea Party\nWinter Wonderland Trip\nXmas Magic\nZodiac",true)
+       .addField("SSRs:", "Absolute Champions\nBirthday Photobook\nCyber Techno | alt: vae\nTaiyou no Esperanza | alt: esperanza\nGrand Extermination Operation + secret\nHoliday Collection\nMonster\nOrdinary Days\nRe:vale Police | alt: police\nSweets\nValentine Great Escape | alt: vge\nWhite Special Day | alt: white sp\nWork\nXmas Rock",true)
+       .addField("Ichiban Kuji:", "Marchen Dream\nKing Pudding\nOrder Please\nHappy Sparkle Star | alt: sparkle\nMechanical Lullaby | alt: mlullaby\nCelestial Pilgrimage | alt: hoshi\n",true)
+       .addField("URs:", "Kiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: hny \n Music in your Thoughts | alt: walker",true)
+       .addField("Others", "Silver Sky\nDis One (group)\nShuffle Talk \n Shuffle Talk 2018");
      return message.channel.send(cardsembed);
    }
 
@@ -229,11 +227,9 @@ bot.commands = new Discord.Collection();
     bot.on("message", function(message) {
     msg = message.content.toLowerCase();
     if(!msg.startsWith(prefix)) return;
-    // let botschannel = message.guild.channels.find(`name`, "bot-channel");
-    // if(!botschannel) return;
     var args = message.content.substring(prefix.length).split();
-
     switch (args[0].toLowerCase()) {
+          
 // UR cards
       case "kiseki":
         return message.channel.send ({files:["./images/borderless/ur/kiseki.png"]});
@@ -246,14 +242,15 @@ bot.commands = new Discord.Collection();
       case "walker":
         return message.channel.send ({files:["./images/borderless/ur/walker.png"]});
       break;
-      case "music in your thoughts2":
-      case "walker2":
+      case "music in your thoughts ur":
+      case "walker ur":
         return message.channel.send ({files:["./images/borderless/ur/walker2.png"]});
       break;
       case "happy new year":
-        case "new year":
+        case "hny":
         return message.channel.send ({files:["./images/borderless/ur/new_year.png"]});
       break;
+          
 // Ichiban Kuji Cards
       case "order please":
       case "order":
@@ -280,20 +277,21 @@ bot.commands = new Discord.Collection();
       case "mlullaby":
         return message.channel.send ({files:["./images/borderless/ichiban/lullaby.png"]});
       break;
+          
 // Other cards
       case "shuffle talk":
-        return message.channel.send ({files:["./images/borderless/shuffle_talk.png"]});
+        return message.channel.send ({files:["./images/borderless/others/shuffle_talk.png"]});
       break;
       case "shuffle talk 2018":
-        return message.channel.send ({files:["./images/borderless/shuffle_talk_18.png"]});
+        return message.channel.send ({files:["./images/borderless/others/shuffle_talk_18.png"]});
       break;
       case "silver sky":
-        return message.channel.send ({files:["./images/borderless/silver_sky.png"]});
+        return message.channel.send ({files:["./images/borderless/others/silver_sky.png"]});
       break;
       case "dis one (group)":
-        return message.channel.send ({files:["./images/borderless/disone.png"]});
+        return message.channel.send ({files:["./images/borderless/others/dis_one.png"]});
       break;
-
+          
 // R cards
       case "ordinary days r":
       case "ordinary r":
@@ -303,6 +301,7 @@ bot.commands = new Discord.Collection();
       case "police r":
         return message.channel.send ({files:["./images/borderless/r/police.png"]});
       break;
+          
 // SR cards
       case "rabbit ears parka sr":
       case "rabbit ears sr":
@@ -334,7 +333,7 @@ bot.commands = new Discord.Collection();
       case "police sr":
         return message.channel.send ({files:["./images/borderless/sr/police.png"]});
       break;
-      case "middle of rehearsalssr":
+      case "middle of rehearsal sr":
       case "rehearsal sr":
         return message.channel.send ({files:["./images/borderless/sr/rehearsal.png"]});
       break;
@@ -342,120 +341,124 @@ bot.commands = new Discord.Collection();
       case "winter wonderland sr":
         return message.channel.send ({files:["./images/borderless/sr/winter_wonderland.png"]});
       break;
+          
 // SSR Cards
-      case "middle of rehearsal ssr":
-      case "rehearsal ssr":
-        return message.channel.send ({files:["./images/borderless/rehearsal.png"]});
+      case "12 songs gift":
+      case "12 songs":
+        return message.channel.send ({files:["./images/borderless/ssr/12_songs_gift.png"]});
       break;
-      case "photobook":
+      case "absolute champions":
+        return message.channel.send ({files:["./images/borderless/ssr/absolute_champions.png"]});
+      break;
+      case "ainana roman":
+      case "taisho roman":
+      case "taisho":
+        return message.channel.send ({files:["./images/borderless/ssr/ainana_roman.png"]});
+      break;
       case "birthday photobook":
-        return message.channel.send ({files:["./images/borderless/birthday_photobook.png"]});
+      case "photobook":
+        return message.channel.send ({files:["./images/borderless/ssr/birthday_photobook.png"]});
       break;
-      case "rabbit ears parka":
-      case "rabbit ears":
-      case "rabbit":
-        return message.channel.send ({files:["./images/borderless/rabbit.png"]});
+      case "bmaga":
+      case "bno":
+        return message.channel.send ({files:["./images/borderless/ssr/bno.png"]});
       break;
-      case "tea party":
-      case "tea":
-        return message.channel.send ({files:["./images/borderless/tea_party.png"]});
+      case "connected feelings":
+      case "connected":
+        return message.channel.send ({files:["./images/borderless/ssr/connected_feelings.png"]});
       break;
-      case "xmas magic":
-        return message.channel.send ({files:["./images/borderless/xmas_magic.png"]});
+      case "cyber techno":
+      case "vae":
+        return message.channel.send ({files:["./images/borderless/ssr/cyber_techno.png"]});
+      break;
+      case "dis one":
+        return message.channel.send ({files:["./images/borderless/ssr/dis_one.png"]});
+      break;
+      case "gothic halloween":
+      case "gothic":
+        return message.channel.send ({files:["./images/borderless/ssr/gothic_halloween.png"]});
       break;
       case "grand extermination operation":
       case "grand":
       case "extermination":
       case "splatoonish":
-        return message.channel.send ({files:["./images/borderless/extermination.png"]});
+        return message.channel.send ({files:["./images/borderless/ssr/extermination.png"]});
       break;
       case "grand extermination operation secret":
       case "grand secret":
       case "extermination secret":
       case "splatoonish secret":
-        return message.channel.send ({files:["./images/borderless/extermination.png"]});
+        return message.channel.send ({files:["./images/borderless/ssr/extermination_secret.png"]});
+      break;
+      case "holiday collection":
+        return message.channel.send ({files:["./images/borderless/ssr/holiday_collection.png"]});
       break;
       case "light future":
-        return message.channel.send ({files:["./images/borderless/light_future.png"]});
+        return message.channel.send ({files:["./images/borderless/ssr/light_future.png"]});
+      break;
+      case "middle of rehearsal ssr":
+      case "rehearsal ssr":
+        return message.channel.send ({files:["./images/borderless/ssr/middle_of_rehearsal.png"]});
+      break;
+      case "monster":
+        return message.channel.send ({files:["./images/borderless/ssr/monster.png"]});
+      break;
+      case "no doubt":
+        return message.channel.send ({files:["./images/borderless/ssr/no_doubt.png"]});
       break;
       case "ordinary days":
       case "ordinary":
-        return message.channel.send ({files:["./images/borderless/ordinary_days.png"]});
+        return message.channel.send ({files:["./images/borderless/ssr/ordinary_days.png"]});
       break;
-      case "work":
-        return message.channel.send ({files:["./images/borderless/work.png"]});
-      break;
-      case "gothic halloween":
-      case "gothic":
-        return message.channel.send ({files:["./images/borderless/gothic_halloween.png"]});
-      break;
-      case "no doubt":
-        return message.channel.send ({files:["./images/borderless/no_doubt.png"]});
-      break;
-      case "monster":
-        return message.channel.send ({files:["./images/borderless/monster.png"]});
-      break;
-      case "ainana roman":
-      case "taisho roman":
-      case "taisho":
-        return message.channel.send ({files:["./images/borderless/ainana_roman.png"]});
-      break;
-      case "zodiac":
-        return message.channel.send ({files:["./images/borderless/zodiac.png"]});
-      break;
-      case "connected feelings":
-      case "connected":
-        return message.channel.send ({files:["./images/borderless/linked_feelings.png"]});
-      break;
-      case "xmas rock":
-        return message.channel.send ({files:["./images/borderless/xmas_rock.png"]});
-      break;
-      case "bmaga":
-      case "bno":
-        return message.channel.send ({files:["./images/borderless/bno.png"]});
+      case "rabbit ears parka":
+      case "rabbit ears":
+      case "rabbit":
+        return message.channel.send ({files:["./images/borderless/ssr/rabbit.png"]});
       break;
       case "re:vale police":
       case "police":
-        return message.channel.send ({files:["./images/borderless/police.png"]});
-      break;
-      case "12 songs gift":
-      case "12 songs":
-        return message.channel.send ({files:["./images/borderless/12_songs_gift.png"]});
-      break;
-      case "absolute champions":
-        return message.channel.send ({files:["./images/borderless/absolute_champions.png"]});
-      break;
-      case "dis one":
-        return message.channel.send ({files:["./images/borderless/dis_one.png"]});
-      break;
-      case "sweets":
-        return message.channel.send ({files:["./images/borderless/sweets.png"]});
-      break;
-      case "winter wonderland trip":
-      case "winter wonderland":
-        return message.channel.send ({files:["./images/borderless/winter_wonderland.png"]});
-      break;
-      case "taiyou no esperanza":
-      case "esperanza":
-        return message.channel.send ({files:["./images/borderless/esperanza.png"]});
-      break;
-      case "white special day":
-      case "white day":
-        return message.channel.send ({files:["./images/borderless/white_special_day.png"]});
+        return message.channel.send ({files:["./images/borderless/ssr/revale_police.png"]});
       break;
       case "road to infinity":
       case "rti":
-        return message.channel.send ({files:["./images/borderless/rti.png"]});
+        return message.channel.send ({files:["./images/borderless/ssr/rti.png"]});
       break;
-      case "cyber techno":
-      case "vae":
-        return message.channel.send ({files:["./images/borderless/vae.png"]});
+      case "sweets":
+        return message.channel.send ({files:["./images/borderless/ssr/sweets.png"]});
       break;
-      case "holiday collection":
-        return message.channel.send ({files:["./images/borderless/holiday_collection.png"]});
+      case "taiyou no esperanza":
+      case "esperanza":
+        return message.channel.send ({files:["./images/borderless/ssr/taiyou_no_esperanza.png"]});
+      break;
+      case "tea party":
+      case "tea":
+        return message.channel.send ({files:["./images/borderless/ssr/tea_party.png"]});
+      break;
+      case "valentine great escape":
+      case "vge":
+        return message.channel.send ({files:["./images/borderless/ssr/valentine_great_escape.png"]});
+      break;
+      case "white special day":
+      case "white sp":
+        return message.channel.send ({files:["./images/borderless/ssr/white_special_day.png"]});
+      break;
+      case "winter wonderland trip":
+      case "winter wonderland":
+        return message.channel.send ({files:["./images/borderless/ssr/winter_wonderland.png"]});
+      break;
+      case "work":
+        return message.channel.send ({files:["./images/borderless/ssr/work.png"]});
+      break;
+      case "xmas magic":
+        return message.channel.send ({files:["./images/borderless/ssr/xmas_magic.png"]});
+      break;
+      case "xmas rock":
+        return message.channel.send ({files:["./images/borderless/ssr/xmas_rock.png"]});
+      break;
+      case "zodiac":
+        return message.channel.send ({files:["./images/borderless/ssr/zodiac.png"]});
       break;
     }
 });
 
-// bot.login(botconfig.token); // Delete this for Github + Use the line below instead
 bot.login(process.env.token);
