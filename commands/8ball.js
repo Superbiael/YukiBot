@@ -11,7 +11,10 @@ module.exports.run = async (bot, message, args) => {
      "Sure, why not?",
      "A whole lot.",
      "More or less.",
-     "No ^^"
+     "No ^^",
+     "No ^^ ^^ ^^",
+     "Hm... I hadn’t considered that.",
+     "I don’t mind."
    ];
 
    let result = Math.floor((Math.random() * replies.length));
@@ -22,9 +25,9 @@ module.exports.run = async (bot, message, args) => {
     .addField("Question:", question)
     .addField("Answer:", replies[result]);
 
-   let botschannel = message.guild.channels.find(`name`, "bot-channel");
-   if(!botschannel) return;
-   return botschannel.send(ballembed);
+//    let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
+//    if(!botschannel) return;
+   return message.channel.send(ballembed);
  }
 
 module.exports.help = {
