@@ -23,7 +23,8 @@ bot.commands = new Discord.Collection();
 
    bot.on("ready", async () => {
    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-   bot.user.setActivity("I love you Satsujin", {type:0});
+//    bot.user.setActivity("I love you Satsujin", {type:0});
+        bot.user.setActivity("Oh yeah?", {type:0});  
   });
 
    bot.on("message", async message => {
