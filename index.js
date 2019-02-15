@@ -1,4 +1,3 @@
-// const botconfig = require("./botconfig.json"); // Delete this when transfering to Github
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
@@ -24,7 +23,7 @@ bot.commands = new Discord.Collection();
 
    bot.on("ready", async () => {
    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-   bot.user.setActivity("Oh yeah?", {type:0});
+   bot.user.setActivity("I love you Satsujin", {type:0});
   });
 
    bot.on("message", async message => {
@@ -123,7 +122,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
     }
 
    if (msg.startsWith (prefix + "scout")) {
-     number = 56;
+     number = 57;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
      return message.channel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
     }
@@ -212,7 +211,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
        .setDescription("Command usage: y!cardname\nadd r/sr to the end for other rarities (ex: y!12 songs sr)")
        .setColor("#00ff67")
        .addField("SSRs:", "12 Songs Gift\nAinana Roman\nbMAGA! in Manami Nature Park | alt: bno\nConnected Feelings\nDis One\nGothic Halloween\nLight Future\nNo Doubt\nPhotogenic Life\nRabbit Ears Parka\nRoad to Infinity | alt: rti\nTea Party\nWinter Wonderland Trip\nXmas Magic\nZodiac",true)
-       .addField("SSRs:", "Absolute Champions\nBirthday Photobook\nCyber Techno | alt: vae\nTaiyou no Esperanza | alt: esperanza\nGrand Extermination Operation + secret\nHoliday Collection\nMonster\nOrdinary Days\nRe:vale Police | alt: police\nSweets\nValentine Great Escape | alt: vge\nWhite Special Day | alt: white sp\nWork\nXmas Rock",true)
+       .addField("SSRs:", "Absolute Champions\nBirthday Photobook\nCyber Techno | alt: vae\nTaiyou no Esperanza | alt: esperanza\nGrand Extermination Operation + secret\nHoliday Collection\nMonster\nOrdinary Days\nRe:vale Police | alt: police\nSweets\nValentine Great Escape | alt: vge\nValentine Live\nWhite Special Day | alt: white sp\nWork\nXmas Rock",true)
        .addField("Ichiban Kuji:", "Marchen Dream\nKing Pudding\nOrder Please\nHappy Sparkle Star | alt: sparkle\nMechanical Lullaby | alt: mlullaby\nCelestial Pilgrimage | alt: hoshi\n",true)
        .addField("URs:", "Kiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: hny \n Music in your Thoughts | alt: walker",true)
        .addField("Others", "Silver Sky\nDis One (group)\nShuffle Talk \n Shuffle Talk 2018");
@@ -434,6 +433,9 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
       case "vge":
         return message.channel.send ({files:["./images/borderless/ssr/valentine_great_escape.png"]});
       break;
+      case "valentine live":
+        return message.channel.send ({files:["./images/borderless/ssr/valentine_live.png"]});
+      break;
       case "white special day":
       case "white sp":
         return message.channel.send ({files:["./images/borderless/ssr/white_special_day.png"]});
@@ -457,5 +459,4 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
     }
 });
 
-// bot.login(botconfig.token); // Delete this for Github + Use the line below instead
 bot.login(process.env.token);
