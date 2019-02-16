@@ -28,7 +28,7 @@ bot.commands = new Discord.Collection();
 
    bot.on("message", async message => {
    // if (message.author.bot) return;
-   if(message.channel.type === "dm") return;
+//    if(message.channel.type === "dm") return;
 
    let prefix = 'y!';
    let messageArray = message.content.split(" ");
