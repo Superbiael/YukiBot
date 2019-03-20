@@ -123,7 +123,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
     }
 
    if (msg.startsWith (prefix + "scout")) {
-     number = 58;
+     number = 57;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
      return message.channel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
     }
@@ -213,7 +213,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
        .setColor("#00ff67")
        .addField("SSRs:", "12 Songs Gift\nAinana Roman\nbMAGA! in Manami Nature Park | alt: bno\nConnected Feelings\nDis One\nGothic Halloween\nLight Future\nNo Doubt\nPhotogenic Life\nRabbit Ears Parka\nRoad to Infinity | alt: rti\nTea Party\nWinter Wonderland Trip\nXmas Magic\nZodiac",true)
        .addField("SSRs:", "Absolute Champions\nBirthday Photobook\nCyber Techno | alt: vae\nTaiyou no Esperanza | alt: esperanza\nGrand Extermination Operation + secret\nHoliday Collection\nMonster\nOrdinary Days\nRe:vale Police | alt: police\nSweets\nValentine Great Escape | alt: vge\nValentine Live\nWhite Special Day | alt: white sp\nWork\nXmas Rock",true)
-       .addField("Ichiban Kuji:", "Marchen Dream\nKing Pudding\nOrder Please\nHappy Sparkle Star | alt: sparkle\nMechanical Lullaby | alt: mlullaby\nCelestial Pilgrimage | alt: hoshi\nWonderland in the Dark | alt: wonderland",true)
+       .addField("Ichiban Kuji:", "Marchen Dream\nKing Pudding\nOrder Please\nHappy Sparkle Star | alt: sparkle\nMechanical Lullaby | alt: mlullaby\nCelestial Pilgrimage | alt: hoshi\n",true)
        .addField("URs:", "Kiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: hny \n Music in your Thoughts | alt: walker",true)
        .addField("Others", "Silver Sky\nDis One (group)\nShuffle Talk \n Shuffle Talk 2018");
      return message.channel.send(cardsembed);
@@ -273,10 +273,6 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
       case "mlullaby":
         return message.channel.send ({files:["./images/borderless/ichiban/lullaby.png"]});
       break;
-      case "wonderland in the dark":
-      case "wonderland":
-        return message.channel.send ({files:["./images/borderless/ichiban/wonderland_in_the_dark.png"]});
-        break
 // Other cards
       case "shuffle talk":
         return message.channel.send ({files:["./images/borderless/others/shuffle_talk.png"]});
