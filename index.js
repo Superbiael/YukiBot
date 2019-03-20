@@ -276,6 +276,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
       case "wonderland in the dark":
       case "wonderland":
         return message.channel.send ({files:["./images/borderless/ichiban/wonderland_in_the_dark.png"]});
+        break
 // Other cards
       case "shuffle talk":
         return message.channel.send ({files:["./images/borderless/others/shuffle_talk.png"]});
