@@ -23,12 +23,12 @@ bot.commands = new Discord.Collection();
 
    bot.on("ready", async () => {
    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-   bot.user.setActivity("Oh yeah?", {type:0});
+   bot.user.setActivity("I love you Satsujin", {type:0});
   });
 
    bot.on("message", async message => {
    // if (message.author.bot) return;
-//    if(message.channel.type === "dm") return;
+   if(message.channel.type === "dm") return;
 
    let prefix = 'y!';
    let messageArray = message.content.split(" ");
@@ -89,7 +89,8 @@ bot.commands = new Discord.Collection();
         case 39: message.channel.send ("I really am lucky. Now I know joy, and the meaning of a smile.\nI also know the miracle of having someone waiting for me when I return home."); break;
         case 40: message.channel.send ("I live in a constant state of may blues."); break;
         case 41: message.channel.send ("☆-(´>ω・`)b"); break;
-      }
+        case 42: message.channel.send ("Re:vale is willing to start from the beginning as many times as we need to."); break;
+        case 43: message.channel.send (""); break;
      }
 
    if (msg.startsWith ("good morning yuki")) {
@@ -116,13 +117,13 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
        case 1: message.channel.send ("I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
        case 2: message.channel.send ("I would like you to keep loving me, and only me, forever from now on. And I'll make sure to keep charming you."); break;
        case 3: message.channel.send ("I know. I love you too, darling~"); break;
-       case 4: message.channel.send ("Being with you is so much fun. Thank for you everything, now and forever."); break;
+       case 4: message.channel.send ("Being with you is so much fun. Thank for you everything, I love you too. Now and forever."); break;
        case 5: message.channel.send ("You've shared your warmth with me, and in return I want to make you happy."); break;
      }
     }
 
    if (msg.startsWith (prefix + "scout")) {
-     number = 57;
+     number = 58;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
      return message.channel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
     }
@@ -212,7 +213,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
        .setColor("#00ff67")
        .addField("SSRs:", "12 Songs Gift\nAinana Roman\nbMAGA! in Manami Nature Park | alt: bno\nConnected Feelings\nDis One\nGothic Halloween\nLight Future\nNo Doubt\nPhotogenic Life\nRabbit Ears Parka\nRoad to Infinity | alt: rti\nTea Party\nWinter Wonderland Trip\nXmas Magic\nZodiac",true)
        .addField("SSRs:", "Absolute Champions\nBirthday Photobook\nCyber Techno | alt: vae\nTaiyou no Esperanza | alt: esperanza\nGrand Extermination Operation + secret\nHoliday Collection\nMonster\nOrdinary Days\nRe:vale Police | alt: police\nSweets\nValentine Great Escape | alt: vge\nValentine Live\nWhite Special Day | alt: white sp\nWork\nXmas Rock",true)
-       .addField("Ichiban Kuji:", "Marchen Dream\nKing Pudding\nOrder Please\nHappy Sparkle Star | alt: sparkle\nMechanical Lullaby | alt: mlullaby\nCelestial Pilgrimage | alt: hoshi\n",true)
+       .addField("Ichiban Kuji:", "Marchen Dream\nKing Pudding\nOrder Please\nHappy Sparkle Star | alt: sparkle\nMechanical Lullaby | alt: mlullaby\nCelestial Pilgrimage | alt: hoshi\nWonderland in the Dark | alt: wonderland",true)
        .addField("URs:", "Kiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: hny \n Music in your Thoughts | alt: walker",true)
        .addField("Others", "Silver Sky\nDis One (group)\nShuffle Talk \n Shuffle Talk 2018");
      return message.channel.send(cardsembed);
@@ -272,6 +273,9 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
       case "mlullaby":
         return message.channel.send ({files:["./images/borderless/ichiban/lullaby.png"]});
       break;
+      case "wonderland in the dark":
+      case "wonderland":
+        return message.channel.send ({files:["./images/borderless/ichiban/wonderland_in_the_dark.png"]});
 // Other cards
       case "shuffle talk":
         return message.channel.send ({files:["./images/borderless/others/shuffle_talk.png"]});
@@ -434,6 +438,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
         return message.channel.send ({files:["./images/borderless/ssr/valentine_great_escape.png"]});
       break;
       case "valentine live":
+      case "valentine":
         return message.channel.send ({files:["./images/borderless/ssr/valentine_live.png"]});
       break;
       case "white special day":
