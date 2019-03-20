@@ -128,7 +128,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
     }
 
    if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
-      number = 7;
+      number = 9;
       imageNumber = Math.floor (Math.random() * (number)) + 1;
       return message.channel.send ({files: ["./images/mofumofu/" + imageNumber + ".png"]})
      }
