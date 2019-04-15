@@ -121,11 +121,15 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
      }
     }
 
+   // if (msg.startsWith (prefix + "scout")) {
+   //   number = 59;
+   //   imageNumber = Math.floor (Math.random() * (number)) + 1;
+   //   return message.channel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
+   //  }
+
    if (msg.startsWith (prefix + "scout")) {
-     number = 58;
-     imageNumber = Math.floor (Math.random() * (number)) + 1;
-     return message.channel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
-    }
+     return message.channel.send ({files:["./images/scout/59.png"]});
+   }
 
    if(cmd === `${prefix}mofumofu` || cmd === `${prefix}mofu`){
       number = 9;
@@ -213,7 +217,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
        .addField("SSRs:", "12 Songs Gift\nAinana Roman\nbMAGA! in Manami Nature Park | alt: bno\nConnected Feelings\nDis One\nGothic Halloween\nLight Future\nNo Doubt\nPhotogenic Life\nRabbit Ears Parka\nRoad to Infinity | alt: rti\nTea Party\nWinter Wonderland Trip\nXmas Magic\nZodiac",true)
        .addField("SSRs:", "Absolute Champions\nBirthday Photobook\nCyber Techno | alt: vae\nTaiyou no Esperanza | alt: esperanza\nGrand Extermination Operation + secret\nHoliday Collection\nMonster\nOrdinary Days\nRe:vale Police | alt: police\nSweets\nValentine Great Escape | alt: vge\nValentine Live\nWhite Special Day | alt: white sp\nWork\nXmas Rock",true)
        .addField("Ichiban Kuji:", "Marchen Dream\nKing Pudding\nOrder Please\nHappy Sparkle Star | alt: sparkle\nMechanical Lullaby | alt: mlullaby\nCelestial Pilgrimage | alt: hoshi\nWonderland in the Dark | alt: wonderland ",true)
-       .addField("URs:", "Kiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: hny \n Music in your Thoughts | alt: walker",true)
+       .addField("URs:", "Anniversary 2019 | alt: anni\nKiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: hny \n Music in your Thoughts | alt: walker",true)
        .addField("Others", "Silver Sky\nDis One (group)\nShuffle Talk \n Shuffle Talk 2018");
      return message.channel.send(cardsembed);
    }
@@ -227,6 +231,14 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
 
     switch (args[0].toLowerCase()) {
 // UR cards
+      case "anniversary 2019":
+      case "anni":
+        return message.channel.send ({files:["./images/borderless/ur/anniversary_2019.png"]});
+      break;
+      case "anniversary 2019 ur":
+      case "anni ur":
+        return message.channel.send ({files:["./images/borderless/ur/anniversary_2019_2.png"]});
+      break;
       case "kiseki":
         return message.channel.send ({files:["./images/borderless/ur/kiseki.png"]});
       break;
