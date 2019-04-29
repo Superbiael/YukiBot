@@ -349,6 +349,10 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
       case "winter wonderland sr":
         return message.channel.send ({files:["./images/borderless/sr/winter_wonderland.png"]});
       break;
+      case "white special day sr":
+      case "white sp sr"
+        return message.channel.send ({files:["./images/borderless/sr/white_special_day.png"]});
+      break;
 // SSR Cards
       case "12 songs gift":
       case "12 songs":
@@ -477,5 +481,5 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
         return message.channel.send ({files:["./images/borderless/ssr/zodiac.png"]});
       break;
     }
-}); 
+});
 bot.login(process.env.token);
