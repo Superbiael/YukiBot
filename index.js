@@ -350,7 +350,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
         return message.channel.send ({files:["./images/borderless/sr/winter_wonderland.png"]});
       break;
       case "white special day sr":
-      case "white sp sr"
+      case "white sp sr":
         return message.channel.send ({files:["./images/borderless/sr/white_special_day.png"]});
       break;
 // SSR Cards
