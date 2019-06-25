@@ -147,6 +147,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
 
    if (msg.startsWith (prefix + "clear")) {
       if(message.author.id != "182723698711592960") return;
+      if(message.author.id != "476269186356871178") return;
       if(!args[0]) return message.channel.send("oof.");
       message.channel.bulkDelete(args[0]).then(() => {
       message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(3000));
