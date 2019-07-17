@@ -45,7 +45,7 @@ bot.commands = new Discord.Collection();
    // if(!botschannel) return;
 
    if(msg.startsWith (prefix + "quote")) {
-     number = 41;
+     number = 42;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
         case 1: message.channel.send ("You remind me of a puppy, just like Momo. No, maybe you're more like a tiny baby rabbit?"); break;
@@ -89,6 +89,7 @@ bot.commands = new Discord.Collection();
         case 39: message.channel.send ("I really am lucky. Now I know joy, and the meaning of a smile.\nI also know the miracle of having someone waiting for me when I return home."); break;
         case 40: message.channel.send ("I live in a constant state of may blues."); break;
         case 41: message.channel.send ("☆-(´>ω・`)b"); break;
+        case 42: message.channel.send ("What's non-fiction? That is: the existence that steals your gaze."); break;
       }
      }
 
