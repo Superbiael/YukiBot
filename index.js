@@ -122,13 +122,13 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
      }
     }
 
-   if (msg.startsWith (prefix + "scout")) {
+   if(cmd === `${prefix}scout`){
      number = 62;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
      return message.channel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
     }
 
-   if (msg.startsWith (prefix + "scoutsp")) {
+   if(msg.startsWith (prefix + "scout ssr")) {
      number = 45;
      imageNumber = Math.floor (Math.random() * (number)) + 1;
      return message.channel.send ({files: ["./images/scout2/" + imageNumber + ".png"]})
