@@ -215,8 +215,8 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
      let cardsembed = new Discord.RichEmbed()
        .setDescription("Command usage: y!cardname\nadd r/sr to the end for other rarities (ex: y!12 songs sr)")
        .setColor("#00ff67")
-       .addField("SSRs:", "12 Songs Gift\nAinana Roman\nbMAGA! in Manami Nature Park | alt: bno\nConnected Feelings\nDis One\nGothic Halloween\nLight Future\nNo Doubt\nPhotogenic Life\nRabbit Ears Parka\nRoad to Infinity | alt: rti\nTea Party\nWinter Wonderland Trip\nXmas Magic\nZodiac",true)
-       .addField("SSRs:", "Absolute Champions\nA Bouquet for You | alt: dhc\nBirthday Photobook\nCyber Techno | alt: vae\nTaiyou no Esperanza | alt: esperanza\nGrand Extermination Operation + secret\nHoliday Collection\nMonster\nOrdinary Days\nRe:vale Police | alt: police\nSweets\nValentine Great Escape | alt: vge\nValentine Live\nWhite Special Day | alt: white sp\nWork\nXmas Rock",true)
+       .addField("SSRs:", "12 Songs Gift\nAinana Roman\nbMAGA! in Manami Nature Park | alt: bno\nConnected Feelings\nDis One\nGothic Halloween\nLight Future\nNo Doubt\nPhotogenic Life\nRabbit Ears Parka\nREUNION\nRoad to Infinity | alt: rti\nTea Party\nWinter Wonderland Trip\nXmas Magic\nZodiac",true)
+       .addField("SSRs:", "Absolute Champions\nA Bouquet for You | alt: dhc\nBirthday Photobook\nCyber Techno | alt: vae\nTaiyou no Esperanza | alt: esperanza\nEiensei Riron | alt: eternity\nGrand Extermination Operation + secret\nHoliday Collection\nMonster\nOrdinary Days\nRe:vale Police | alt: police\nSweets\nValentine Great Escape | alt: vge\nValentine Live\nWhite Special Day | alt: white sp\nWork\nXmas Rock",true)
        .addField("Ichiban Kuji:", "Marchen Dream\nKing Pudding\nOrder Please\nHappy Sparkle Star | alt: sparkle\nMechanical Lullaby | alt: mlullaby\nCelestial Pilgrimage | alt: hoshi\nWonderland in the Dark | alt: wonderland ",true)
        .addField("URs:", "Anniversary 2019 | alt: anni\nKiseki \nMiddle of Rehearsal | alt: rehearsal\nHappy New Year | alt: hny \n Music in your Thoughts | alt: walker",true)
        .addField("Others", "Silver Sky\nDis One (group)\nShuffle Talk \n Shuffle Talk 2018");
@@ -400,6 +400,12 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
       case "splatoonish":
         return message.channel.send ({files:["./images/borderless/ssr/extermination.png"]});
       break;
+      case "eiensei riron":
+      case "eiensei":
+      case "eternity theory":
+      case "eternity":
+        return message.channel.send ({files:["./images/borderless/ssr/eiensei_riron.png"]});
+      break;
       case "grand extermination operation secret":
       case "grand secret":
       case "extermination secret":
@@ -434,6 +440,9 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
       case "rabbit ears":
       case "rabbit":
         return message.channel.send ({files:["./images/borderless/ssr/rabbit.png"]});
+      break;
+      case "reunion":
+        return message.channel.send ({files:["./images/borderless/ssr/reunion.png"]});
       break;
       case "re:vale police":
       case "police":
