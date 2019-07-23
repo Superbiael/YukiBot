@@ -111,7 +111,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
 
    if (msg.startsWith ("i love you yuki")) {
      if(message.author.id != "182723698711592960") return;
-     number = 6;
+     number = 7;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("I love you too, Satsujin. I don't know how to put into words how happy I am with you."); break;
@@ -120,6 +120,7 @@ return message.channel.send("Ah, Satsujin, I thought you were an angel for a mom
        case 4: message.channel.send ("Being with you is so much fun. Thank for you everything, now and forever."); break;
        case 5: message.channel.send ("You've shared your warmth with me, and in return I want to make you happy."); break;
        case 6: message.channel.send ("I'm really thankful for all the feelings you told me. From now on, always love me and my music."); break;
+       case 7: message.channel.send ("I hope you'll continue falling in love with this new me, and his new melodies."); break;
      }
     }
 
